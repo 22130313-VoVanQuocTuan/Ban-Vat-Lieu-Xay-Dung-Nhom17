@@ -111,9 +111,10 @@ p {
 }
 
 #section-header2 .logo img {
-    height: 90px;
-    width: 150px;
+    height: 79px;
+    width: 148px;
     cursor: pointer;
+    
 }
 
 #section-header2 .search-bar {
