@@ -177,6 +177,11 @@ p {
 }
 
 #section-header2 .cart a {
+    width: 100px; /* Đặt chiều rộng cố định */
+    height: 50px; /* Đặt chiều cao cố định */
+    display: inline-block;
+    overflow: hidden; /* Đảm bảo không có phần tử nào tràn ra ngoài */
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt */
     font-size: 40px;
     color: #003366;
     margin-left: 2%;
@@ -184,7 +189,8 @@ p {
 }
 
 #section-header2 .cart a:hover {
-    font-size: 45px;
+   
+    transform: scale(1.2); /* Phóng to 1.5 lần */
 }
 
 /* --------------------section-nav------------------ */
@@ -211,6 +217,7 @@ p {
     float: left;
     margin: 0 10px;
     transition: background-color 0.2s ease;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt */
 
 }
 
@@ -218,6 +225,7 @@ p {
     background: linear-gradient(to right, #82a0c2, #15283e);
     box-shadow: 0 0 0 1px #c0c0c0 inset;
     border-radius: 5px 5px 0 0;
+    transform: scale(0.9); /* thu nhỏ */
 }
 
 /* mục chứa thẻ <a> */
@@ -244,14 +252,14 @@ p {
     position: absolute;
     background-color: #f2f2f2;
     list-style: none;
-    margin-left: -19px;
+    margin-left: -20px;
     margin-top: 23px;
 }
 
 #section-nav ul.navbar-center li:hover ul.items {
     display: block;
     padding: 0;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 5px 5px 5px;
     z-index: 10;
 }
 
@@ -264,6 +272,7 @@ p {
     height: 40px;
     border-bottom: solid 1px gray;
     padding-top: 25px;
+    border-radius: 0px 5px 0px 0px;
 }
 
 #section-nav ul.navbar-center li ul.items li a {

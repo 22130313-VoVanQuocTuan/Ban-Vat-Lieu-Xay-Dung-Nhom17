@@ -31,24 +31,8 @@
 .icon-logo .g{
     color: #ef0000 ;
 }
-
-/* Keyframes để đổi màu liên tục */
-@keyframes colorChange {
-    0% {
-        color: #e74c3c; /* Đỏ */
-    }
-    25% {
-        color: #3498db; /* Xanh dương */
-    }
-    50% {
-        color: #2ecc71; /* Xanh lá */
-    }
-    75% {
-        color: #f1c40f; /* Vàng */
-    }
-    100% {
-        color: #e74c3c; /* Quay lại Đỏ */
-    }
+.icon-logo .f{
+    color: #1418ff;
 }
 
 h1{
@@ -68,6 +52,16 @@ h1{
 }
 
 
+.login-form .blue  {
+    color: #007bff; /* Màu chữ cho liên kết */
+    text-decoration: none; /* Không gạch chân */
+}
+
+.login-form .blue:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+
 .content .container a:hover{
     text-decoration: underline;
 }
@@ -84,7 +78,7 @@ h1{
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
     margin-left: 9px;
 }
@@ -96,6 +90,7 @@ h1{
 .content .container button.hidden{
     background-color: transparent;
     border-color: #fff;
+    width: 170px;
 }
 
 .content .container form{
@@ -114,13 +109,14 @@ h1{
     border: none;
     margin: 8px 0;
     padding: 15px 15px;
-    font-size: 13px;
+    font-size: 18px;
     border-radius: 8px;
     width: 70%;
-
     outline: none;
 }
-
+.content .container input::placeholder{
+    font-size: 15px; /* Tăng font chữ của placeholder */
+}
 .form-container{
     position: absolute;
     top: 0;

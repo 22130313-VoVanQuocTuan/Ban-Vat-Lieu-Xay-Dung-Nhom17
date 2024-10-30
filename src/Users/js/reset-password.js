@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Mật khẩu của bạn đã được cập nhật thành công.');
 
             // Chuyển hướng về trang đăng nhập hoặc trang nào khác
-            window.location.href = "/src/Users/pages/account/login-signup.html"; // Địa chỉ trang đăng nhập
+            window.location.href = "/src/Users/page/login-signup.html"; // Địa chỉ trang đăng nhập
         }
     });
 
     // Khi người dùng muốn trở lại trang đăng nhập
     backToLoginLink.addEventListener('click', function() {
-        window.location.href = "/src/Users/pages/account/login-signup.html"; // Địa chỉ trang đăng nhập
+        window.location.href = "/src/Users/page/login-signup.html"; // Địa chỉ trang đăng nhập
     });
 });
