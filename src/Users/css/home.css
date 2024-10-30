@@ -1,0 +1,80 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Văn bản ban đầu ẩn bên ngoài màn hình */
+.animated-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: slideInOut 5s infinite; /* Hiệu ứng lặp vô hạn */
+    font-size: 20px;
+  
+}
+
+/* Keyframes cho hoạt hình chạy ra và chạy vào */
+@keyframes slideInOut {
+    0% {
+        left: -100%; /* Bắt đầu từ ngoài màn hình bên trái */
+    }
+    25% {
+        left: 10%; /* Chạy vào giữa màn hình */
+    }
+    75% {
+        left: 10%; /* Ở lại giữa trong một khoảng thời gian */
+    }
+    100% {
+        left: -100%; /* Chạy ra ngoài màn hình bên phải */
+    }
+}
+
+/* ---------------section-header1--------------- */
+#section-header1 {
+    height: 60px;
+    background: linear-gradient(to right, #82a0c2, #15283e);
+}
+
+#section-header1 .top-left {
+    float: left;
+    margin: 18px 12px 0 200px;
+}
+
+#section-header1 .top-left p {
+    color: white;
+    font-weight: bold;
+}
+
+#section-header1 .top-right {
+    float: right;
+    margin-top: 18px;
+    margin-right: 200px;
+}
+
+#section-header1 .top-right a {
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+    /* Thêm hiệu ứng khi hover */
+}
+
+#section-header1 .top-right a:hover {
+    color: #d1d1d1
+}
