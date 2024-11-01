@@ -13,11 +13,11 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 home.addEventListener('click',() => {
-    window.location.href= '/src/Users/pages/home.html'
+    window.location.href= '/src/Users/page/home.html'
 
 });
 HOME.addEventListener('click',() => {
-    window.location.href= '/src/Users/pages/home.html'
+    window.location.href= '/src/Users/page/home.html'
 
 });
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //nhấn login quay về trang chủ
 login.addEventListener('submit', function(event) {
      event.preventDefault();
-       window.location.href = '/src/Users/pages/home.html'; // Chuyển hướng về trang chủ
+       window.location.href = '/src/Users/page/home.html'; // Chuyển hướng về trang chủ
     }
 );
 });
