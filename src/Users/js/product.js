@@ -1,8 +1,7 @@
 
 const sidebar = document.querySelector('.conten .left-section');
 const sidebarItems = document.querySelectorAll('.conten .left-sidebar .item');
-const catItems = document.querySelectorAll('.conten .categories a');
-const menuItem = document.querySelectorAll('.conten .menuItem')
+
 
 
 
@@ -26,207 +25,172 @@ sidebarItems.forEach(sideItem => {
 
 
 
-// thêm hiệu ứng "active" cho mục danh mục được nhấn và loại bỏ hiệu ứng đó khỏi các mục danh mục khác
-catItems.forEach(catItem => {
-    catItem.addEventListener('click', () => {
-        catItems.forEach(item => {
-            item.classList.remove('active');
-        });
-        catItem.classList.add('active');
-    });
-});
 
-// iều chỉnh vị trí của thanh bên (sidebar) khi người dùng cuộn trang
-window.addEventListener('scroll', () => {
-    if (window.innerWidth <= 992) {
-        if (this.pageYOffset > 20) {
-            sidebar.style.paddingTop = '20px';
-        } else {
-            sidebar.style.paddingTop = '70px';
-        }
-    }
-});
-// Xử lý sự kiện click cho từng mục menu
-menuItem.forEach(sideItem => {
-    sideItem.addEventListener('click', () => {
-        // Nếu mục đang được nhấn đã có lớp 'active', không làm gì cả
-        if (sideItem.classList.contains('active')) {
-            return;
-        }
-        
-        // Xóa lớp 'active' khỏi tất cả các mục
-        menuItem.forEach(item => {
-            item.classList.remove('active');
-        });
-        
-        // Thêm lớp 'active' cho mục đang nhấn
-        sideItem.classList.add('active');
-    });
-});
+
 
 
 
 const list_cart = [
     {  
-        image : "../img_product/gach-inax.webp", nameProduct: "Gạch inax",   price: "200.000 VND",  newPrice: "22.500.000 VND", salse: "10% khi thanh toán"
+        image : "../img_product/gach-inax.webp", nameProduct: "Gạch inax",   price: "200.000 ₫",  newPrice: "22.500.000 ₫", salse: "10% khi thanh toán"
     },
     {  
-        image : "../img_product/gach-inax.webp",  nameProduct: "MacBook Air M1",   price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        image : "../img_product/gach-inax.webp",  nameProduct: "MacBook Air M1",   price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "../img_product/gach-inax.webp",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "../img_product/gach-inax.webp",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "../img_product/gach-inax.webp",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "../img_product/gach-inax.webp",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
     {  
         image : "/home/image/image1.png",
         nameProduct: "MacBook Air M1",
-        price: "200.000 VND",
-        newPrice: "22.500.000 VND",
+        price: "200.000 ₫   ",
+        newPrice: "22.500.000 ₫",
         salse: "10% khi thanh toán"
     },
 ];
@@ -250,12 +214,12 @@ function displayProducts() {
         productDiv.innerHTML = `
             <a href=""><img src="${product.image}" alt="${product.nameProduct}"></a>
             <h3>${product.nameProduct}</h3>
-            <p>Gía ban đầu: <del>${product.price}</del>
+            <p>Gía: <del>${product.price}</del>
             <p  style="color: red;">Gía đã giảm:  ${product.newPrice}</p>
             <p>Giảm giá: ${product.salse}</p>
             
              <a href="" class="add-cart"><i class="ri-add-circle-line"></i>Thêm</a>
-         <a href="" class="favorite"><i class="ri-chat-heart-line"></i>Yêu thích</a>
+        
         `;
         productList.appendChild(productDiv);
     });
