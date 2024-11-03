@@ -53,3 +53,21 @@ function renderCart() {
             </tr>
         `;
     });
+    const vat = subtotal * 0.08;
+    const total = subtotal + vat;
+
+    // Cập nhật tổng tiền trong phần tóm tắt giỏ hàng
+    document.getElementById('subtotal').textContent = `${subtotal.toLocaleString()}₫`;
+    document.getElementById('vat').textContent = `${vat.toLocaleString()}₫`;
+    document.getElementById('total').textContent = `${total.toLocaleString()}₫`;
+}
+
+// Hàm cập nhật số lượng khi người dùng nhập thủ công
+function updateQuantity(index, value) {
+    const product = cart[index];
+    product.quantity = Math.max(1, parseInt(value, 10) || 1); // Đảm bảo số lượng tối thiểu là 1
+    renderCart(); // Cập nhật lại giỏ hàng
+}
+
+// Gọi hàm renderCart khi trang tải để hiển thị giỏ hàng ban đầu
+window.onload = renderCart;
