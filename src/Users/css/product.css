@@ -22,7 +22,7 @@ a {
 
 /* General content styles */
 .conten {
-   width: 100%;
+   width: 90%;
    height: auto;
    display: flex;
    margin: 50px auto;
@@ -198,4 +198,28 @@ button:hover {
    border-radius: 12px;
    font-size: 16px;
    padding: 5px 10px;
+}
+.fa-whatsapp {
+   bottom: 50px;
+   right: 8px;
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   z-index: 99;
+   font-size: 50px;
+
+}
+
+.fa-facebook-messenger {
+   bottom: 100px;
+   right: 10px;
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   z-index: 99;
+   font-size: 50px;
+}
+
+li {
+   list-style: none;
 }
