@@ -119,11 +119,12 @@ button:hover {
 .conten .right {
    width: 70%;
    display: flex;
+   height: auto;
    flex-direction: column;
-   align-items: center;
+   align-items: center;background-color: #000d33f8;
 }
 
-.conten .right .row {
+.conten .right .row, .pagination {
    background-color: #000d33f8;
    display: flex;
    flex-wrap: wrap;
