@@ -1076,7 +1076,7 @@ p {
     height: 50px;
     z-index: 99;
     font-size: 50px;
-    list-style: none;
+ 
 }
 
 .fa-facebook-messenger {
@@ -1087,5 +1087,7 @@ p {
     height: 50px;
     z-index: 99;
     font-size: 50px;
+}
+li{
     list-style: none;
 }
