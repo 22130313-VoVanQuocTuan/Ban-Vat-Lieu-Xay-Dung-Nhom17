@@ -67,24 +67,24 @@
                                 MỤC SẢN
                                 PHẨM</span>
                             <ul class="items">
-                                <li> <a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
-                                        DỰNG</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
-                                        VỮA</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
-                                        SỎI</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
-                                    SẮT</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
-                                        LIỆU GỖ</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
-                                        GIA</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
-                                        LỢP</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
-                                        PHỤ KIỆN</li>
-                                <li><a href="#"></a>&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
-                                        ĐIỆN NƯỚC</li>
+                                <li> <a href="./product/gach-xay-dung.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
+                                        DỰNG</a></li>
+                                <li><a href="./product/xi-mang-va-vua.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
+                                        VỮA</a></li>
+                                <li><a href="./product/cat-da-va-soi.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
+                                        SỎI</a></li>
+                                <li><a href="./product/thep-va-sat.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
+                                    SẮT</a></li>
+                                <li><a href="./product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
+                                        LIỆU GỖ</a></li>
+                                <li><a href="./product/son-va-phu-gia.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
+                                        GIA</a></li>
+                                <li><a href="./product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
+                                        LỢP</a></li>
+                                <li><a href="./product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
+                                        PHỤ KIỆN</a></li>
+                                <li><a href="./product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
+                                        ĐIỆN NƯỚC</a></li>
                             </ul>
                         </li>
                         <li class="propClone"><a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ </a></li>
@@ -97,13 +97,13 @@
                         <li class="propClone">
                             <span class="none-a"> <i class="fa-solid fa-book"></i> &nbsp;&nbsp; HƯỚNG DẪN </span>
                             <ul class="items">
-                                <li><a href="./buying-help.html"></a>&nbsp;&nbsp;<i
+                                <li><a href="./buying-help.html">&nbsp;&nbsp;<i
                                             class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;HƯỚNG DẪN
-                                        MUA HÀNG
+                                        MUA HÀNG</a>
                                 </li>
-                                <li><a href="./term_and_services.html"></a>&nbsp;&nbsp;<i
+                                <li><a href="./term_and_services.html">&nbsp;&nbsp;<i
                                             class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
-                                        VÀ DỊCH VỤ
+                                        VÀ DỊCH VỤ</a>
                                 </li>
                             </ul>
                         </li>
@@ -122,24 +122,24 @@
                     <div class="form-group1">
                         <div class="infor"> Thông tin nhận hàng </div>
                         <div class="form-group">
-                            <input type="email" id="email" class="back email" placeholder="Email">
+                            <input type="email" id="email" class="back email" placeholder="Email" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" id="name" class="back name" placeholder="Họ và tên">
+                            <input type="text" id="name" class="back name" placeholder="Họ và tên" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" id="phone" class="back phone" placeholder="Số điện thoại">
+                            <input type="tel" id="phone" class="back phone" placeholder="Số điện thoại" required type="range">
                         </div>
 
                         <div class="form-group">
                             <input type="text" id="address" class="back address"
-                                placeholder="Nhập địa chỉ (tùy chọn)">
+                                placeholder="Nhập địa chỉ (tùy chọn)" required>
                         </div>
 
                         <div class="form-group">
-                            <select id="city" class="city" onchange="updateDeliveryInfo()">
+                            <select id="city" class="city" onchange="updateDeliveryInfo()" required>
                                 <option value="">Chọn tỉnh thành</option>
                                 <option value="An Giang">An Giang</option>
                                 <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
@@ -215,18 +215,18 @@
                     </div>
 
                     <div class="form-group2">
-
-                       
+                    
                         <div>
                             <div class="pay">Thanh toán</div>
+
                             <label for="cod-payment">
                                 <input type="radio" id="cod-payment" name="payment" value="cod"
-                                    onclick="showCODMessage()">
+                                    onclick="showCODMessage()" required>
                                 Thanh toán khi giao hàng (COD)
                             </label>
                             <br>
                             <label for="vnpay-payment">
-                                <input type="radio" id="vnpay-payment" name="payment" value="vnpay">
+                                <input type="radio" id="vnpay-payment" name="payment" value="vnpay" required>
                                 Thanh toán qua VNPay
                             </label>
                         </div>
