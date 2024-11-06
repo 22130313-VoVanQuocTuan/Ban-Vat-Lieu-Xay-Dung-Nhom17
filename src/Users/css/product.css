@@ -28,13 +28,14 @@ a {
 
 /* General content styles */
 .conten {
-   width: 90%;
+   width: 85%;
    height: auto;
    display: flex;
-   margin: 50px auto;
+   margin-left: auto;
+   margin-right: auto;
    justify-content: space-between;
    flex-wrap: wrap;
-   padding-top: 175px;
+
 }
 
 .conten .item {
@@ -90,8 +91,8 @@ button:hover {
    min-width: 280px;
    display: flex;
    flex-direction: column;
-   padding: 16px;
-   
+   padding-left: 37px;
+   padding-top: 15px;
    border-radius: 10px;
 }
 
@@ -156,7 +157,7 @@ button:hover {
    padding: 15px;
    cursor: pointer;
    font-size: 20px;
-   margin-left: 40px;
+   margin-left: 49px;
    background-color: #e8e5e5;
    border-radius: 5px;
    
@@ -172,7 +173,7 @@ button:hover {
    background-color: white; /* Màu nền của menu */
    border: 1px solid #ccc; /* Đường viền cho menu */
    z-index: 6;
-   left: 45px;
+   left: 53px;
    top: 36px;
    height: 100px;
    width: 180px;
@@ -202,13 +203,12 @@ button:hover {
    display: flex;
    flex-wrap: wrap;
    gap: 46px;
-   justify-content: center;
    padding: 20px;
 }
 
 .conten .right .name-cart {
    width: 220px;
-   padding: 15px;
+   padding: 3px;
    transition: box-shadow 0.3s ease;
    background-color: #fafafa;
    border-radius: 15px;
@@ -224,25 +224,28 @@ button:hover {
 .conten .right .row img {
    width: 100%;
    max-width: 180px;
-   border-radius: 10px;
-   margin-left: 20px;
+   border-radius: 20px;
+   margin-left: 10px;
+
    transition: transform 0.3s ease;
-   height: 250px;
+   height: 222px;
+   padding: 10px;
 }
 
 .conten .right .name-cart img:hover {
-   transform: scale(1.05);
+   transform: scale(1.08);
 }
 
 .conten .right .name-cart h3 {
    font-size: 20px;
    color: #110ec6;
-   margin: 15px 0 10px;
+   margin: 15px 10px 10px;
 }
 
 .conten .right .name-cart p {
    font-weight: 600;
    margin-bottom: 5px;
+   margin-left: 10px;
 }
 
 /* Buttons */

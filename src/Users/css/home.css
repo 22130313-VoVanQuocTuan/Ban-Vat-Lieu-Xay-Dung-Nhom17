@@ -12,6 +12,7 @@ body {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+   
 }
 
 p {
@@ -38,7 +39,7 @@ p {
 
 /* ---------------section-header1--------------- */
 #section-header1 {
-    height: 60px;
+    height: 58px;
     background: linear-gradient(to right, #4f3131, #15283e);
 }
 
@@ -75,6 +76,8 @@ p {
 #section-header2 {
     height: 105px;
     background-color: rgb(247, 238, 238);
+    border-top: 1px solid
+   
 }
 
 #section-header2 .menu {
@@ -265,11 +268,12 @@ p {
 }
 
 #section-nav ul.navbar-center li ul.items li a {
-    color: black;
+   color: #000000;
 }
 
 #section-nav ul.navbar-center li ul.items li:hover {
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #891f1f, #15283e);
+    color: #ffffff;
 }
 
 /* -------------------section-slider-------------------------- */
@@ -290,7 +294,7 @@ p {
 .title-w{
     display: flex;
     position: absolute;
-    top: 450px;
+    top: 35%;
     z-index: 8;
     font-size: 70px;
     font-weight: bold;
@@ -1313,7 +1317,7 @@ p {
     
 }
 
-.fa-facebook-square {
+#fb li {
     bottom: 160px;
     right: 10px;
     position: fixed;

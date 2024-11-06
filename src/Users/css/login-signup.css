@@ -12,13 +12,13 @@
 
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 10px 15px rgb(0 102 255 / 20%);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;/*đổ bóng*/
-    width: 1565px;
+    width: 1497px;
     max-width: 100%;
     min-height: 650px;
-    margin-top: 240px;
+ 
 
   
     
@@ -194,7 +194,7 @@ h1{
 .toggle{
     background-color:#3895ff;
     height: 100%;
-    background: linear-gradient(to right, #82a0c2,#15283e);
+    background: linear-gradient(to right, #ff0000,#15283e);
     color: #fff;
     position: relative;
     left: -100%;
