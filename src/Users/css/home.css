@@ -20,47 +20,20 @@ p {
 }
 
 .fixed {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
     /* Tạo đường viền nếu cần */
 }
 
 /* Văn bản ban đầu ẩn bên ngoài màn hình */
 .animated-text {
     position: absolute;
-    white-space: nowrap;
-    animation: slideInOut 5s infinite;
-    /* Hiệu ứng lặp vô hạn */
     font-size: 20px;
-
-}
-
-/* Keyframes cho hoạt hình chạy ra và chạy vào */
-@keyframes slideInOut {
-    0% {
-        left: -100%;
-        /* Bắt đầu từ ngoài màn hình bên trái */
-    }
-
-    25% {
-        left: 10%;
-        /* Chạy vào giữa màn hình */
-    }
-
-    75% {
-        left: 10%;
-        /* Ở lại giữa trong một khoảng thời gian */
-    }
-
-    100% {
-        left: -100%;
-        /* Chạy ra ngoài màn hình bên phải */
-    }
 }
 
 /* ---------------section-header1--------------- */
@@ -303,7 +276,7 @@ p {
 
 #section-slider {
     height: 780px;
-    padding-top: 220px;
+    padding-top: 1px;
     background-color: #f2f2f2;
     position: relative;
     overflow: hidden;
@@ -1318,14 +1291,14 @@ p {
     color: #ffffff;
 }
 
-.fa-whatsapp {
+.fa-phone {
     bottom: 50px;
     right: 8px;
     position: fixed;
     width: 50px;
     height: 50px;
     z-index: 99;
-    font-size: 50px;
+    font-size: 40px;
 
 }
 
@@ -1337,9 +1310,10 @@ p {
     height: 50px;
     z-index: 99;
     font-size: 50px;
+    
 }
 
-.fa-facebook {
+.fa-facebook-square {
     bottom: 160px;
     right: 10px;
     position: fixed;
@@ -1347,7 +1321,4 @@ p {
     height: 50px;
     z-index: 99;
     font-size: 50px;
-}
-li {
-    list-style: none;
 }
