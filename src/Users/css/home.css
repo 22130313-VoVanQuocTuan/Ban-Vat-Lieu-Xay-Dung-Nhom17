@@ -273,6 +273,9 @@ p {
 
 #section-nav ul.navbar-center li ul.items li:hover {
     background: linear-gradient(to right, #891f1f, #15283e);
+}
+
+#section-nav ul.navbar-center li ul.items li:hover a {
     color: #ffffff;
 }
 
