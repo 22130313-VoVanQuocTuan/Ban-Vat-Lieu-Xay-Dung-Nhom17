@@ -300,6 +300,7 @@ p {
 }
 
 /* -------------------section-slider-------------------------- */
+
 #section-slider {
     height: 780px;
     padding-top: 220px;
@@ -311,6 +312,26 @@ p {
 .slide-show-content-image {
     position: relative;
     transition: all 0.3s ease;
+}
+/*Chào mừng*/
+.title-w{
+    display: flex;
+    position: absolute;
+    top: 450px;
+    z-index: 8;
+    font-size: 70px;
+    font-weight: bold;
+    width: 70%;
+    color: #ffffff;
+    margin-left: 15%;
+    text-align: center;
+    overflow: hidden;    /* Ẩn phần chưa hiển thị */
+    animation: blinkCursor 0.5s step-end infinite;
+   
+}
+
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
 }
 
 .slide-show-content-image img {
@@ -350,6 +371,7 @@ p {
 /* ------------slider js1 */
 .slide-show-content-image img {
     position: absolute;
+    filter: brightness(0.4); /* Giảm sáng xuống 70% */
 }
 
 .slide-show-content-image img:nth-child(2) {
@@ -374,7 +396,7 @@ p {
 
 /*---------------section-content-------------------------------------------- */
 #section-content {
-    width: 1200px;
+    width: 1500px;
     height: auto;
     background-color: #ffffff;
     padding-top: 10px;
@@ -384,12 +406,12 @@ p {
 
 /* ---------------------List Product Flash Sale---------------- */
 .product-one-content {
-    width: 1210px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+   
+    background: linear-gradient(to right, #4f3131, #15283e);
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 55px;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-one-content .title {
@@ -510,7 +532,7 @@ p {
     transform: translateY(-50%);
     margin-left: 5px;
     padding: 2px 2px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -546,26 +568,29 @@ p {
 .selling-products-container {
     height: auto;
     display: flex;
+    text-align: center;
     justify-content: center;
-    justify-items: center;
     gap: 15px;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .selling-products-content {
-    width: 400px;
+    width: 600px;
     border: 2px #15283e solid;
+    margin-right: auto;
 }
 
 .selling-products-content h4 {
     margin: 0;
     border: 2px #c0c0c0 solid;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     padding: 15px;
+    color: #ffffff;
 }
 
-.imgSale {
-    width: 100%;
-}
+
 
 .content-products {
     padding-top: 15px;
@@ -614,12 +639,14 @@ p {
 /* ---------------------Slider product 1---------------- */
 
 .slider-product-one-content {
-    width: 1200px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    
+    background: linear-gradient(to right, #4f3131, #15283e);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 55px;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slider-product-one-content-items {
@@ -728,7 +755,7 @@ p {
     transform: translateY(-50%);
     margin-left: 5px;
     padding: 2px 2px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -808,12 +835,14 @@ p {
 /* ---------------------Slider product 2---------------- */
 
 .slider-product-two-content {
-    width: 1200px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+   
+    background: linear-gradient(to right, #4f3131, #15283e);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 55px;
     margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .slider-product-two-content-items {
@@ -922,7 +951,7 @@ p {
     transform: translateY(-50%);
     margin-left: 5px;
     padding: 2px 2px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -1002,12 +1031,14 @@ p {
 /* ---------------------Slider product 3---------------- */
 
 .slider-product-three-content {
-    width: 1200px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+ 
+    background: linear-gradient(to right, #4f3131, #15283e);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 55px;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slider-product-three-content-items {
@@ -1116,7 +1147,7 @@ p {
     transform: translateY(-50%);
     margin-left: 5px;
     padding: 2px 2px;
-    background: linear-gradient(to right, #82a0c2, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -1206,9 +1237,10 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 1490px;
     margin: 0 auto;
     padding: 0 20px;
+   
 }
 
 #section-footer p,
