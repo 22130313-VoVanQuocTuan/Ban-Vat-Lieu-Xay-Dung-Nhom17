@@ -1,5 +1,11 @@
+html{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
    text-decoration: none;
+   color: #000000;
+
 }
 
 /* Responsive tablet view */
@@ -71,6 +77,13 @@ button:hover {
    background-color: #52baff6a;
 }
 
+.danhmuc{
+   font-size: 30px;
+   font-weight: bold;
+   color: #010000;
+   margin-left: 15px;
+   
+}
 /* Left sidebar */
 .conten .left-sidebar {
    width: 25%;
@@ -78,7 +91,7 @@ button:hover {
    display: flex;
    flex-direction: column;
    padding: 16px;
-   background-color: #000d33f8;
+   
    border-radius: 10px;
 }
 
@@ -90,12 +103,14 @@ button:hover {
    border-radius: 5px;
    margin: 10px 20px;
    padding: 8px;
-   background-color: #fafafa;
+   background-color: #ffffff;
+   border-bottom: 1px solid;
    transition: transform 0.3s ease;
 }
 
 .conten .left-sidebar .item:hover {
    transform: scale(1.05);
+   background-color: #b9bfcc4d;
 }
 
 .conten .left-sidebar .item i {
@@ -112,23 +127,81 @@ button:hover {
 }
 
 .conten .left-sidebar .item.active h3 {
-   color: rgb(15, 70, 130);
+   color: rgb(0, 0, 0);
 }
 
 /* Right content */
 .conten .right {
+   
    width: 70%;
    display: flex;
    height: auto;
    flex-direction: column;
-   align-items: center;background-color: #000d33f8;
+   align-items: center;
 }
+
+/*Bộ lọc*/
+.filter{
+   display: flex;
+   width: 100%;
+   height: 50px;
+   margin-top: 20px;
+  margin-left: 35px;
+   background-color: #ffffff;
+   margin-bottom: 15px;
+ 
+   
+}
+.sort{
+   padding: 15px;
+   cursor: pointer;
+   font-size: 20px;
+   margin-left: 40px;
+   background-color: #e8e5e5;
+   border-radius: 5px;
+   
+}
+
+.sort-price{
+   position: relative;
+}
+/* Ẩn nội dung của menu thả xuống */
+.dropdown-content {
+   display: none; /* Ẩn nội dung khi không có chuột */
+   position: absolute; /* Để menu xuất hiện đúng vị trí */
+   background-color: white; /* Màu nền của menu */
+   border: 1px solid #ccc; /* Đường viền cho menu */
+   z-index: 6;
+   left: 45px;
+   top: 36px;
+   height: 100px;
+   width: 180px;
+   
+}
+.dropdown-content li{
+   list-style: none;
+   font-size: 22px;
+   margin: 24px;
+   margin-left: -29px;
+   border-bottom: 1px solid;
+   cursor: pointer;
+}
+.dropdown-content li:hover{
+    color: #d10505;
+}
+ /* Hiện menu thả xuống khi di chuột vào .sort hoặc menu */
+ .sort:hover + .dropdown .dropdown-content,
+ .dropdown:hover .dropdown-content {
+     display: block; /* Hiện nội dung khi di chuột vào .sort hoặc menu */
+ }
+
+
 
 .conten .right .row, .pagination {
    background-color: #ffffffff;
    display: flex;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 46px;
    justify-content: center;
    padding: 20px;
 }
@@ -154,10 +227,11 @@ button:hover {
    border-radius: 10px;
    margin-left: 20px;
    transition: transform 0.3s ease;
+   height: 250px;
 }
 
 .conten .right .name-cart img:hover {
-   transform: scale(1.15);
+   transform: scale(1.05);
 }
 
 .conten .right .name-cart h3 {
@@ -232,3 +306,4 @@ button:hover {
 li {
    list-style: none;
 }
+
