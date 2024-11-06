@@ -142,8 +142,8 @@ h1{
 }
 
 .content .container.active .sign-up{
-    transform: translateX(100%);
-    opacity: 1;
+    transform: translateX(100%); /*Di chuyển thành phần .sign-up theo hướng trục X (ngang) bằng 100% kích thước chiều rộng của chính nó*/
+    opacity: 1; /*độ mờ (opacity) của phần tử*/
     z-index: 5;
     animation: move 0.6s;
 }
