@@ -1359,11 +1359,12 @@ body.no-scroll {
 .popup-content {
     position: relative;
     width: 90%;
-    max-width: 600px;
-    background-color: rgb(255, 37, 37); /* Nền bán trong suốt để làm nổi bật chữ */
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0); /* Nền bán trong suốt để làm nổi bật chữ */
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
+    
     
 }
 
@@ -1372,39 +1373,45 @@ body.no-scroll {
     height: auto;
     border-radius: 10px;
     object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+     
 }
 
 .banner-title {
+    
+    width: 370px;
     position: absolute; /* Đặt chữ lên trên hình ảnh */
-    top: 20%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
-    color: #000000;
-    margin: 0;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    
+    
+    
     
 }
 
 .banner-desc {
+    width:  470px;
     position: absolute;
-    top: 65%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
-    color: #000000;
-    font-size: 16px;
+    color: #ffffff;
     margin: 10px 0;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .banner-btn {
     display: inline-block;
     position: absolute;
-    bottom: 10%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    
-    background-color: #EE4D2D;
+    padding: 5px;
+    background-color: #160f5f;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -1413,7 +1420,10 @@ body.no-scroll {
 
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1px;
+    right: 4px;
+    font-size: 40px;
     cursor: pointer;
+    color: #ffffff;
+    
 }

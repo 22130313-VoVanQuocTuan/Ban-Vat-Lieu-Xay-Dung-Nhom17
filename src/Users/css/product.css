@@ -108,6 +108,16 @@ button:hover {
    border-bottom: 1px solid;
    transition: transform 0.3s ease;
 }
+/* CSS mặc định cho item */
+.left-sidebar .item a {
+   color: #000;
+   text-decoration: none;
+}
+/* CSS khi item được chọn */
+.left-sidebar .item.active a {
+   color: #EE4D2D; /* Màu bạn muốn khi chọn */
+   font-weight: bold;
+}
 
 .conten .left-sidebar .item:hover {
    transform: scale(1.05);
