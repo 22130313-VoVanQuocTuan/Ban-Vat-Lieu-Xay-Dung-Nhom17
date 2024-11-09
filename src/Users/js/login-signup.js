@@ -60,10 +60,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //nhấn login quay về trang chủ
 login.addEventListener('submit', function(event) {
-     event.preventDefault();
-       window.location.href = '/src/Users/page/home.html'; // Chuyển hướng về trang chủ
+    event.preventDefault(); // Ngăn chặn hành động submit mặc định của form
+
+    // Lấy giá trị từ các trường nhập liệu
+    var username = document.getElementById('login-username').value;
+    var password = document.getElementById('login-password').value;
+
+    // Kiểm tra tên đăng nhập và mật khẩu
+    if (username === "Admin" && password === "Admin") {
+        // Chuyển hướng đến trang Admin nếu thông tin đăng nhập đúng
+        window.location.href = '/src/admin/pages/index.html'; // Đường dẫn tới trang admin
+    } else {
+        // Chuyển hướng đến trang chủ cho người dùng thông thường
+        window.location.href = '/src/Users/page/home.html'; // Đường dẫn tới trang người dùng
     }
-);
+});
 });
 
 
