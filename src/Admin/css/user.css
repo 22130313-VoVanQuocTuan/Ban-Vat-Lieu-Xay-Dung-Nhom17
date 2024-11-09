@@ -1,4 +1,8 @@
  
+ html,body{
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
  :root {
     --blue: #2a2185;
     --white: #fff;
@@ -86,34 +90,18 @@
     background-color: #ff6c6c;
     border-radius: 5px;
 }
-.status-menu {
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.statusText{
+    padding: 2px;
     border-radius: 5px;
-    padding: 10px;
-}
-
-.status-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.status-menu ul li {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.status-menu ul li:hover {
-    background-color: #ddd;
 }
 .update-user{
-    
+    margin-bottom: 150px;
     text-align: center;
 }
 .update-user button{
-    
-    text-align: center;
+    background-color: #2a2185;
+    color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
 }
