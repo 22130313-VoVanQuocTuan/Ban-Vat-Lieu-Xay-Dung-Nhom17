@@ -127,14 +127,14 @@
                     </form>
                 </div>
                 <div class="form-container sign-in none">
-                    <form id="login-form" onsubmit="return login()" >
+                    <form id="login-form">
                         <h1>Đăng nhập</h1>
                         <div class="social-icons">
                             <a href="#" class="icon-logo"><i class="fa-brands fa-google-plus-g g"></i></a>
                             <a href="#" class="icon-logo"><i class="fa-brands fa-facebook-f f"></i></a>
                         </div>
                         <span>Hoặc sử dụng tài khoản đã đăng kí</span>
-                        <input type="username" id="login-username" placeholder="UserName" required>
+                        <input type="text" id="login-username" placeholder="UserName" required>
                         <input type="password" id="login-password" placeholder="Password" required>
                         <a class="blue" href="./reset-password.html">Quên mật khẩu?</a>
                         <button type="submit">Đăng nhập</button>
@@ -222,25 +222,9 @@
                                 class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
                 </div>
             </div>
-        
+         <a href="/src/admin/pages/index.html"></a>
         <script src="/src/Users/js/login-signup.js"></script>
-        <script>
-            function login() {
-                // Lấy giá trị của tên người dùng và mật khẩu
-                const username = document.getElementById("login-username").value;
-                const password = document.getElementById("login-password").value;
-        
-                // Kiểm tra nếu tên người dùng và mật khẩu đều là "Admin"
-                if (username === "Admin" && password === "Admin") {
-                    // Chuyển hướng đến trang /admin
-                    window.location.href = "/src/admin/pages/index.html";
-                    return false; // Ngăn chặn form thực hiện submit mặc định
-                } else {
-                    alert("Tên đăng nhập hoặc mật khẩu không đúng!");
-                    return false; // Ngăn chặn form thực hiện submit mặc định
-                }
-            }
-        </script>
+
 </body>
 
 </html>
