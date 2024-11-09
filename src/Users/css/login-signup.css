@@ -18,21 +18,19 @@
     width: 1497px;
     max-width: 100%;
     min-height: 650px;
- 
 
-  
-    
 }
-.icon-logo i {
-    font-size: 40px;
-    transition: all 0.3s ease;
-    animation: colorChange 3s infinite;
+a{
+    text-decoration: none;
 }
+
 .icon-logo .g{
     color: #ef0000 ;
+   
 }
 .icon-logo .f{
     color: #1418ff;
+
 }
 
 h1{

@@ -21,3 +21,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Bắt đầu chạy hiệu ứng
     animateText();
 });
+

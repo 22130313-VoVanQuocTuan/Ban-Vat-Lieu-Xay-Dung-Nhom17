@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vật Liệu Xây Dựng Thành Công </title>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
-    integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
 <link rel="stylesheet" href="/src/Users/css/home.css">
 <link rel="stylesheet" href="/src/Users/css/login-signup.css">
@@ -132,7 +127,7 @@
                     </form>
                 </div>
                 <div class="form-container sign-in none">
-                    <form id="login-form">
+                    <form id="login-form" onsubmit="return login()" >
                         <h1>Đăng nhập</h1>
                         <div class="social-icons">
                             <a href="#" class="icon-logo"><i class="fa-brands fa-google-plus-g g"></i></a>
@@ -229,6 +224,23 @@
             </div>
         
         <script src="/src/Users/js/login-signup.js"></script>
+        <script>
+            function login() {
+                // Lấy giá trị của tên người dùng và mật khẩu
+                const username = document.getElementById("login-username").value;
+                const password = document.getElementById("login-password").value;
+        
+                // Kiểm tra nếu tên người dùng và mật khẩu đều là "Admin"
+                if (username === "Admin" && password === "Admin") {
+                    // Chuyển hướng đến trang /admin
+                    window.location.href = "/src/admin/pages/index.html";
+                    return false; // Ngăn chặn form thực hiện submit mặc định
+                } else {
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng!");
+                    return false; // Ngăn chặn form thực hiện submit mặc định
+                }
+            }
+        </script>
 </body>
 
 </html>

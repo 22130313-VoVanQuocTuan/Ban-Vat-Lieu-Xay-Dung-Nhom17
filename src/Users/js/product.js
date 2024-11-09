@@ -289,3 +289,39 @@ function changePage(offset) {
 
 // Hiển thị trang đầu tiên khi tải trang
 displayProducts(currentPage);
+
+
+
+//  Giuwx trạng thái cảu các item
+
+  // Tìm tất cả các phần tử có class "item" trong danh mục
+  const items = document.querySelectorAll('.left-sidebar .item');
+
+  // Đọc giá trị danh mục đã chọn từ localStorage
+  const selectedCategory = localStorage.getItem('selectedCategory');
+
+  // Nếu đã có danh mục được lưu, thêm lớp "active" vào mục đó
+  if (selectedCategory) {
+      document.querySelector(`[data-category="${selectedCategory}"]`).classList.add('active');
+  }
+
+  items.forEach(item => {
+      item.addEventListener('click', function(event) {
+          // Xóa lớp "active" khỏi tất cả các item
+          items.forEach(el => el.classList.remove('active'));
+
+          // Thêm lớp "active" vào item hiện tại
+          item.classList.add('active');
+
+          // Lưu danh mục đã chọn vào localStorage
+          const category = item.getAttribute('data-category');
+          localStorage.setItem('selectedCategory', category);
+
+          // Ngăn chặn hành động mặc định của link (để xử lý chuyển trang sau)
+          event.preventDefault();
+
+          // Lấy đường dẫn từ thẻ <a> và chuyển đến trang đó
+          const link = item.querySelector('a').getAttribute('href');
+          window.location.href = link;
+      });
+  });

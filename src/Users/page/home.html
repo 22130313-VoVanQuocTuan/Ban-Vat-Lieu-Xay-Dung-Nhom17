@@ -991,6 +991,27 @@
         </div>
 
     </div>
+
+<!-- Banner -->
+<div class="popup-banner" id="popupBanner" style="display: none;">
+    <div class="popup-content">
+        <!-- Ảnh banner -->
+        <img src="https://quatangthanhphat.com/wp-content/uploads/2023/08/banner-chuc-mung-giang-sinh-1-scaled.jpg" alt="Sự kiện ưu đãi" class="banner-image">
+        
+        <!-- Nội dung banner -->
+        <div class="banner-details">
+            <h2 class="banner-title">Sự Kiện Giảm Giá Đặc Biệt Mừng Giáng Sinh</h2>
+            <p class="banner-desc">Giảm giá lên đến 50% cho các sản phẩm</p>
+            <a href="product.html" class="banner-btn">Mua Ngay</a>
+        </div>
+        
+        <!-- Nút đóng banner -->
+        <div class="close-button" onclick="closePopup()">
+            <i class="fa-solid fa-x"></i>
+        </div>
+    </div>
+</div>
+      
     <div id="section-footer">
         <div class="container">
             <div class="contact-info">
@@ -1038,6 +1059,25 @@
     <script src="../js/slider_Image-home.js"></script>
     <script src="../js/slider-products.js"></script>
     <script src="../js/home.js"></script>
+    <script>
+        // Mở banner tự động khi trang tải xong
+        window.onload = function() {
+            openPopup(); // Gọi hàm mở popup
+        };
+    
+        function openPopup() {
+            // Hiển thị banner và ngừng cuộn trang
+            document.getElementById("popupBanner").style.display = "flex";
+            document.body.classList.add("no-scroll");
+        }
+    
+        function closePopup() {
+            // Ẩn banner và khôi phục cuộn trang
+            document.getElementById("popupBanner").style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    </script>
+    
 </body>
 
 </html>

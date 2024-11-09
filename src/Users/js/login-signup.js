@@ -67,6 +67,7 @@ login.addEventListener('submit', function(event) {
 });
 
 
+
 // chuyển số verify code liên tiếp
 const inputs = document.querySelectorAll('.verification-code');
 
