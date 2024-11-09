@@ -115,7 +115,7 @@ button:hover {
 }
 /* CSS khi item được chọn */
 .left-sidebar .item.active a {
-   color: #EE4D2D; /* Màu bạn muốn khi chọn */
+   color: #fd2200; /* Màu bạn muốn khi chọn */
    font-weight: bold;
 }
 
