@@ -1,0 +1,107 @@
+/* Đặt kiểu cho toàn bộ phần chi tiết sản phẩm */
+#section-content-1 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 600px;
+}
+
+/* Định dạng cho container chứa sản phẩm */
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Định dạng cho hình ảnh sản phẩm */
+.product-image img {
+    max-width: 100%;
+    width: 510px;
+    height: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng cho thông tin sản phẩm */
+.product-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Tiêu đề sản phẩm */
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Mô tả sản phẩm */
+.product-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Giá sản phẩm */
+.product-price {
+    font-size: 20px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho lựa chọn số lượng */
+.product-options {
+    margin-bottom: 20px;
+}
+
+.product-options label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.product-options input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Nút "Thêm vào giỏ hàng" */
+.add-to-cart-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho nút "Thêm vào giỏ hàng" */
+.add-to-cart-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive cho giao diện trên các thiết bị nhỏ */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .product-image img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}

@@ -236,7 +236,7 @@ p {
     background: linear-gradient(to right, #891f1f, #15283e);
     box-shadow: 0 0 0 1px #c0c0c0 inset;
     border-radius: 5px 5px 0 0;
-    transform: scale(0.9);
+    transform: scale(0.97);
     /* thu nhỏ */
 }
 
