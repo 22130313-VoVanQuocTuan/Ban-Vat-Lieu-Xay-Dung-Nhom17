@@ -21,8 +21,10 @@
                     </p>
                 </div>
                 <div class="top-right">
-                    <a href="login-signup.html"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                    <a href="login-signup.html"><span>Đăng Kí</span></a>
+                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                    <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                    <a href="login-signup.html" id="signup-link"><span>Đăng Ký</span></a>
+                    <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                 </div>
             </div>
 
@@ -51,7 +53,12 @@
                         </div>
                     </div>
                     <div class="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-wrapper">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,23 +71,32 @@
                             MỤC SẢN
                             PHẨM</span>
                         <ul class="items">
-                            <li> <a href="./product/gach-xay-dung.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
+                            <li> <a href="./product/gach-xay-dung.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
                                     DỰNG</a></li>
-                            <li><a href="./product/xi-mang-va-vua.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
+                            <li><a href="./product/xi-mang-va-vua.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
                                     VỮA</a></li>
-                            <li><a href="./product/cat-da-va-soi.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
+                            <li><a href="./product/cat-da-va-soi.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
                                     SỎI</a></li>
-                            <li><a href="./product/thep-va-sat.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
-                                SẮT</a></li>
-                            <li><a href="./product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
+                            <li><a href="./product/thep-va-sat.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
+                                    SẮT</a></li>
+                            <li><a href="./product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
                                     LIỆU GỖ</a></li>
-                            <li><a href="./product/son-va-phu-gia.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
+                            <li><a href="./product/son-va-phu-gia.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
                                     GIA</a></li>
-                            <li><a href="./product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
+                            <li><a href="./product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
                                     LỢP</a></li>
-                            <li><a href="./product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
+                            <li><a href="./product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
                                     PHỤ KIỆN</a></li>
-                            <li><a href="./product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
+                            <li><a href="./product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
                                     ĐIỆN NƯỚC</a></li>
                         </ul>
                     </li>
@@ -95,8 +111,11 @@
                         <span class="none-a"> <i class="fa-solid fa-book"></i> &nbsp;&nbsp; HƯỚNG DẪN </span>
                         <ul class="items">
                             <li><a href="./buying-help.html">&nbsp;&nbsp;<i
-                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;HƯỚNG DẪN
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp; HƯỚNG DẪN
                                     MUA HÀNG</a>
+                            </li>
+                            <li><a href="./product_unit.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;BẢNG ĐƠN VỊ SẢN PHẨM</a>
                             </li>
                             <li><a href="term_and_services.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
@@ -114,7 +133,7 @@
         <div class="slide-show-content-container">
             <p class="title-w" id="animatedText">CHÀO MỪNG BẠN ĐẾN VỚI TRANG WEB CỦA CHÚNG TÔI</p>
             <div class="slide-show-content-image">
-              
+
                 <img src="../img/slider1.png">
                 <img src="../img/slider2.png">
                 <img src="../img/slider3.png">
@@ -992,26 +1011,26 @@
 
     </div>
 
-<!-- Banner -->
-<div class="popup-banner" id="popupBanner" style="display: none;">
-    <div class="popup-content">
-        <!-- Ảnh banner -->
-        <img src="../img/baner.png" alt="Sự kiện ưu đãi" class="banner-image">
-        
-        <!-- Nội dung banner -->
-        <div class="banner-details">
-            <h2 class="banner-title">Sự Kiện Giảm Giá Đặc Biệt Mừng Giáng Sinh</h2>
-            <p class="banner-desc">Giảm giá lên đến 50% cho các sản phẩm</p>
-            <a href="product.html" class="banner-btn">Mua Ngay</a>
-        </div>
-        
-        <!-- Nút đóng banner -->
-        <div class="close-button" onclick="closePopup()">
-            <i class="fa-solid fa-x"></i>
+    <!-- Banner -->
+    <div class="popup-banner" id="popupBanner" style="display: none;">
+        <div class="popup-content">
+            <!-- Ảnh banner -->
+            <img src="../img/baner.png" alt="Sự kiện ưu đãi" class="banner-image">
+
+            <!-- Nội dung banner -->
+            <div class="banner-details">
+                <h2 class="banner-title">Sự Kiện Giảm Giá Đặc Biệt Mừng Giáng Sinh</h2>
+                <p class="banner-desc">Giảm giá lên đến 50% cho các sản phẩm</p>
+                <a href="product.html" class="banner-btn">Mua Ngay</a>
+            </div>
+
+            <!-- Nút đóng banner -->
+            <div class="closee-button" onclick="closePopup()">
+                <i class="fa-solid fa-x"></i>
+            </div>
         </div>
     </div>
-</div>
-      
+
     <div id="section-footer">
         <div class="container">
             <div class="contact-info">
@@ -1035,8 +1054,10 @@
                 <ul>
                     <li> <a href="https://www.facebook.com/profile.php?id=100044411504061"><i
                                 class="fa-brands fa-facebook" style="color: #d1d1d1;"></i></a></li>
-                    <li> <a href="https://www.instagram.com/paq.2012/"><i class="fa-brands fa-instagram-square" style="color: #d1d1d1;"></i></a></li>
-                    <li> <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter" style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://www.instagram.com/paq.2012/"><i class="fa-brands fa-instagram-square"
+                                style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter"
+                                style="color: #d1d1d1;"></i></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -1052,32 +1073,33 @@
                         class="fab fa-instagram" style="color: #f12020;"></i></a></li>
         </div>
         <div id="fb">
-            <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061" target="_blank"><i
-                        class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
+            <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
+                    target="_blank"><i class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
         </div>
     </div>
     <script src="../js/slider_Image-home.js"></script>
     <script src="../js/slider-products.js"></script>
     <script src="../js/home.js"></script>
+    <script src="../js/login-signup.js"></script>
     <script>
         // Mở banner tự động khi trang tải xong
-        window.onload = function() {
+        window.onload = function () {
             openPopup(); // Gọi hàm mở popup
         };
-    
+
         function openPopup() {
             // Hiển thị banner và ngừng cuộn trang
             document.getElementById("popupBanner").style.display = "flex";
             document.body.classList.add("no-scroll");
         }
-    
+
         function closePopup() {
             // Ẩn banner và khôi phục cuộn trang
             document.getElementById("popupBanner").style.display = "none";
             document.body.classList.remove("no-scroll");
         }
     </script>
-    
+
 </body>
 
 </html>

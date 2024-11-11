@@ -24,8 +24,10 @@
                     </p>
                 </div>
                 <div class="top-right">
-                    <a href="login-signup.html"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                    <a href="login-signup.html"><span>Đăng Kí</span></a>
+                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                    <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                    <a href="login-signup.html" id="signup-link"><span>Đăng Ký</span></a>
+                    <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                 </div>
             </div>
 
@@ -54,7 +56,12 @@
                         </div>
                     </div>
                     <div class="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-wrapper">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,6 +118,9 @@
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;HƯỚNG DẪN
                                     MUA HÀNG</a>
                             </li>
+                            <li><a href="./product_unit.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;BẢNG ĐƠN VỊ SẢN PHẨM</a>
+                            </li>
                             <li><a href="./term_and_services.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
                                     VÀ DỊCH VỤ</a>
@@ -127,30 +137,35 @@
 
         <form action="">
             <div class="index">
-        
+
                 <div class="box1">
                     <div class="form-group1">
                         <div class="infor"> Thông tin nhận hàng </div>
                         <div class="form-group">
                             <input type="email" id="email" class="back email" placeholder="Email" required>
-                            <div id="email-error" class="error-message" style="color: red; display: none;">Vui lòng nhập email.</div>
+                            <div id="email-error" class="error-message" style="color: red; display: none;">Vui lòng nhập
+                                email.</div>
                         </div>
-        
+
                         <div class="form-group">
                             <input type="text" id="name" class="back name" placeholder="Họ và tên" required>
-                            <div id="name-error" class="error-message" style="color: red; display: none;">Vui lòng nhập họ và tên.</div>
+                            <div id="name-error" class="error-message" style="color: red; display: none;">Vui lòng nhập
+                                họ và tên.</div>
                         </div>
-        
+
                         <div class="form-group">
                             <input type="tel" id="phone" class="back phone" placeholder="Số điện thoại" required>
-                            <div id="phone-error" class="error-message" style="color: red; display: none;">Vui lòng nhập số điện thoại.</div>
+                            <div id="phone-error" class="error-message" style="color: red; display: none;">Vui lòng nhập
+                                số điện thoại.</div>
                         </div>
-        
+
                         <div class="form-group">
-                            <input type="text" id="address" class="back address" placeholder="Nhập địa chỉ (tùy chọn)" required>
-                            <div id="address-error" class="error-message" style="color: red; display: none;">Vui lòng nhập địa chỉ.</div>
+                            <input type="text" id="address" class="back address" placeholder="Nhập địa chỉ (tùy chọn)"
+                                required>
+                            <div id="address-error" class="error-message" style="color: red; display: none;">Vui lòng
+                                nhập địa chỉ.</div>
                         </div>
-        
+
                         <div class="form-group">
                             <select id="city" class="city" required>
                                 <option value="">Chọn tỉnh thành</option>
@@ -218,19 +233,20 @@
                                 <option value="Vĩnh Phúc">Vĩnh Phúc</option>
                                 <option value="Yên Bái">Yên Bái</option>
                             </select>
-                            <div id="city-error" class="error-message" style="color: red; display: none;">Vui lòng chọn tỉnh thành.</div>
+                            <div id="city-error" class="error-message" style="color: red; display: none;">Vui lòng chọn
+                                tỉnh thành.</div>
                         </div>
-        
+
                         <div class="form-group">
                             <input type="text" id="note" class="note" placeholder="Ghi chú (tùy chọn)">
                         </div>
-        
+
                     </div>
-        
+
                     <div class="form-group2">
                         <div>
                             <div class="pay">Thanh toán</div>
-        
+
                             <label for="cod-payment">
                                 <input type="radio" id="cod-payment" name="payment" value="cod" required>
                                 Thanh toán khi giao hàng (COD)
@@ -241,35 +257,36 @@
                                 Thanh toán qua VNPay
                             </label>
                             <!-- Thông báo lỗi chung -->
-                            <div id="error-message" style="color: red; display: none; margin-top: 20px;">Vui lòng điền đầy đủ thông tin để thanh toán.</div>
+                            <div id="error-message" style="color: red; display: none; margin-top: 20px;">Vui lòng điền
+                                đầy đủ thông tin để thanh toán.</div>
                         </div>
-        
+
                     </div>
-        
+
                 </div>
-        
+
                 <div class="box2">
                     <div class="order">Đơn hàng</div>
-        
+
                     <div class="three-items">
                         <div class="immage-product"><img src="#" alt="Ảnh"></div>
                         <div class="product-name p">Tên sản phẩm:</div>
                         <div class="cost p">Giá tiền:</div>
                     </div>
-        
+
                     <div class="totals">
                         <div class="total p">Tổng cộng:</div>
                     </div>
-        
+
                     <div class="sub">
                         <div class="hrep p"><a href="./cart.html" style="text-decoration: none;">
-                            < Quay về giỏ hàng </a>
+                                < Quay về giỏ hàng </a>
                         </div>
                         <button type="button" class="submit-btn" onclick="placeOrder()">Đặt hàng</button>
                     </div>
-        
+
                 </div>
-        
+
             </div>
         </form>
 
@@ -282,7 +299,7 @@
     <div id="codForm">
 
         <p class="title">Thanh toán khi nhận hàng (COD)</p>
-      
+
         <p>Tên sản phẩm:</p>
         <p>Số lượng:</p>
         <p>Giá:</p>
@@ -303,7 +320,7 @@
         <p class="title">Thanh toán với VNPay <img
                 src="https://vinadesign.vn/uploads/images/2023/05/vnpay-logo-vinadesign-25-12-57-55.jpg" alt=""> </p>
 
-        
+
         <p>Tên sản phẩm:</p>
         <p>Số lượng:</p>
         <p>Giá:</p>
@@ -366,7 +383,7 @@
 
     </div>
     <script src="../js/comfirmation.js"></script>
-
+    <script src="../js/login-signup.js"></script>
     <!-- JavaScript -->
 
 

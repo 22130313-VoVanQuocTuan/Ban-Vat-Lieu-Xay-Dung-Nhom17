@@ -24,8 +24,10 @@
                         </p>
                     </div>
                     <div class="top-right">
-                        <a href="login-signup.html"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                        <a href="login-signup.html"><span>Đăng Kí</span></a>
+                        <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                        <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                        <a href="login-signup.html" id="signup-link"><span>Đăng Ký</span></a>
+                        <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                     </div>
                 </div>
 
@@ -53,7 +55,12 @@
                         </div>
                     </div>
                     <div class="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-wrapper">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,6 +116,9 @@
                             <li><a href="./buying-help.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;HƯỚNG DẪN
                                     MUA HÀNG</a>
+                            </li>
+                            <li><a href="./product_unit.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;BẢNG ĐƠN VỊ SẢN PHẨM</a>
                             </li>
                             <li><a href="term_and_services.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
@@ -571,7 +581,7 @@
     </div>
 
     <script src="../js/product.js"></script>
-
+    <script src="../js/login-signup.js"></script>
 </body>
 
 </html>

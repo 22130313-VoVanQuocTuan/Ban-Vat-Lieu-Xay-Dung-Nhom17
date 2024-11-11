@@ -159,6 +159,31 @@ p {
     display: flex;
     align-items: center;
     margin-left: 55px;
+    position: relative;
+}
+
+
+.cart-wrapper {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cart-wrapper:hover {
+    transform: scale(1.2);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: 36px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 #section-header2 .cart a {
@@ -177,11 +202,6 @@ p {
     cursor: pointer;
 }
 
-#section-header2 .cart a:hover {
-
-    transform: scale(1.2);
-    /* Phóng to 1.5 lần */
-}
 
 /* --------------------section-nav------------------ */
 #section-nav {
@@ -1418,7 +1438,7 @@ body.no-scroll {
     font-weight: bold;
 }
 
-.close-button {
+.closee-button {
     position: absolute;
     top: 1px;
     right: 4px;

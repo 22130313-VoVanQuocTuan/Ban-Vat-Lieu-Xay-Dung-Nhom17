@@ -18,11 +18,15 @@
             <div class="container">
                 <div class="banner">
                     <div class="top-left">
-                        <p class="animated-text"><marquee>Chào mừng bạn đến với website của chúng tôi !</marquee></p>
+                        <p class="animated-text">
+                            <marquee>Chào mừng bạn đến với website của chúng tôi !</marquee>
+                        </p>
                     </div>
                     <div class="top-right">
-                        <a href="login-signup.html"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                        <a href="login-signup.html"><span>Đăng Kí</span></a>
+                        <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                        <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                        <a href="login-signup.html" id="signup-link"><span>Đăng Ký</span></a>
+                        <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                     </div>
                 </div>
 
@@ -50,7 +54,12 @@
                         </div>
                     </div>
                     <div class="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="cart-wrapper">
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,27 +72,37 @@
                             MỤC SẢN
                             PHẨM</span>
                         <ul class="items">
-                            <li> <a href="./product/gach-xay-dung.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
+                            <li> <a href="./product/gach-xay-dung.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
                                     DỰNG</a></li>
-                            <li><a href="./product/xi-mang-va-vua.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
+                            <li><a href="./product/xi-mang-va-vua.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
                                     VỮA</a></li>
-                            <li><a href="./product/cat-da-va-soi.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
+                            <li><a href="./product/cat-da-va-soi.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
                                     SỎI</a></li>
-                            <li><a href="./product/thep-va-sat.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
-                                SẮT</a></li>
-                            <li><a href="./product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
+                            <li><a href="./product/thep-va-sat.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
+                                    SẮT</a></li>
+                            <li><a href="./product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
                                     LIỆU GỖ</a></li>
-                            <li><a href="./product/son-va-phu-gia.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
+                            <li><a href="./product/son-va-phu-gia.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
                                     GIA</a></li>
-                            <li><a href="./product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
+                            <li><a href="./product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
                                     LỢP</a></li>
-                            <li><a href="./product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
+                            <li><a href="./product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
                                     PHỤ KIỆN</a></li>
-                            <li><a href="./product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
+                            <li><a href="./product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
                                     ĐIỆN NƯỚC</a></li>
                         </ul>
                     </li>
-                    <li class="propClone"><a href="home.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ </a></li>
+                    <li class="propClone"><a href="home.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ
+                        </a></li>
                     <li class="propClone"><a href="product.html"><i class="fa-brands fa-product-hunt"></i>
                             &nbsp;&nbsp;SẢN PHẨM</a>
                     </li>
@@ -96,6 +115,9 @@
                             <li><a href="./buying-help.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;HƯỚNG DẪN
                                     MUA HÀNG</a>
+                            </li>
+                            <li><a href="./product_unit.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;BẢNG ĐƠN VỊ SẢN PHẨM</a>
                             </li>
                             <li><a href="term_and_services.html">&nbsp;&nbsp;<i
                                         class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
@@ -110,31 +132,40 @@
     </div>
 
     <div id="section-content-1">
-               <div class="guide-container">
-                <h2>Hướng Dẫn Mua Hàng</h2>
-                <p>Chào mừng bạn đến với cửa hàng trực tuyến của chúng tôi! Dưới đây là hướng dẫn từng bước để bạn có thể dễ dàng mua sắm các vật liệu xây dựng mà mình cần.</p>
-        
-                <h3>Bước 1: Tìm Kiếm Sản Phẩm</h3>
-                <p>Sử dụng thanh tìm kiếm ở trên cùng để nhập tên sản phẩm bạn muốn tìm. Bạn cũng có thể duyệt qua các danh mục sản phẩm để tìm kiếm dễ dàng hơn.</p>
-        
-                <h3>Bước 2: Chọn Sản Phẩm</h3>
-                <p>Khi bạn đã tìm thấy sản phẩm mong muốn, hãy nhấp vào nó để xem chi tiết. Tại đây, bạn có thể thêm sản phẩm đó vào giỏ hàng.</p>
-        
-                <h3>Bước 3: Thêm Vào Giỏ Hàng</h3>
-                <p>Nhấp vào nút "Thêm vào giỏ hàng" để lưu sản phẩm vào giỏ hàng của bạn. Bạn có thể tiếp tục mua sắm hoặc đi đến giỏ hàng để xem lại sản phẩm đã chọn.</p>
-        
-                <h3>Bước 4: Kiểm Tra Giỏ Hàng</h3>
-                <p>Khi bạn đã sẵn sàng để thanh toán, hãy vào giỏ hàng bằng cách nhấp vào biểu tượng giỏ hàng ở góc trên bên phải, hoặc trên thanh hiển thị của chúng tôi. Tại đây, bạn có thể kiểm tra lại các sản phẩm và số lượng.</p>
-        
-                <h3>Bước 5: Thanh Toán</h3>
-                <p>Nhấp vào nút "Thanh toán" để tiến hành. Bạn sẽ được yêu cầu nhập thông tin giao hàng và chọn phương thức thanh toán. Hãy chắc chắn rằng tất cả thông tin là chính xác trước khi xác nhận đơn hàng.</p>
-        
-                <h3>Bước 6: Nhận Đơn Hàng</h3>
-                <p>Sau khi thanh toán thành công, bạn sẽ nhận được thông báo xác nhận qua email. Đơn hàng của bạn sẽ được xử lý và giao hàng trong thời gian sớm nhất.</p>
-        
-                <p>Cảm ơn bạn đã chọn mua sắm tại cửa hàng của chúng tôi! Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi qua hotline trên thanh hiển thị góc bên phải.</p>
-            </div>
-        
+        <div class="guide-container">
+            <h2>Hướng Dẫn Mua Hàng</h2>
+            <p>Chào mừng bạn đến với cửa hàng trực tuyến của chúng tôi! Dưới đây là hướng dẫn từng bước để bạn có thể dễ
+                dàng mua sắm các vật liệu xây dựng mà mình cần.</p>
+
+            <h3>Bước 1: Tìm Kiếm Sản Phẩm</h3>
+            <p>Sử dụng thanh tìm kiếm ở trên cùng để nhập tên sản phẩm bạn muốn tìm. Bạn cũng có thể duyệt qua các danh
+                mục sản phẩm để tìm kiếm dễ dàng hơn.</p>
+
+            <h3>Bước 2: Chọn Sản Phẩm</h3>
+            <p>Khi bạn đã tìm thấy sản phẩm mong muốn, hãy nhấp vào nó để xem chi tiết. Tại đây, bạn có thể thêm sản
+                phẩm đó vào giỏ hàng.</p>
+
+            <h3>Bước 3: Thêm Vào Giỏ Hàng</h3>
+            <p>Nhấp vào nút "Thêm vào giỏ hàng" để lưu sản phẩm vào giỏ hàng của bạn. Bạn có thể tiếp tục mua sắm hoặc
+                đi đến giỏ hàng để xem lại sản phẩm đã chọn.</p>
+
+            <h3>Bước 4: Kiểm Tra Giỏ Hàng</h3>
+            <p>Khi bạn đã sẵn sàng để thanh toán, hãy vào giỏ hàng bằng cách nhấp vào biểu tượng giỏ hàng ở góc trên bên
+                phải, hoặc trên thanh hiển thị của chúng tôi. Tại đây, bạn có thể kiểm tra lại các sản phẩm và số lượng.
+            </p>
+
+            <h3>Bước 5: Thanh Toán</h3>
+            <p>Nhấp vào nút "Thanh toán" để tiến hành. Bạn sẽ được yêu cầu nhập thông tin giao hàng và chọn phương thức
+                thanh toán. Hãy chắc chắn rằng tất cả thông tin là chính xác trước khi xác nhận đơn hàng.</p>
+
+            <h3>Bước 6: Nhận Đơn Hàng</h3>
+            <p>Sau khi thanh toán thành công, bạn sẽ nhận được thông báo xác nhận qua email. Đơn hàng của bạn sẽ được xử
+                lý và giao hàng trong thời gian sớm nhất.</p>
+
+            <p>Cảm ơn bạn đã chọn mua sắm tại cửa hàng của chúng tôi! Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên
+                hệ với chúng tôi qua hotline trên thanh hiển thị góc bên phải.</p>
+        </div>
+
     </div>
 
     <div id="section-footer">
@@ -160,8 +191,10 @@
                 <ul>
                     <li> <a href="https://www.facebook.com/profile.php?id=100044411504061"><i
                                 class="fa-brands fa-facebook" style="color: #d1d1d1;"></i></a></li>
-                    <li> <a href="https://www.instagram.com/paq.2012/"><i class="fa-brands fa-instagram-square" style="color: #d1d1d1;"></i></a></li>
-                    <li> <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter" style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://www.instagram.com/paq.2012/"><i class="fa-brands fa-instagram-square"
+                                style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter"
+                                style="color: #d1d1d1;"></i></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -177,13 +210,14 @@
                         class="fab fa-instagram" style="color: #f12020;"></i></a></li>
         </div>
         <div id="fb">
-            <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061" target="_blank"><i
-                        class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
+            <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
+                    target="_blank"><i class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
         </div>
 
     </div>
     <script src="../js/slider_Image-home.js"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/login-signup.js"></script>
 </body>
 
 </html>
