@@ -114,4 +114,62 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = "../page/login-signup.html";
         });
     }
+
+
+    
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const registerForm = document.getElementById('register-form');
+    const emailInput = document.getElementById('register-email');
+    const usernameInput = document.getElementById('register-username');
+    const passwordInput = document.getElementById('register-password');
+    
+    const emailError = document.getElementById('email-error');
+    const usernameError = document.getElementById('username-error');
+    const passwordError = document.getElementById('password-error');
+
+    registerForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+
+        // Xóa thông báo lỗi cũ
+        emailError.textContent = '';
+        usernameError.textContent = '';
+        passwordError.textContent = '';
+
+        // Kiểm tra email
+        if (!emailInput.value) {
+            emailError.textContent = 'Vui lòng nhập email';
+            isValid = false;
+        } else if (!validateEmail(emailInput.value)) {
+            emailError.textContent = 'Email không đúng định dạng';
+            isValid = false;
+        }
+
+        // Kiểm tra tên đăng nhập
+        if (!usernameInput.value) {
+            usernameError.textContent = 'Vui lòng nhập tên đăng nhập';
+            isValid = false;
+        }
+
+        // Kiểm tra mật khẩu
+        if (!passwordInput.value) {
+            passwordError.textContent = 'Vui lòng nhập mật khẩu';
+            isValid = false;
+        }
+
+        // Nếu tất cả hợp lệ, tiến hành xử lý đăng ký
+        if (isValid) {
+            alert("Đăng ký thành công!");
+            // Thực hiện các hành động đăng ký tiếp theo tại đây
+        }
+    });
+
+    // Hàm kiểm tra định dạng email
+    function validateEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email);
+    }
 });

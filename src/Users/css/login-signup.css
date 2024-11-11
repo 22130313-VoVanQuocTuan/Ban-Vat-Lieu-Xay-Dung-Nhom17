@@ -282,9 +282,9 @@ h1{
 .content .show-verify {
     display: block; /* Hiển thị overlay và form xác thực */
 }
-.content .error-message {
+ .error-message {
     color: red;
     font-size: 12px;
-     display: none; /* Ẩn mặc định */
+   
     
 }
