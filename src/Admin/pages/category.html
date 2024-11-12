@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
+<style>
+    .add-category{
+    
+    margin-bottom: 50px;
+    text-align: center;
+}
+.add-category button{
+    background-color: #2a2185;
+    color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+    
+</style>
 
 <body>
     <!-- ------------------ Điều hướng -------------------->
@@ -62,7 +78,7 @@
                 </li>
 
                 <li>
-                    <a href="category.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
@@ -160,30 +176,22 @@
             <div class="details-user">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Danh sách người dùng</h2>
+                        <h2>Danh sách danh mục</h2>
                         <a href="#" class="btn">Xem Tất Cả</a>
                     </div>
-                    <div class="update-user">
-                        <p style="font-size: 30px; margin-bottom: 20px;">Cập nhật trạng thái user</p>
-                        <input  type="text" placeholder="Nhập ID user cần cập nhật" style="font-size: 25px; padding: 2px; border-radius: 5px;">
-                        <select title="choice" id="statusSelect" style="font-size: 25px; border-radius: 5px; padding: 2px;">
-                            <option value="active">Hoạt động</option>
-                            <option value="inactive">Không hoạt động</option>
-                            <option value="pending">Đang chờ xử lý</option>
-                            <option value="suspended">Bị đình chỉ</option>
-                        </select>
-                        <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
+                    <div class="add-category">
+                        <p style="font-size: 30px; margin-bottom: 20px;">Thêm danh mục</p>
+                        
+                        <input type="text" style="font-size: 30px; border-radius: 5px;" placeholder="Nhập tên danh mục">  
+                        <button  onclick="updateUserStatus()">Thêm</button>
                     </div>
                     <table>
                         <thead>
                             <tr>
-                                <td>UserId</td>
-                                <td>Tên người dùng</td>
-                                <td>Email</td>
-                                <td>Địa chỉ</td>
-                                <td>Ngày sinh</td>
-                                <td>Số điện thoại</td>
-                                <td>Trạng thái</td>
+                                <td>id</td>
+                                <td>Tên danh mục</td>
+                                <td>Ngày tạo</td>
+
                                 <td>Hành động</td>
                             </tr>
                         </thead>
@@ -191,92 +199,120 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>TuanDev</td>
-                                <td>22130313@gmail.com</td>
-                                <td>1/11/15 Đặng Thùy Trâm,Phường 13,Bình Thạnh, TP.HCM</td>
-                                <td>19/04/2004</td>
-                                <td>0386394258</td>
-                                <td><span class="statusText">Hoạt động</span></td>
+                                <td>Gạch xây dựng</td>
+                                <td>2024/07/19</td>
+
                                 <td>
-                                <div class="v">
-                                <button onclick="deleteUser()">Xóa</button>
-                           
-                                </div>
-                                 </td>
-                                
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>TuanDev2</td>
-                                <td>122130313@gmail.com</td>
-                                <td>1/11/15 Đặng Thùy Trâm,Phường 13,Bình Thạnh, TP.HCM</td>
-                                <td>19/04/2004</td>
-                                <td>0386394258</td>
-                                <td><span class="statusText">Không hoạt động</span></td>
+                                <td>Xi măng và vựa</td>
+                                <td>2024/07/19</td>
+
                                 <td>
-                                <div class="v">
-                                <button onclick="deleteUser()">Xóa</button>
-                               
-                                </div>
-                                 </td>
-                                
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>TuanDev3</td>
-                                <td>322130313@gmail.com</td>
-                                <td>1/11/15 Đặng Thùy Trâm,Phường 13,Bình Thạnh, TP.HCM</td>
-                                <td>19/04/2004</td>
-                                <td>0386394258</td>
-                                <td><span class="statusText">Hoạt động</span></td>
+                                <td>Cát,Đá và Sỏi</td>
+                                <td>2024/07/19</td>
+
                                 <td>
-                                <div class="v">
-                                <button onclick="deleteUser()">Xóa</button>
-                               
-                                </div>
-                                 </td>
-                                
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>TuanDev4</td>
-                                <td>422130313@gmail.com</td>
-                                <td>1/11/15 Đặng Thùy Trâm,Phường 13,Bình Thạnh, TP.HCM</td>
-                                <td>19/04/2004</td>
-                                <td>0386394258</td>
-                                <td><span class="statusText">Bị đình chỉ</span></td>
+                                <td>Thép và sắt</td>
+                                <td>2024/07/19</td>
+
                                 <td>
-                                <div class="v">
-                                <button onclick="deleteUser()">Xóa</button>
-                             
-                                </div>
-                                 </td>
-                                
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>TuanDev5</td>
-                                <td>522130313@gmail.com</td>
-                                <td>1/11/15 Đặng Thùy Trâm,Phường 13,Bình Thạnh, TP.HCM</td>
-                                <td>19/04/2004</td>
-                                <td>0386394258</td>
-                                <td><span class="statusText">Đang chờ xử lý</span></td>
-                                <td>
-                                <div class="v">
-                                <button onclick="deleteUser()">Xóa</button>
-                                
-                                </div>
-                                 </td>
-                                
-                            </tr>
-                            
+                                <td>Gỗ và Vậ liệu gỗ</td>
+                                <td>2024/07/19</td>
 
-                            
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Sơn và Phụ gia</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Ngói và tấm lợp</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Ống nước và Phụ kiện</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Thiết bị điện nước</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+
                         </tbody>
                     </table>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
@@ -285,7 +321,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/user.js"></script>
-    
+
 </body>
 
 </html>

@@ -95,13 +95,14 @@
     border-radius: 5px;
 }
 .update-user{
-    margin-bottom: 150px;
+    margin-bottom: 20px;
     text-align: center;
 }
 .update-user button{
     background-color: #2a2185;
     color: #f1f1f1;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 25px;
+    padding: 2px;
     cursor: pointer;
 }

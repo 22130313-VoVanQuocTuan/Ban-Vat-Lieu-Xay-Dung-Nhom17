@@ -320,3 +320,39 @@ li {
    list-style: none;
 }
 
+/* Cấu trúc chung cho các discount */
+.slide-discount {
+   display: flex;
+   flex-direction: column;  /* Xếp các discount theo chiều dọc */
+   gap: 10px;  /* Khoảng cách giữa các phần tử */
+   width: 100%;  /* Chiều rộng của thẻ chứa */
+   padding: 10px;
+   background-color: #f7f7f7;  /* Màu nền nhẹ cho khuyến mãi */
+   border-radius: 8px;  /* Bo góc cho khung */
+   margin-top: 15px;
+}
+
+/* Kiểu dáng cho mỗi discount */
+.discount {
+   background-color: #fff;  /* Nền trắng cho mỗi discount */
+   padding: 15px;
+   border-radius: 5px;  /* Bo góc cho mỗi discount */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Thêm bóng đổ */
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;  /* Căn chỉnh phần tử con sang trái */
+}
+
+/* Thêm kiểu cho nhãn giảm giá */
+.discount-label {
+   font-size: 18px;
+   font-weight: bold;
+   color: #ff6f00;  /* Màu cam cho nhãn giảm giá */
+   margin-bottom: 5px;  /* Khoảng cách dưới nhãn */
+}
+
+/* Kiểu cho mô tả khuyến mãi */
+.discount-description {
+   font-size: 14px;
+   color: #555;  /* Màu chữ nhẹ cho mô tả */
+}
