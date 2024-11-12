@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+
     // Xử lý đăng nhập
     if (login) {
         login.addEventListener('submit', function(event) {
@@ -70,12 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 localStorage.setItem('username', username);
                 window.location.href = '/src/Users/page/home.html';
+               
             }
         });
     } else {
         console.error('Không tìm thấy form đăng nhập với ID "login-form"');
     }
 
+
+    
     // Chuyển ô nhập liệu verify code
     const inputs = document.querySelectorAll('.verification-code');
     inputs.forEach((input, index) => {
@@ -95,16 +100,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Quản lý hiển thị giao diện khi đăng nhập
     const username = localStorage.getItem('username');
+    const cartItemCount =  document.getElementById("cart-count");
+
     if (username) {
+        // Hiển thị thông tin khi người dùng đã đăng nhập
         userGreeting.style.display = 'inline';
         usernameDisplay.textContent = username;
         loginLink.style.display = 'none';
         signupLink.style.display = 'none';
         logoutLink.style.display = 'inline';
+    
+        // Hiển thị số lượng giỏ hàng
+        cartItemCount.style.display = 'inline';  // Hiển thị số lượng giỏ hàng
     } else {
+        // Nếu chưa đăng nhập, ẩn các liên kết và số lượng giỏ hàng
         userGreeting.style.display = 'none';
         logoutLink.style.display = 'none';
+        cartItemCount.style.display = 'none';  // Ẩn số lượng giỏ hàng khi chưa đăng nhập
     }
+    
 
     // Xử lý đăng xuất
     if (logoutLink) {
@@ -121,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    
     const registerForm = document.getElementById('register-form');
     const emailInput = document.getElementById('register-email');
     const usernameInput = document.getElementById('register-username');

@@ -25,7 +25,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 900;
     background-color: white;
     /* border-bottom: 1px solid #ddd; */
     /* Tạo đường viền nếu cần */
