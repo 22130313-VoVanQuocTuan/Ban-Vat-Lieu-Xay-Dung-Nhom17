@@ -39,6 +39,7 @@ p {
 
 /* ---------------section-header1--------------- */
 #section-header1 {
+    max-width: 100%;
     height: 58px;
     background: linear-gradient(to right, #4f3131, #15283e);
 }
