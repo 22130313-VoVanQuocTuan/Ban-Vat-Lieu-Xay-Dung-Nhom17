@@ -184,7 +184,7 @@ p {
 .cart-count {
     position: absolute;
     top: -8px;
-    right: 36px;
+       right: -19px;
     background-color: red;
     color: white;
     font-size: 12px;
@@ -260,7 +260,7 @@ p {
 
     .cart-count {
         top: -5px;
-        right: 20px;
+        right: -15px;
     }
 
     #section-header1 {
