@@ -19,10 +19,17 @@
     font-size: 25px;
 }
 
-.home-button{
+.button-check{
     margin-bottom: 20px;
     margin-top: 10px;
     font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-check:hover{
+    background-color: #875555;
+    color: white;
 }
 
 .icon-check{
