@@ -184,7 +184,7 @@ p {
 .cart-count {
     position: absolute;
     top: -8px;
-    right: 36px;
+       right: -19px;
     background-color: red;
     color: white;
     font-size: 12px;
@@ -212,6 +212,8 @@ p {
 
 /* Small screen (mobile phones) */
 @media (max-width: 768px) {
+    /* responsive cho section-header2*/
+    
     #section-header2 {
         height: auto; /* Tự điều chỉnh chiều cao */
     }
@@ -260,8 +262,10 @@ p {
 
     .cart-count {
         top: -5px;
-        right: 20px;
+        right: -15px;
     }
+
+    /* responsive cho section-header1*/
 
     #section-header1 {
         width: 100%;
