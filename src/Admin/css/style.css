@@ -108,44 +108,15 @@ body {
   text-align: start;
   white-space: nowrap;
 }
+
 .navigation.active {
-  width: 100px; /* Hoặc bất cứ kích thước nào bạn muốn */
+  width: 100px;
 }
 
 .main.active {
   width: calc(100% - 55px);
   left: 55px;
 }
-
-
-/* --------- curve outside ---------- */
-/* .navigation ul li:hover a::before,
-.navigation ul li.hovered a::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 35px 35px 0 10px var(--white);
-  pointer-events: none;
-}
-
-.navigation ul li:hover a::after,
-.navigation ul li.hovered a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 35px -35px 0 10px var(--white);
-  pointer-events: none;
-} */
 
 /* ------------------ Main ------------------ */
 .main {
@@ -211,19 +182,14 @@ body {
   position: relative;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
   margin-right: 50px;
+  margin-top: 0;
 }
-
-.user img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.user a   i{
+  font-size: 45px;
+  margin-top: 23px;
 }
 
 /* ------------------ Cards ------------------ */
@@ -330,7 +296,7 @@ td {
 
 .details table thead td {
   font-weight: 600px;
-  background-color: var(--gray); 
+  background-color: var(--gray);
   color: var(--black1);
   font-weight: bolder;
 }
@@ -392,6 +358,7 @@ td {
   font-size: 14px;
   font-weight: 500;
 }
+
 /* ------------------Khách hàng gần dây-------------------- */
 .recentCustomers {
   position: relative;
@@ -401,6 +368,11 @@ td {
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+}
+
+.recentCustomers .cardHeader {
+  margin: 0;
+  padding: 0;
 }
 
 .recentCustomers .imgBx {
@@ -436,7 +408,7 @@ td {
 }
 
 .recentCustomers table tr:hover {
-  background:#4f3131;
+  background: #4f3131;
   color: var(--white);
 }
 
