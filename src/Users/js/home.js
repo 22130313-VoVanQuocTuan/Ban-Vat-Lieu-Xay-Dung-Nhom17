@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       setTimeout(animateText, 100); // Tốc độ đánh chữ (100ms mỗi chữ)
     }
-  
+
     // Bắt đầu chạy hiệu ứng
     animateText();
 });
