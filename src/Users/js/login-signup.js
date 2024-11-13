@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('username', username); // Lưu tên đăng nhập vào localStorage
                 window.location.href = '/src/Users/page/home.html'; // Chuyển đến trang người dùng
             }else{
-                password_errorlog.textContent = 'Tài khoản hoặc mật khẩu không đúng”. ';
+                password_errorlog.textContent = 'Tài khoản hoặc mật khẩu không đúng';
                 password_errorlog.style.display = 'block';
             isValid = false;
             }

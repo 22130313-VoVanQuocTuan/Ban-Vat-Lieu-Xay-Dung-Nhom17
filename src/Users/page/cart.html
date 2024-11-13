@@ -148,7 +148,7 @@
                         </tr>
                     </thead>
                     <tbody id="cart-items-container" class="cart-items-container">
-                        <tr>
+                        <tr id="cart">
                             <td>Gạch-inax</td>
                             <td><img src="../img_product/gach-inax.webp" alt="${product.name}"></td>
                             <td>
@@ -158,9 +158,24 @@
                                     <button class="qty-btn plus-btn">+</button>
                                 </div>
                             </td>
-                            <td class="price-after-discount">200.000 ₫</td> <!-- Giá sau giảm -->
-                            <td class="total-after-discount">180.000 ₫</td> <!-- Tổng sau giảm -->
-                            <td><button class="remove-from-cart-button">Xóa</button>
+                            <td id ="price" class="price-after-discount">200.000 ₫</td> 
+                            <td id="total-price" class="total-after-discount">180.000 ₫</td> 
+                            <td><button id="delete" class="remove-from-cart-button">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr id="cart">
+                            <td>Gạch-inax</td>
+                            <td><img src="../img_product/gach-inax.webp" alt="${product.name}"></td>
+                            <td>
+                                <div class="quantity">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <input title="input" type="number" value="1" class="qty-input" min="1" />
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td id ="price" class="price-after-discount">200.000 ₫</td> 
+                            <td id="total-price" class="total-after-discount">180.000 ₫</td> 
+                            <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
                         </tr>
                     </tbody>
@@ -180,7 +195,7 @@
                         <span id="subtotal">180.000₫</span>
                     </div>
                     <div class="summary-item">
-                        <span>VAT (8%):</span>
+                        <span>Phí vận chuyển:</span>
                         <span id="vat">14.400₫</span>
                     </div>
                 </div>
@@ -193,7 +208,8 @@
                 <div class="voucher">
                     <label for="voucher">Phiếu ưu đãi</label>
                     <input type="text" id="voucher" placeholder="Mã ưu đãi" />
-                    <button class="apply-btn">
+                    <span id="voucher-error" class="error-message" style="color: red; display:none;">Mã ưu đãi không hợp lệ hoặc đã hết hạn.</span>
+                    <button id="apply-btn" class="apply-btn">
                         Áp dụng
                     </button>
                     <div class="help">
