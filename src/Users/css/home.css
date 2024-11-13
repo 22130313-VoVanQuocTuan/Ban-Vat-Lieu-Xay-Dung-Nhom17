@@ -291,17 +291,20 @@ p {
 
 /* --------------------section-nav------------------ */
 #section-nav {
-    height: 64px;
+    height: auto;
     background: linear-gradient(to right, #4f3131, #15283e);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #section-nav ul.navbar-center {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -310,10 +313,8 @@ p {
     padding: 22px 20px;
     color: #f2f2f2;
     cursor: pointer;
-    float: left;
-    margin: 0 10px;
-    transition: background-color 0.2s ease;
-    transition: transform 0.3s ease;
+    margin: 0 5px;
+    transition: background-color 0.2s ease, transform 0.3s ease;
     /* Tạo hiệu ứng mượt */
 
 }
@@ -333,6 +334,7 @@ p {
     font-weight: bold;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -352,6 +354,9 @@ p {
     list-style: none;
     margin-left: -20px;
     margin-top: 23px;
+    z-index: 10;
+    width: auto;
+    border-radius: 0 0 5px 5px;
 }
 
 #section-nav ul.navbar-center li:hover ul.items {
@@ -384,6 +389,8 @@ p {
 #section-nav ul.navbar-center li ul.items li:hover a {
     color: #ffffff;
 }
+
+
 
 /* -------------------section-slider-------------------------- */
 
