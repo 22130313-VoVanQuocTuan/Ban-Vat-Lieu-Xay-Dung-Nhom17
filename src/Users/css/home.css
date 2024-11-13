@@ -5,6 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     box-sizing: border-box;
+   
 }
 
 .container {
@@ -77,7 +78,7 @@ p {
 #section-header2 {
     height: 105px;
     background-color: rgb(247, 238, 238);
-    border-top: 1px solid
+    border-top: 1px solid #ccc; /* Thêm màu vào border-top */
    
 }
 
@@ -114,11 +115,14 @@ p {
 #section-header2 .search-bar input {
     padding: 10px;
     font-size: 14px;
-    width: 500px;
+    width: 100%; /* Đảm bảo thanh tìm kiếm luôn vừa kích thước màn hình nhỏ */
     height: 25px;
     border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
 }
+
+
+
 
 #section-header2 .search-bar button {
     padding: 10px 20px;
@@ -128,6 +132,7 @@ p {
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    
 }
 
 #section-header2 .search-bar button:hover {
@@ -140,6 +145,7 @@ p {
     color: #003366;
     font-weight: bold;
     line-height: 1.1;
+    margin-top: 10px;
 }
 
 #section-header2 .info .hotline .hotline-text {
@@ -161,6 +167,7 @@ p {
     align-items: center;
     margin-left: 55px;
     position: relative;
+    margin-top: 10px;
 }
 
 
@@ -188,7 +195,7 @@ p {
 }
 
 #section-header2 .cart a {
-    width: 100px;
+    width: auto;
     /* Đặt chiều rộng cố định */
     height: 50px;
     /* Đặt chiều cao cố định */
@@ -201,6 +208,60 @@ p {
     color: #003366;
     margin-left: 2%;
     cursor: pointer;
+}
+
+/* Small screen (mobile phones) */
+@media (max-width: 768px) {
+    #section-header2 {
+        height: auto; /* Tự điều chỉnh chiều cao */
+    }
+
+    #section-header2 .menu {
+        flex-direction: column; /* Chuyển sang cột dọc */
+        align-items: flex-start;
+        padding: 12px;
+        width: auto;
+    }
+
+    #section-header2 .logo img {
+        height: 60px; /* Thu nhỏ logo */
+        width: auto;
+    }
+
+    #section-header2 .search-bar {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    #section-header2 .search-bar input {
+       
+        width: 250px; /* Giảm chiều rộng thanh tìm kiếm */
+    }
+
+    #section-header2 .search-bar button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #section-header2 .info .hotline {
+        font-size: 14px;
+       
+    }
+
+    #section-header2 .cart {
+        margin-left: 0;
+    }
+
+    .cart-wrapper {
+        transform: scale(1); /* Hủy hiệu ứng phóng to */
+    }
+
+    .cart-count {
+        top: -5px;
+        right: 20px;
+    }
 }
 
 
