@@ -1236,7 +1236,7 @@ p {
 
 /* -------------------section footer---------------------- */
 #section-footer {
-    height: 150px;
+    max-height: 500px;
     padding: 40px 0;
     background: linear-gradient(to right, #4f3131, #15283e);
     color: #d1d1d1;
@@ -1250,7 +1250,7 @@ p {
     max-width: 1490px;
     margin: 0 auto;
     padding: 0 20px;
-   
+    flex-wrap: wrap; /*cho các ptu xuong dong khi màn hình thu nhỏ */
 }
 
 #section-footer p,
@@ -1266,7 +1266,6 @@ p {
     font-weight: bold;
     font-size: 18px;
 }
-
 
 #section-footer ul {
     list-style: none;
@@ -1317,7 +1316,6 @@ p {
     color: #cccccc;
     letter-spacing: 1px;
 }
-
 /* Thêm hiệu ứng cho các biểu tượng social media */
 #section-footer .social-media ul li a i {
     color: #d1d1d1;
@@ -1326,6 +1324,33 @@ p {
 
 #section-footer .social-media ul li a i:hover {
     color: #ffffff;
+}
+
+/* Chỉnh layout cho màn hình nhỏ */
+@media (max-width: 768px) {
+    #section-footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #section-footer .contact-info,
+    #section-footer .links,
+    #section-footer .social-media,
+    #section-footer .copyright {
+        margin-bottom: 20px;
+    }
+    
+    #section-footer .social-media ul {
+        justify-content: center;
+    }
+}
+
+/* Chỉnh layout cho màn hình rất nhỏ */
+@media (max-width: 480px) {
+    #section-footer h3 {
+        font-size: 16px;
+    }
 }
 
 .fa-phone {
