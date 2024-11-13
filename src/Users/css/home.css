@@ -284,7 +284,16 @@ p {
     #section-header1 .top-left marquee {
         font-size: 10px;
     }
+    #section-slider .slide-show-content-container .title-w{
+        font-size: 20px;
+    }
+    #section-slider{
+        max-height: 222px;
+    }
 
+    #section-slider .slide-show-content-container .slide-show-content-image img {
+        max-height: 222px;
+    }
 
 }
 
