@@ -262,6 +262,26 @@ p {
         top: -5px;
         right: 20px;
     }
+
+    #section-header1 {
+        width: 100%;
+    }
+
+    #section-header1 .top-right {
+        margin-right: 15px;
+        font-size: 10px;
+        margin-top: 24px;
+    }
+
+    #section-header1 .top-left {
+        margin-left: 15px;
+    }
+
+    #section-header1 .top-left marquee {
+        font-size: 10px;
+    }
+
+
 }
 
 
