@@ -288,3 +288,11 @@ h1{
    
     
 }
+
+/*Hiệu ứng rung khi không nhạp mã xác thực */
+.shake {
+   
+    border: 2px solid red; /* Viền đỏ khi có lỗi */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.9); /* Hiệu ứng bóng mờ đỏ */
+}
+

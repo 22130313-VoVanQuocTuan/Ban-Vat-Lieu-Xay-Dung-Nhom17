@@ -8,7 +8,24 @@
     <title>Bảng điều khiển Quản trị viên </title>
     <!------------------ Kiểu dáng ------------------>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/user.css">
 </head>
+<style>
+    .add-category{
+    
+    margin-bottom: 50px;
+    text-align: center;
+}
+.add-category button{
+    background-color: #2a2185;
+    color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+    
+</style>
 
 <body>
     <!-- ------------------ Điều hướng -------------------->
@@ -34,7 +51,7 @@
                 </li>
 
                 <li>
-                    <a href="user.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -61,19 +78,11 @@
                 </li>
 
                 <li>
-                    <a href="category.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
                         <span class="title">Danh mục</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="review.html">
-                        <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                        </span>
-                        <span class="title">Review</span>
                     </a>
                 </li>
 
@@ -163,145 +172,147 @@
                 </div>
             </div>
 
-            <!-------------------- Danh Sách Chi Tiết Đơn Hàng------------------ -->
-            <div class="details">
+            <!-------------------- Danh Sách Chi Tiết người dùng------------------ -->
+            <div class="details-user">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Đơn Hàng Gần Đây</h2>
+                        <h2>Danh sách đánh giá cảu khách hàng</h2>
                         <a href="#" class="btn">Xem Tất Cả</a>
                     </div>
-
+                    <div class="add-category">
+                        <p style="font-size: 30px; margin-bottom: 20px;">Thêm danh mục</p>
+                        
+                        <input type="text" style="font-size: 30px; border-radius: 5px;" placeholder="Nhập tên danh mục">  
+                        <button  onclick="updateUserStatus()">Thêm</button>
+                    </div>
                     <table>
                         <thead>
                             <tr>
-                                <td>Tên</td>
-                                <td>Giá</td>
-                                <td>Thanh Toán</td>
-                                <td>Trạng Thái</td>
+                                <td>id</td>
+                                <td>Tên danh mục</td>
+                                <td>Ngày tạo</td>
+
+                                <td>Hành động</td>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>Gạch ngoại thất Inax 255/PPC-21</td>
-                                <td>598.000₫</td>
-                                <td>Đã Thanh Toán</td>
-                                <td><span class="status delivered">Đã Giao</span></td>
+                                <td>1</td>
+                                <td>Gạch xây dựng</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Xi măng và vựa</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Cát,Đá và Sỏi</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Thép và sắt</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Gỗ và Vậ liệu gỗ</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Sơn và Phụ gia</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Ngói và tấm lợp</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Ống nước và Phụ kiện</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Thiết bị điện nước</td>
+                                <td>2024/07/19</td>
+
+                                <td>
+                                    <div class="v">
+                                        <button onclick="deleteUser()">Xóa</button>
+                                    </div>
+                                </td>
+
                             </tr>
 
-                            <tr>
-                                <td>Gạch lát nền giả gỗ GR01 150x800</td>
-                                <td>631.000₫</td>
-                                <td>Chưa Thanh Toán</td>
-                                <td><span class="status pending">Đang Chờ</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Gạch men bóng kính 60x60 VJ-66018</td>
-                                <td>320.000₫</td>
-                                <td>Đã Thanh Toán</td>
-                                <td><span class="status return">Trả Hàng</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Gạch Porcerlain kim cương CMC KC89004</td>
-                                <td>631.000₫</td>
-                                <td>Chưa Thanh Toán</td>
-                                <td><span class="status inProgress">Đang Tiến Hành</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Gạch Lamri ốp chân tường Prime 9109</td>
-                                <td>89.000₫</td>
-                                <td>Đã Thanh Toán</td>
-                                <td><span class="status delivered">Đã Giao</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Sơn Nội Thất Dulux EasyClean</td>
-                                <td>600.000₫</td>
-                                <td>Chưa Thanh Toán</td>
-                                <td><span class="status pending">Đang Chờ</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Máy bơm nước</td>
-                                <td>900.000₫</td>
-                                <td>Đã Thanh Toán</td>
-                                <td><span class="status return">Trả Hàng</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Đầu bịt ống nước</td>
-                                <td>80.000₫</td>
-                                <td>Chưa Thanh Toán</td>
-                                <td><span class="status inProgress">Đang Tiến Hành</span></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-------------------- Khách Hàng Mới------------------->
-                <div class="recentCustomers">
-                    <div class="cardHeader">
-                        <h2>Khác hàng tiềm năng</h2>
-                    </div>
-                    <table>
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Nguyễn Văn A </h4>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Trần Thị B <br> </h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Lê Hoàng C <br> </h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Phạm Minh D  </h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Đỗ Thị E </h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="../imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Trần Hoàng M </h4>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
@@ -309,6 +320,8 @@
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/user.js"></script>
+
 </body>
 
 </html>

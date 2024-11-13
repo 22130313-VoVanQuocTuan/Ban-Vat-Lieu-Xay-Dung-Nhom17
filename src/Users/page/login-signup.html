@@ -24,7 +24,8 @@
                 </p>
             </div>
             <div class="top-right">
-                <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span
+                        id="username"></span>!</span>
                 <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
                 <a href="login-signup.html" id="signup-link"><span>Đăng Ký</span></a>
                 <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
@@ -138,9 +139,12 @@
                         <a href="#" class="icon-logo facebook"><i class="fa-brands fa-facebook-f f"></i></a>
                     </div>
                     <span>Hoặc sử dụng email để đăng kí tài khoản</span>
-                    <input type="email" id="register-email" placeholder="Email" required>
-                    <input type="username" id="register-username" placeholder="UserName" required>
-                    <input type="password" id="register-password" placeholder="Password" required>
+                    <input type="text" id="register-email" placeholder="Email">
+                    <div id="email-error" style="color: red;"></div>
+                    <input type="username" id="register-username" placeholder="UserName">
+                    <div id="username-error" style="color: red;"></div>
+                    <input type="password" id="register-password" placeholder="Password">
+                    <div id="password-error" style="color: red;"></div>
                     <button type="submit" id="submit-register">Đăng kí</button>
                 </form>
             </div>
@@ -152,10 +156,12 @@
                         <a href="#" class="icon-logo"><i class="fa-brands fa-facebook-f f"></i></a>
                     </div>
                     <span>Hoặc sử dụng tài khoản đã đăng kí</span>
-                    <input type="text" id="login-username" placeholder="UserName" required>
-                    <input type="password" id="login-password" placeholder="Password" required>
+                    <input type="text" id="login-username" placeholder="UserName" >
+                    <span id="username-errorlog" class="error-message"></span> <!-- Thông báo lỗi tên đăng nhập -->
+                    <input type="password" id="login-password" placeholder="Password" >
+                    <span id="password-errorlog" class="error-message"></span> <!-- Thông báo lỗi mật khẩu -->
                     <a class="blue" href="./reset-password.html">Quên mật khẩu?</a>
-                    <button type="submit">Đăng nhập</button>
+                    <button type="submit" id="login-button">Đăng nhập</button>
                 </form>
             </div>
             <div class="toggle-container none">
@@ -179,14 +185,24 @@
             <div class="overlay" id="overlay"></div>
             <div class="verify-code-container" id="verify-code-container">
                 <h1>Xác thực email</h1>
+                <!-- Icon dấu X để đóng form -->
+                <button title="bt" type="button" class="close-button" id="close-button" style="position: absolute; top: -20px;left: 77%;">
+                    <i class="fas fa-times"></i> <!-- Font Awesome icon for "X" -->
+                </button>
                 <div class="verification-code-inputs">
-                    <input title="code" type="text" id="verification-code-1" maxlength="1" class="verification-code" required>
-                    <input title="code" type="text" id="verification-code-2" maxlength="1" class="verification-code" required>
-                    <input title="code" type="text" id="verification-code-3" maxlength="1" class="verification-code" required>
-                    <input title="code" type="text" id="verification-code-4" maxlength="1" class="verification-code" required>
+                    <input title="code" type="text" id="verification-code-1" maxlength="1" class="verification-code"
+                        required>
+                    <input title="code" type="text" id="verification-code-2" maxlength="1" class="verification-code"
+                        required>
+                    <input title="code" type="text" id="verification-code-3" maxlength="1" class="verification-code"
+                        required>
+                    <input title="code" type="text" id="verification-code-4" maxlength="1" class="verification-code"
+                        required>
+                          <!-- Thông báo lỗi -->
+                       <div id="error-message" class="error-message"></div>
                 </div>
                 <button type="button" class="btn-verify" id="verify-button">Xác thực</button>
-                <button type="button" class="close-button" id="close-button">Kết thúc</button>
+                <button type="button" class="reset" id="reset">Gửi lại</button>
 
 
             </div>
@@ -234,12 +250,13 @@
                         class="fa-solid fa-phone" style="color: #02bc15d1;"></i></a></li>
         </div>
         <div>
-            <li style="list-style-type: none;"><a href="https://www.instagram.com/paq.2012/" target="_blank" rel="noopener"><i
-                        class="fab fa-instagram" style="color: #f12020;"></i></a></li>
+            <li style="list-style-type: none;"><a href="https://www.instagram.com/paq.2012/" target="_blank"
+                    rel="noopener"><i class="fab fa-instagram" style="color: #f12020;"></i></a></li>
         </div>
         <div id="fb">
             <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
-                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square" style="color: #0911ff;" ></i></a></li>
+                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square"
+                        style="color: #0911ff;"></i></a></li>
         </div>
     </div>
     <a href="/src/admin/pages/index.html"></a>
