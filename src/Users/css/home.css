@@ -212,6 +212,8 @@ p {
 
 /* Small screen (mobile phones) */
 @media (max-width: 768px) {
+    /* responsive cho section-header2*/
+    
     #section-header2 {
         height: auto; /* Tự điều chỉnh chiều cao */
     }
@@ -262,6 +264,8 @@ p {
         top: -5px;
         right: 20px;
     }
+
+    /* responsive cho section-header1*/
 
     #section-header1 {
         width: 100%;
