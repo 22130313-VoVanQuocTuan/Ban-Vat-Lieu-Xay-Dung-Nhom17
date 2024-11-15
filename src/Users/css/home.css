@@ -608,11 +608,11 @@ p {
     transition: transform 0.3s ease;
     display: inline-block;
     margin-top: 5px;
-    margin-right: 30px;
+    margin-right: 24px;
 }
 
 .product-one-content-item .product-title .product-price:hover {
-    transform: translateX(-5px);
+    transform: translate(-15px);
 }
 
 .product-one-content-item .product-title .product-price:hover li {
@@ -660,6 +660,71 @@ p {
     text-decoration: line-through;
 }
 
+/* Responsive cho list Flash Sale */
+@media screen and (max-width: 768px) {
+    #section-content {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .product-one-content {
+        padding: 10px;
+    }
+
+    /* Đảm bảo cho các sản phẩm có thể vừa trong một hàng */
+    .product-one-content-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Cân chỉnh khoảng cách giữa các sản phẩm */
+        gap: 15px; /* Khoảng cách giữa các sản phẩm */
+    }
+
+    .product-one-content-item {
+        width: calc(20% - 15px); /* Mỗi sản phẩm chiếm 1/5 chiều rộng của hàng */
+        margin-bottom: 20px; /* Khoảng cách dưới mỗi sản phẩm */
+    }
+
+    .product-one-content-item .img-product img {
+        width: 80%;
+        height: auto;
+    }
+
+    .product-one-content-item .product-title .name-product a {
+        font-size: 14px;
+    }
+
+    .product-one-content-item .product-title .product-price {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .product-one-content-item .product-title .product-price li {
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+/* Chỉnh layout cho màn hình nhỏ */
+
+@media screen and (min-width: 480px) {
+    .product-one-content-items {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .product-one-content-item {
+        width: 19%; /* Tối ưu cho 5 sản phẩm trên 1 hàng */
+        margin-right: 1%;
+    }
+}
+
+
 /* Selling Product----------------------- */
 .selling-products-container {
     height: auto;
@@ -686,7 +751,10 @@ p {
     color: #ffffff;
 }
 
-
+.selling-products-container .imgSale img{
+    width: 100%;
+    height: 100%;
+}
 
 .content-products {
     padding-top: 15px;
