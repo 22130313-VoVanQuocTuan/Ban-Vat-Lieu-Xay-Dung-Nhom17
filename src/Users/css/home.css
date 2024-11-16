@@ -882,6 +882,7 @@ p {
 .slider-product-one-content-item {
     min-width: 226px;
     margin-right: 14px;
+    margin-top: 15px;
     background-color: white;
     padding: 20px 0px 8px;
     border-radius: 5px;
@@ -935,6 +936,11 @@ p {
 }
 
 .slider-product-one-content-item .product-title .name-product a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
@@ -1078,6 +1084,7 @@ p {
 .slider-product-two-content-item {
     min-width: 226px;
     margin-right: 14px;
+    margin-top: 15px;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px 8px;
     border-radius: 5px;
@@ -1131,6 +1138,11 @@ p {
 }
 
 .slider-product-two-content-item .product-title .name-product a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
     text-decoration: none;
     color: rgb(14, 14, 14);
 }
@@ -1274,6 +1286,7 @@ p {
 .slider-product-three-content-item {
     min-width: 226px;
     margin-right: 14px;
+    margin-top: 15px;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px 8px;
     border-radius: 5px;
@@ -1327,6 +1340,11 @@ p {
 }
 
 .slider-product-three-content-item .product-title .name-product a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
     text-decoration: none;
     color: rgb(12, 12, 12);
 }
