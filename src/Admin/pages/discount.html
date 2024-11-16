@@ -112,11 +112,11 @@
 
             <div class="list-discounts">
                 <div class="list-discounts-title">
-                    <h2>Danh sách sản phẩm</h2>
+                    <h2>Danh sách sản phẩm khuyến mãi</h2>
                 </div>
                 <div class="list-discounts-content">
                     <div class="list-discounts-content-button">
-                        <a href="#" class="add-product-btn" onclick="openAddProductModal()">Thêm sản phẩm</a>
+                        <a href="#" class="add-product-btn" onclick="openAddPromotionModal()">Thêm sản phẩm</a>
                     </div>
                     <!-- Table discounts -->
                     <table>
@@ -138,24 +138,30 @@
                         </tbody>
                     </table>
                     <!-- mẫu điền thêm sản phẩm  -->
-                    <div id="addProductModal" class="modal">
+                    <div id="addDiscountModal" class="modal">
                         <div class="modal-content">
-                            <span class="close-btn" onclick="closeAddProductModal()">&times;</span>
+                            <span class="close-btn" onclick="closeAddDiscountModal()">&times;</span>
                             <h3>Thêm sản phẩm mới</h3>
                             <form id="adddiscountForm">
-                                <label for="discountCode">Mã sản phẩm:</label>
+                                <label for="discountCode">Id:</label>
                                 <input type="text" id="discountCode" required>
 
-                                <label for="discountName">Tên sản phẩm:</label>
+                                <label for="discountName">Mã khuyến mãi:</label>
                                 <input type="text" id="discountName" required>
 
-                                <label for="discountPrice">Giá:</label>
-                                <input type="text" id="discountPrice" required>
+                                <label for="discountPrice">Giá trị:</label>
+                                <input type="number" id="discountPrice" required>
 
-                                <label for="discountCategory">Danh mục:</label>
-                                <input type="text" id="discountCategory" required>
+                                <label for="discountCategory">Giá trị tối thiểu:</label>
+                                <input type="number" id="discountCategory" required>
 
-                                <label for="discountStock">Tồn kho:</label>
+                                <label for="discountStock">Ngày bắt đầu:</label>
+                                <input type="date" id="discountStart" required>
+
+                                <label for="discountStock">Ngày kết thúc:</label>
+                                <input type="date" id="discountExpired" required>
+
+                                <label for="discountStock">Số lượng:</label>
                                 <input type="number" id="discountStock" required>
 
                                 <label for="discountDescription">Mô tả:</label>
@@ -167,11 +173,8 @@
                                     <option value="inactive">Hết hàng</option>
                                 </select>
 
-                                <label for="discountImage">Hình ảnh:</label>
-                                <input type="file" id="discountImage">
-
-                                <button type="button" onclick="addProduct()">Lưu sản phẩm</button>
-                                <button type="button" class="exit-btn" onclick="closeAddProductModal()">Thoát</button>
+                                <button type="button" onclick="addDiscount()">Lưu sản phẩm</button>
+                                <button type="button" class="exit-btn" onclick="closeAddDiscountModal()">Thoát</button>
                             </form>
                         </div>
                     </div>
