@@ -9,6 +9,7 @@
 
     <!------------------ Kiểu dáng ------------------>
     <link rel="stylesheet" href="../css/discount.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.html">
                         <span class="icon">
                             <img src="../imgs/logo.png" alt="">
                         </span>
@@ -51,6 +52,15 @@
                         <span class="title">Sản phẩm</span>
                     </a>
                 </li>
+                <li>
+                    <a href="order.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hóa đơn</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="discount.html">
@@ -58,6 +68,14 @@
                             <ion-icon name="help-outline"></ion-icon>
                         </span>
                         <span class="title">Khuyến Mãi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="promotional.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Mã giảm giá</span>
                     </a>
                 </li>
 
@@ -69,9 +87,18 @@
                         <span class="title">Danh mục</span>
                     </a>
                 </li>
+                <li>
+                    <a href="review.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Review</span>
+                    </a>
+                </li>
+
 
                 <li>
-                    <a href="#">
+                    <a href="account.html">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -80,11 +107,11 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/src/Users/page/login-signup.html">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
-                        <span class="title">Đăng Xuất</span>
+                        <span class="title" onclick="lockout()">Đăng Xuất</span>
                     </a>
                 </li>
             </ul>
@@ -193,7 +220,7 @@
 
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
     <script src="../js/product.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

@@ -1,26 +1,26 @@
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.content{
+.content {
     height: 650px;
-  
+
 
 }
 
-.index{
+.index {
     display: flex;
-    padding:  0  0 165px 0;
+    padding: 0 0 165px 0;
 }
 
-.infor{
+.infor {
     margin-bottom: 15px;
     font-weight: bold;
     font-size: 35px;
 }
 
 
-.box1{
+.box1 {
     float: left;
     width: 60%;
     display: flex;
@@ -30,12 +30,12 @@ html{
 
 
 
-.form-group1{
+.form-group1 {
     margin-left: 80px;
 }
 
 
-.back{
+.back {
     height: 40px;
     width: 335px;
     margin-bottom: 15px;
@@ -45,7 +45,7 @@ html{
     color: #999999;
 }
 
-.city{
+.city {
     height: 45px;
     width: 354px;
     margin-bottom: 15px;
@@ -55,7 +55,7 @@ html{
     color: #999999;
 }
 
-.district{
+.district {
     height: 45px;
     width: 354px;
     margin-bottom: 15px;
@@ -65,7 +65,7 @@ html{
     color: #999999;
 }
 
-.ward{
+.ward {
     height: 45px;
     width: 354px;
     margin-bottom: 15px;
@@ -75,7 +75,7 @@ html{
     color: #999999;
 }
 
-.note{
+.note {
     height: 60px;
     width: 339px;
     border-radius: 5px;
@@ -84,17 +84,17 @@ html{
     color: #999999;
 }
 
-.form-group2{
+.form-group2 {
     margin-left: 30px;
 
 }
 
-.delivery{
+.delivery {
     font-weight: bold;
     font-size: 30px;
 }
 
-.input-infor-delivery{
+.input-infor-delivery {
     padding: 15px 110px 15px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -103,7 +103,7 @@ html{
     font-size: 16px;
 }
 
-.pay{
+.pay {
     margin: 0 0 15px 0;
     font-size: 35px;
     font-weight: bold;
@@ -131,16 +131,16 @@ label {
 
 
 
-.box2{
-    float:right;
+.box2 {
+    float: right;
     width: 35%;
     background-color: #fafafa;
-   
+
     margin-right: 10%;
     margin-top: 27px;
 }
 
-.order{
+.order {
     margin: 22px 0 20px 0;
     padding-bottom: 20px;
     border-bottom: 2px solid #999999;
@@ -149,108 +149,117 @@ label {
     font-size: 35px;
 }
 
-.three-items{
-    
+.three-items {
+
     padding: 20px 0 20px 0;
     border-bottom: 2px dashed #999999;
 }
 
-.immage-product{
+.immage-product {
     margin: 0 20px 20px 20px;
 }
 
-.product-name{
+.product-name {
     font-size: 16px;
     margin: 0 180px 20px 0;
     border-bottom: 2px dashed #999999;
     padding: 20px 0;
 }
 
-.cost{
+.cost {
     font-size: 16px;
 }
 
 
-.two-items1{
+.two-items1 {
     height: 80px;
     border-bottom: 2px dashed #999999;
 }
 
-.sale{
-    width: 100%;                  /* Chiều rộng toàn bộ phần tử chứa */
-    max-width: 300px;             /* Chiều rộng tối đa */
-    padding: 10px;                /* Khoảng cách bên trong */
-    font-size: 16px;              /* Kích thước chữ */
-    border: 2px solid #999999;   /* Viền nét đứt màu xanh nhạt */
-    border-radius: 8px;           /* Bo tròn góc */
-    outline: none;                /* Xóa viền mặc định khi chọn */
-    transition: border-color 0.3s ease; /* Hiệu ứng khi thay đổi viền */
+.sale {
+    width: 100%;
+    /* Chiều rộng toàn bộ phần tử chứa */
+    max-width: 300px;
+    /* Chiều rộng tối đa */
+    padding: 10px;
+    /* Khoảng cách bên trong */
+    font-size: 16px;
+    /* Kích thước chữ */
+    border: 2px solid #999999;
+    /* Viền nét đứt màu xanh nhạt */
+    border-radius: 8px;
+    /* Bo tròn góc */
+    outline: none;
+    /* Xóa viền mặc định khi chọn */
+    transition: border-color 0.3s ease;
+    /* Hiệu ứng khi thay đổi viền */
     margin: 20px 0 20px 20px;
 }
 
-.apply-button{
+.apply-button {
     padding: 14px 20px 12px 20px;
     border: none;
-    margin-left: 20px ;
+    margin-left: 20px;
     background-color: #84b0d5;
     border-radius: 5px;
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-.apply-button:hover{
+
+.apply-button:hover {
     background-color: #5c9bb0;
 }
 
-.two-items2{
-    padding-bottom: 20px ;
+.two-items2 {
+    padding-bottom: 20px;
     border-bottom: 2px dashed #999999;
 }
 
-.nd1{
+.nd1 {
     display: flex;
 }
 
-.nd2{
+.nd2 {
     display: flex;
 }
 
-.temp{
+.temp {
     margin: 20px 200px 0 20px;
     font-size: 16px;
 }
 
-.cost1{
+.cost1 {
     font-size: 16px;
     margin: 20px 0 0 88px;
 }
 
-.cost2{
+.cost2 {
     font-size: 16px;
     margin: 20px 0 0 42px;
 }
 
-.totals{
+.totals {
     display: flex;
     border-bottom: 2px dashed #999999;
 }
 
-.total{
+.total {
     margin: 20px 266px 20px 3px;
 }
 
-.total-cost{
+.total-cost {
     font-size: 16px;
     margin: 20px 0 20px 0;
 
 }
 
-.sub{
+.sub {
     display: flex;
     height: 70px;
 }
 
-.hrep{
+.hrep {
     margin: 35px 190px 0 0;
     height: 30px;
     text-decoration: none;
@@ -258,7 +267,7 @@ label {
 }
 
 
-.error-message{
+.error-message {
     color: #ff0000;
     margin: 10px;
     display: block;
@@ -268,24 +277,27 @@ label {
 .submit-btn {
     padding: 14px 20px 12px 20px;
     border: none;
-    margin: 20px 0 0 0;
-    background-color: #ff0000;
-    border-radius: 5px;
+    margin: 30px 20px 0 0;
+    background-color: #204af1;
+    border-radius: 10px;
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-left: -92px;
 }
 
 .submit-btn:hover {
     background-color: #24a220;
 }
-.p{
+
+.p {
     font-size: 20px;
 
 }
+
 /* Kiểm tra layout của form */
 #codForm, #vnpayForm {
-    
+
     position: absolute;
     top: 20%;
     left: 35%;
@@ -296,63 +308,75 @@ label {
     border-radius: 10px;
     z-index: 1000;
     font-size: 20px;
-    
+
 }
-.but{
+
+.but {
     display: flex;
 }
+
 /*css cho button trong form*/
-#codForm button, #vnpayForm button{
+#codForm button, #vnpayForm button {
     text-align: center;
     padding: 10px;
     border-radius: 10px;
-   
-    margin:30px;
+
+    margin: 30px;
     width: 200px;
     cursor: pointer;
     background-color: #144bff;
     border: none;
     color: #ffffff;
 }
+
 /* Khi form được hiển thị, sử dụng class 'show' */
 #codForm.show, #vnpayForm.show {
     display: block;
 
-} #vnpayForm img {
+}
+
+#vnpayForm img {
     width: 40px;
     height: 40px;
     justify-content: center;
 }
-#codForm button:hover, #vnpayForm button:hover{
+
+#codForm button:hover, #vnpayForm button:hover {
     background-color: #ff4141;
 }
+
 /* Lớp CSS để khóa cuộn trang khi overlay hiển thị */
 body.overlay-active {
     overflow: hidden;
 }
-.title{
+
+.title {
     display: flex;
     font-weight: bold;
     color: #007bff;
     font-size: 25px;
     justify-content: center;
     padding: 10px;
-    
+
 }
+
 /* Hiệu ứng overlay khi form được hiển thị */
 /* Lớp phủ tối màn hình */
 .overlay {
-    display: none; /* Mặc định là ẩn */
+    display: none;
+    /* Mặc định là ẩn */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu tối */
-    z-index: 1000; /* Đảm bảo lớp phủ ở trên tất cả */
-    
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu tối */
+    z-index: 1000;
+    /* Đảm bảo lớp phủ ở trên tất cả */
+
 }
+
 .overlay.show {
     display: block;
 }
-

@@ -8,24 +8,28 @@
     <title>Bảng điều khiển Quản trị viên </title>
     <!------------------ Kiểu dáng ------------------>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
 <style>
-    .add-category{
-    
-    margin-bottom: 50px;
-    text-align: center;
-}
-.add-category button{
-    background-color: #2a2185;
-    color: #f1f1f1;
-    border-radius: 5px;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 5px;
-}
-    
+    .add-category {
+
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .add-category button {
+        background-color: #2a2185;
+        color: #f1f1f1;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .add-category button:hover {
+        font-size: 35px;
+    }
 </style>
 
 <body>
@@ -34,7 +38,7 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.html">
                         <span class="icon">
                             <img src="../imgs/logo.png" alt="">
                         </span>
@@ -68,6 +72,15 @@
                         <span class="title">Sản phẩm</span>
                     </a>
                 </li>
+                <li>
+                    <a href="order.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hóa đơn</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="discount.html">
@@ -75,6 +88,14 @@
                             <ion-icon name="help-outline"></ion-icon>
                         </span>
                         <span class="title">Khuyến Mãi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="promotional.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Mã giảm giá</span>
                     </a>
                 </li>
 
@@ -95,8 +116,9 @@
                     </a>
                 </li>
 
+
                 <li>
-                    <a href="#">
+                    <a href="account.html">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -130,12 +152,12 @@
                 </div>
 
                 <div class="user">
-                    <a href="account.html"> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a> 
+                    <a href="account.html"> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a>
 
                 </div>
             </div>
 
-        
+
 
             <!-------------------- Danh Sách Chi Tiết người dùng------------------ -->
             <div class="details-user">
@@ -146,9 +168,9 @@
                     </div>
                     <div class="add-category">
                         <p style="font-size: 30px; margin-bottom: 20px;">Thêm danh mục</p>
-                        
-                        <input type="text" style="font-size: 30px; border-radius: 5px;" placeholder="Nhập tên danh mục">  
-                        <button  onclick="updateUserStatus()">Thêm</button>
+
+                        <input type="text" style="font-size: 30px; border-radius: 5px;" placeholder="Nhập tên danh mục">
+                        <button onclick="updateUserStatus()">Thêm</button>
                     </div>
                     <table>
                         <thead>
@@ -283,7 +305,6 @@
     </div>
 
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-    <script src="../js/main.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/user.js"></script>
 

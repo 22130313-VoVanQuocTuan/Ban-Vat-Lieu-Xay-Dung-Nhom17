@@ -1,6 +1,20 @@
+/*Menu*/
+let toggle = document.querySelector(".toggle");
+let navigation = document.querySelector(".navigation");
+let main = document.querySelector(".main");
+
+toggle.onclick = function () {
+  navigation.classList.toggle("active");
+  main.classList.toggle("active");
+};
+
+
+/*Logout*/
 function lockout(){
     window.location.href = "/src/Users/page/login-signup.html"
 }
+
+
 function updateStatusColors() {
     // Lấy tất cả các phần tử có class là "statusText"
     const statusElements = document.querySelectorAll(".statusText");

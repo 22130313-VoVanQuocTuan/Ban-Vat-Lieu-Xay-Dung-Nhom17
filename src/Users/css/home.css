@@ -205,12 +205,13 @@ p {
 /* Small screen (mobile phones) */
 @media (max-width: 768px) {
     /* responsive cho section-header2*/
+  
     #section-header2 {
         height: auto; 
     }
 
     #section-header2 .menu {
-        flex-direction: column; 
+        
         align-items: flex-start;
         padding: 12px;
         width: auto;
@@ -230,6 +231,7 @@ p {
 
     #section-header2 .search-bar input {
         width: 250px; 
+        margin-left: 20px;
     }
 
     #section-header2 .search-bar button {
@@ -238,6 +240,7 @@ p {
     }
 
     #section-header2 .info .hotline {
+        display: none;
         font-size: 14px;
        
     }
@@ -252,7 +255,7 @@ p {
 
     .cart-count {
         top: -5px;
-        right: -15px;
+        right: 5px;
     }
 
     /* responsive cho section-header1*/

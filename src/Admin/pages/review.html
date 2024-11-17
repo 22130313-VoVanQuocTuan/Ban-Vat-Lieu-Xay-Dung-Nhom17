@@ -13,20 +13,20 @@
     <link rel="stylesheet" href="../css/review.css">
 </head>
 <style>
-    .add-category{
-    
-    margin-bottom: 50px;
-    text-align: center;
-}
-.add-category button{
-    background-color: #2a2185;
-    color: #f1f1f1;
-    border-radius: 5px;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 5px;
-}
-    
+    .add-category {
+
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .add-category button {
+        background-color: #2a2185;
+        color: #f1f1f1;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 5px;
+    }
 </style>
 
 <body>
@@ -35,7 +35,7 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.html">
                         <span class="icon">
                             <img src="../imgs/logo.png" alt="">
                         </span>
@@ -57,7 +57,7 @@
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Người dùng</span>
+                        <span class="title">Khách Hàng</span>
                     </a>
                 </li>
 
@@ -69,6 +69,15 @@
                         <span class="title">Sản phẩm</span>
                     </a>
                 </li>
+                <li>
+                    <a href="order.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hóa đơn</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="discount.html">
@@ -76,6 +85,14 @@
                             <ion-icon name="help-outline"></ion-icon>
                         </span>
                         <span class="title">Khuyến Mãi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="promotional.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Mã giảm giá</span>
                     </a>
                 </li>
 
@@ -88,15 +105,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="order.html">
+                    <a href="review.html">
                         <span class="icon">
-                            <ion-icon name="settings-outline"></ion-icon>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
-                        <span class="title">Hóa đơn</span>
+                        <span class="title">Review</span>
                     </a>
                 </li>
+
+
                 <li>
-                    <a href="#">
+                    <a href="account.html">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -128,138 +147,137 @@
                     </label>
                 </div>
 
-                <div  class="user">
-                    <a href=""> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a> 
+                <div class="user">
+                    <a href=""> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a>
 
                 </div>
             </div>
-            
 
-       <!-- Phần chính -->
-       <div class="review">
-        <div class="recentOrders">
-            <div class="cardHeader">
-                <h2>Danh sách đánh giá của khách hàng</h2>
-                <a href="#" class="btn">Xem Tất Cả</a>
+
+            <!-- Phần chính -->
+            <div class="review">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Danh sách đánh giá của khách hàng</h2>
+                        <a href="#" class="btn">Xem Tất Cả</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Mã sản phẩm</td>
+                                <td>Mã khách hàng</td>
+                                <td>Thông tin đánh giá</td>
+                                <td>Ngày đánh giá</td>
+                                <td>Hành động</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP002</td>
+                                <td>KH002</td>
+                                <td>Giao hàng nhanh, chất lượng ổn</td>
+                                <td>2024-11-12</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP002', 'KH002')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>Rất hài lòng với chất lượng</td>
+                                <td>2024-11-10</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                </td>
+                            </tr>
+
+                            <!-- Thêm các dòng dữ liệu khác tại đây -->
+                        </tbody>
+                    </table>
+                </div>
+
+
             </div>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <td>Mã sản phẩm</td>
-                        <td>Mã khách hàng</td>
-                        <td>Thông tin đánh giá</td>
-                        <td>Ngày đánh giá</td>
-                        <td>Hành động</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP002</td>
-                        <td>KH002</td>
-                        <td>Giao hàng nhanh, chất lượng ổn</td>
-                        <td>2024-11-12</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP002', 'KH002')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SP001</td>
-                        <td>KH001</td>
-                        <td>Rất hài lòng với chất lượng</td>
-                        <td>2024-11-10</td>
-                        <td class="v">
-                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
-                        </td>
-                    </tr>
-                    
-                    <!-- Thêm các dòng dữ liệu khác tại đây -->
-                </tbody>
-            </table>
+
+
         </div>
-
-        
     </div>
-
-       
-    </div>
-</div>
 
 
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-    <script src="../js/main.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/user.js"></script>
 

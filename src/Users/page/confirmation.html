@@ -24,6 +24,21 @@
         width: 100px; /* Điều chỉnh kích thước ảnh nếu cần */
         height: auto;
     }
+    .save{
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #204af1;
+        border-radius: 10px;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .save:hover{
+        background-color: #24a220;
+    }
+    .sub .p:hover{
+        color: #f12020;
+    }
 </style>
 <body>
     <div id="section-header1">
@@ -185,7 +200,7 @@
                         <div class="form-group">
                             <input type="text" id="note" class="note" placeholder="Ghi chú (tùy chọn)">
                         </div>
-                        <button title="bt">Lưu</button>
+                        <button class="save" title="bt">Lưu</button>
 
                     </div>
 
@@ -206,7 +221,7 @@
                             <div id="error-message" style="color: red; display: none; margin-top: 20px;">Vui lòng điền
                                 đầy đủ thông tin để thanh toán.</div>
                         </div>
-                        <button title="bt">Lưu</button>
+                        <button class="save" title="bt">Lưu</button>
 
                     </div>
 
@@ -294,6 +309,7 @@
         <p>Email:</p>
         <p>Tên người nhận:</p>
         <p>Số điện thoại:</p>
+        <p>Ghi chú: Chỉ nhận khi giao tới nhà</p>
         <div class="but">
             <button onclick="confirmCOD()">Xác nhận đơn hàng</button>
             <button onclick="closeForm()">Hủy</button>
@@ -336,6 +352,7 @@
         <p>Email:</p>
         <p>Tên người nhận:</p>
         <p>Số điện thoại:</p>
+        <p>Ghi chú: Chỉ nhận khi giao tới nhà</p>
         <div class="but">
             <button onclick="confirmVNPAY()">Xác nhận đơn hàng</button>
             <button onclick="closeForm()">Hủy</button>
