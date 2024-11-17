@@ -7,33 +7,6 @@
 }
 
 .products {
-<<<<<<< HEAD
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-gap: 30px;
-  }
-  
-  .products .recentOrders {
-    position: relative;
-    display: grid;
-    min-height: 500px;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
- 
-    margin-left: 30px;
-  }
-  
-  .products .cardHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-=======
   position: relative;
   width: 100%;
   padding: 20px;
@@ -78,7 +51,6 @@ td {
   padding: 15px;
   border-bottom: 1px solid #2e0505;
 }
->>>>>>> 72ec8623c465cc51d0fc611509e8703816a365ad
 
 .products table thead tr {
   font-weight: bolder;
