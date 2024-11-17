@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điều khiển Quản trị viên </title>
+
+    <!------------------ Kiểu dáng ------------------>
+    <link rel="stylesheet" href="../css/discount.css">
+</head>
+
+<body>
+    <!-- ------------------ Điều hướng -------------------->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="../imgs/logo.png" alt="">
+                        </span>
+                        <span class="title">Bán Vật Liệu Xây Dựng </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trang chủ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Khách Hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="product.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="discount.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Khuyến Mãi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="category.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Danh mục</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Mật Khẩu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Đăng Xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-------------------- Chính --------------------->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ở đây">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="../imgs/customer01.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="list-discounts">
+                <div class="list-discounts-title">
+                    <h2>Danh sách sản phẩm khuyến mãi</h2>
+                </div>
+                <div class="list-discounts-content">
+                    <div class="list-discounts-content-button">
+                        <a href="#" class="add-product-btn" onclick="openAddPromotionModal()">Thêm sản phẩm</a>
+                    </div>
+                    <!-- Table discounts -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Mã khuyến mãi</th>
+                                <th>Giá trị</th>
+                                <th>Giá trị tối thiểu</th>
+                                <th>Ngày bắt đầu</th>
+                                <th>ngày kết thúc</th>
+                                <th>Số lượng</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="discountList">
+                            <!-- Các sản phẩm sẽ được thêm vào đây -->
+                        </tbody>
+                    </table>
+                    <!-- mẫu điền thêm sản phẩm  -->
+                    <div id="addDiscountModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeAddDiscountModal()">&times;</span>
+                            <h3>Thêm sản phẩm mới</h3>
+                            <form id="adddiscountForm">
+                                <label for="discountCode">Id:</label>
+                                <input type="text" id="discountCode" required>
+
+                                <label for="discountName">Mã khuyến mãi:</label>
+                                <input type="text" id="discountName" required>
+
+                                <label for="discountPrice">Giá trị:</label>
+                                <input type="number" id="discountPrice" required>
+
+                                <label for="discountCategory">Giá trị tối thiểu:</label>
+                                <input type="number" id="discountCategory" required>
+
+                                <label for="discountStock">Ngày bắt đầu:</label>
+                                <input type="date" id="discountStart" required>
+
+                                <label for="discountStock">Ngày kết thúc:</label>
+                                <input type="date" id="discountExpired" required>
+
+                                <label for="discountStock">Số lượng:</label>
+                                <input type="number" id="discountStock" required>
+
+                                <label for="discountDescription">Mô tả:</label>
+                                <textarea id="discountDescription" rows="4" required></textarea>
+
+                                <label for="discountStatus">Trạng thái:</label>
+                                <select id="discountStatus" required>
+                                    <option value="active">Còn hàng</option>
+                                    <option value="inactive">Hết hàng</option>
+                                </select>
+
+                                <button type="button" onclick="addDiscount()">Lưu sản phẩm</button>
+                                <button type="button" class="exit-btn" onclick="closeAddDiscountModal()">Thoát</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Hiện mô tả sản phẩm -->
+                    <div id="viewDescriptionModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeViewDescriptionModal()">&times;</span>
+                            <h3>Mô tả sản phẩm</h3>
+                            <div id="discountDescriptionDetails"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
