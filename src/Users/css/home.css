@@ -56,7 +56,7 @@ p {
 #section-header1 .top-right {
     float: right;
     margin-top: 18px;
-    margin-right: 85px;
+    margin-right: 205px;
 }
 
 #section-header1 .top-right a {
@@ -560,6 +560,8 @@ p {
 .product-one-content-item .img-product img:hover {
     transform: scale(1.1);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .product-one-content-item .img-product img {
@@ -665,7 +667,7 @@ p {
 /* Responsive cho list Flash Sale */
 @media screen and (max-width: 768px) {
     #section-content {
-        width: 100%;
+        width: 85%;
         padding: 10px;
         margin: 0 auto;
     }
@@ -883,8 +885,8 @@ p {
 }
 
 .slider-product-one-content-item {
-    min-width: 226px;
-    margin-right: 14px;
+    min-width: 260px;
+    margin-right: 30px;
     margin-top: 15px;
     background-color: white;
     padding: 20px 0px 8px;
@@ -923,16 +925,20 @@ p {
 .slider-product-one-content-item .img-product img {
     height: 168px;
     width: 168px;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
 }
 
 .slider-product-one-content-item .img-product img:hover {
     transform: scale(1.1);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .slider-product-one-content-item .img-product {
     border-radius: 5px;
 }
+
 
 .slider-product-one-content-item .product-title {
     margin-left: 25px;
@@ -946,6 +952,7 @@ p {
     text-align: center;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    margin-left: 28px;
 }
 
 .slider-product-one-content-item .product-title .name-product {
@@ -1024,9 +1031,12 @@ p {
     justify-content: space-between;
     width: 100%;
     transform: translateY(-50%);
+    z-index: 10; /* Ưu tiên nút cao hơn */
+    pointer-events: none; /* Không can thiệp vào sự kiện hover của sản phẩm */
 }
 
 .slider-product-one-content-btn i {
+    pointer-events: auto; /* Nút điều hướng vẫn có thể click */
     color: #06080a;
     font-size: 32px;
     height: 50px;
@@ -1085,8 +1095,8 @@ p {
 }
 
 .slider-product-two-content-item {
-    min-width: 226px;
-    margin-right: 14px;
+    min-width: 260px;
+    margin-right: 30px;
     margin-top: 15px;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px 8px;
@@ -1125,11 +1135,15 @@ p {
 .slider-product-two-content-item .img-product img {
     height: 168px;
     width: 168px;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+
 }
 
 .slider-product-two-content-item .img-product img:hover {
     transform: scale(1.1);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .slider-product-two-content-item .img-product {
@@ -1148,6 +1162,7 @@ p {
     text-align: center;
     text-decoration: none;
     color: rgb(14, 14, 14);
+    margin-left: 28px;
 }
 
 .slider-product-two-content-item .product-title .name-product {
@@ -1225,9 +1240,13 @@ p {
     justify-content: space-between;
     width: 100%;
     transform: translateY(-50%);
+    z-index: 10; /* Ưu tiên nút cao hơn */
+    pointer-events: none; /* Không can thiệp vào sự kiện hover của sản phẩm */
+
 }
 
 .slider-product-two-content-btn i {
+    pointer-events: auto;
     color: #06080a;
     font-size: 32px;
     height: 50px;
@@ -1250,7 +1269,6 @@ p {
     position: relative;
     height: 300px;
     transition: all 0.3s ease;
-
 }
 
 .slider-product-two-content-items {
@@ -1287,8 +1305,8 @@ p {
 }
 
 .slider-product-three-content-item {
-    min-width: 226px;
-    margin-right: 14px;
+    min-width: 260px;
+    margin-right: 30px;
     margin-top: 15px;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px 8px;
@@ -1327,11 +1345,15 @@ p {
 .slider-product-three-content-item .img-product img {
     height: 168px;
     width: 168px;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+
 }
 
 .slider-product-three-content-item .img-product img:hover {
     transform: scale(1.1);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .slider-product-three-content-item .img-product {
@@ -1350,6 +1372,7 @@ p {
     text-align: center;
     text-decoration: none;
     color: rgb(12, 12, 12);
+    margin-left: 28px;
 }
 
 .slider-product-three-content-item .product-title .name-product {
@@ -1427,9 +1450,12 @@ p {
     justify-content: space-between;
     width: 100%;
     transform: translateY(-50%);
+    z-index: 10; /* Ưu tiên nút cao hơn */
+    pointer-events: none; /* Không can thiệp vào sự kiện hover của sản phẩm */
 }
 
 .slider-product-three-content-btn i {
+    pointer-events: auto; /* Nút điều hướng vẫn có thể click */
     color: #06080a;
     font-size: 32px;
     height: 50px;
@@ -1705,6 +1731,28 @@ body.no-scroll {
     cursor: pointer;
     color: #ffffff;
     
+}
+
+ /* responsive cho banner */
+@media screen and (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .banner-title {
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .banner-desc {
+        width: 300px;
+        font-size: 22px;
+    }
+
+    .close-button {
+        font-size: 20px;
+    }
 }
 
 

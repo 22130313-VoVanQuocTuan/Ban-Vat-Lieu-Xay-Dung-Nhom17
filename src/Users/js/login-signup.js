@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
         userGreeting.style.display = 'inline';
         usernameDisplay.textContent = username;
         loginLink.style.display = 'none';
-        signupLink.style.display = 'none';
         logoutLink.style.display = 'inline';
+        signupLink.style.display = 'inline';
         if (cartItemCount) cartItemCount.style.display = 'inline';
     } else {
         userGreeting.style.display = 'none';
