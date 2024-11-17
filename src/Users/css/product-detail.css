@@ -88,6 +88,7 @@
     background-color: #2980b9;
 }
 
+
 /* Responsive cho giao diện trên các thiết bị nhỏ */
 @media (max-width: 768px) {
     .product-details {
