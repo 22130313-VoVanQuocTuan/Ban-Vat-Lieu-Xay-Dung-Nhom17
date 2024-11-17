@@ -22,11 +22,13 @@
                     </p>
                 </div>
                 <div class="top-right">
-                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span
+                            id="username"></span>!</span>
                     <a href="informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
-                        <i class="fas fa-user-circle"  ></i> Tài khoản
+                        <i class="fas fa-user-circle"></i> Tài khoản
                     </a>
-                    <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                    <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng
+                            Nhập</span></a>
                     <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                 </div>
             </div>
@@ -103,7 +105,8 @@
                                     ĐIỆN NƯỚC</a></li>
                         </ul>
                     </li>
-                    <li class="propClone"><a href="home.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ </a></li>
+                    <li class="propClone"><a href="home.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ
+                        </a></li>
                     <li class="propClone"><a href="product.html"><i class="fa-brands fa-product-hunt"></i>
                             &nbsp;&nbsp;SẢN PHẨM</a>
                     </li>
@@ -136,48 +139,52 @@
         <div class="account-info-page">
             <h1>Thông tin tài khoản</h1>
             <p class="greeting">Xin chào, Huy Lam</p>
-        
+
             <div class="content">
                 <!-- Đơn hàng gần nhất -->
                 <div class="recent-orders">
                     <h2>Đơn hàng gần nhất</h2>
                     <table>
                         <thead>
-                        <tr>
-                            <th>Mã đơn hàng</th>
-                            <th>Ngày đặt</th>
-                            <th>Địa chỉ</th>
-                            <th>Tình trạng thanh toán</th>
-                            <th>Chi tiết đơn hàng</th>
-                        </tr>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Địa chỉ</th>
+                                <th>Tình trạng thanh toán</th>
+                                <th>Chi tiết đơn hàng</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                           <td>001</td>
-                           <td>22/12/2024</td>
-                           <td>Đại Học Nông Lâm TPHCM</td>
-                           <td> Đã thanh toán</td>
-                           <td><button type="submit">Xem</button></td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>19/12/2024</td>
-                            <td>Đại Học Nông Lâm TPHCM</td>
-                            <td> Chưa thanh toán</td>
-                            <td><button type="submit">Xem</button></td>
-                         </tr>
-                         <tr>
-                            <td>002</td>
-                            <td>19/12/2024</td>
-                            <td>Đại Học Nông Lâm TPHCM</td>
-                            <td> Chưa thanh toán</td>
-                            <td><button type="submit">Xem</button></td>
-                         </tr>
-                         
+                            <tr>
+                                <td>SP001</td>
+                                <td>22/12/2024</td>
+                                <td>Đại Học Nông Lâm TPHCM</td>
+                                <td> Đã thanh toán</td>
+                                <td>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Xem</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP002</td>
+                                <td>19/12/2024</td>
+                                <td>Đại Học Nông Lâm TPHCM</td>
+                                <td> Chưa thanh toán</td>
+                                <td> <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Xem</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP003</td>
+                                <td>19/12/2024</td>
+                                <td>Đại Học Nông Lâm TPHCM</td>
+                                <td> Chưa thanh toán</td>
+                                <td> <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Xem</button>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
-        
+
                 <!-- Thông tin khách hàng -->
                 <div class="customer-info">
                     <h2>Thông tin khách hàng</h2>
@@ -189,7 +196,55 @@
                 </div>
             </div>
         </div>
+        <!-- Modal Chi tiết Hóa đơn -->
+        <div id="orderDetailModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 class="modal-title">Chi tiết hóa đơn</h2>
+                <div id="orderDetailContent">
+                    <!-- Thông tin chi tiết -->
+                    <table class="order-detail-table">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                                <th>Giảm giá</th>
+                                <th>Tổng giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Xi măng BC</td>
+                                <td>20</td>
+                                <td>1.000.000 ₫</td>
+                                <td>0 ₫</td>
+                                <td>1.000.000 ₫</td>
+                            </tr>
+                            <tr>
+                                <td> Gạch BC</td>
+                                <td>100</td>
+                                <td>1.000.000 ₫</td>
+                                <td>0 ₫</td>
+                                <td>1.000.000 ₫</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-info">
+                        <p><strong>Mã đơn hàng:</strong> <span class="info-highlight">22</span></p>
+                        <p><strong>Mã khách hàng:</strong> <span class="info-highlight">12</span></p>
+                        <p><strong>Ngày đặt hàng:</strong> <span class="info-highlight">2024-12-12</span></p>
+                        <p><strong>Tổng tiền:</strong> <span class="info-highlight total-price">2.000.000 ₫</span></p>
+                        <p><strong>Trạng thái:</strong> <span class="badge success">Đã thanh toán</span></p>
+                        <p><strong>Địa chỉ:</strong> Bình Thạnh</p>
+                        <p><strong>Người nhận hàng:</strong> Tuấn</p>
+                        <p><strong>Ghi chú:</strong> Giao tới tận nhà cho tôi</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </div>
 
     <div id="section-footer">
@@ -242,6 +297,7 @@
     </div>
     <script src="/src/Users/js/scripts.js" defer></script>
     <script src="../js/login-signup.js"></script>
+    <script src="../js/informationCustomer.js"></script>
     <script>
         // Mở banner tự động khi trang tải xong
         window.onload = function () {
