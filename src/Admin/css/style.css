@@ -178,6 +178,17 @@ body {
   font-size: 1.2rem;
 }
 
+.list-products-title {
+  background: linear-gradient(to right, #4f3131, #15283e);
+  height: 50px;
+}
+
+.list-products-title h2 {
+  padding-top: 15px;
+  padding-left: 15px;
+  color: var(--white);
+}
+
 .user {
   position: relative;
   width: 50px;

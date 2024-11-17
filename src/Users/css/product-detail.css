@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
-    height: 600px;
+    height: auto;
 }
 
 /* Định dạng cho container chứa sản phẩm */
@@ -36,6 +36,7 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 /* Mô tả sản phẩm */
@@ -86,6 +87,40 @@
 /* Hiệu ứng hover cho nút "Thêm vào giỏ hàng" */
 .add-to-cart-btn:hover {
     background-color: #2980b9;
+}
+
+/* Đánh giá sản phẩm */
+
+.review{
+    max-width: 80%;
+}
+
+.comment-form button{
+    width: 100px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.product-info p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.contact{
+    margin-top: 15px;
+}
+
+.describe-comment{
+    font-size: 50px;
+}
+
+.describe-comment textarea{
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
 }
 
 /* Responsive cho giao diện trên các thiết bị nhỏ */
