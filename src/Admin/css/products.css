@@ -191,8 +191,8 @@ td {
 }
 
 .modal-actions button {
-  background-color: #4a3eb8;
-  color: white;
+  background: #f88e62;
+  color: #ffffff;
   border: none;
   padding: 8px 15px;
   border-radius: 4px;
@@ -201,7 +201,7 @@ td {
 }
 
 .modal-actions button:hover {
-  background-color: #2a2185;
+  background: #e2704e;
 }
 
 .close-modal {
@@ -243,7 +243,13 @@ td {
   transition: visibility 0s, opacity 0.5s ease-in-out;
 }
 
-/*--------------------------- Add Product modal --------------*/
+/*----------------- Add Product modal --------------*/
+
+#addProductModal .modal-content h3{
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
 /* Form Styling */
 #addProductForm {
   display: flex;
