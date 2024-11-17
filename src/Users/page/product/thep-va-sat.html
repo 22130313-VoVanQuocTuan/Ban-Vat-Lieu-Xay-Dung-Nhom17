@@ -22,11 +22,12 @@
                     </p>
                 </div>
                 <div class="top-right">
-                    <a href="../login-signup.html"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                    <a href="../login-signup.html"><span>Đăng Kí</span></a>
-                    <a href="informationCustomer.html" class="account-link">
-                        <i class="fas fa-user-circle"></i> Tài Khoản
+                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                    <a href="../informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
+                        <i class="fas fa-user-circle"  ></i> Tài khoản
                     </a>
+                    <a href="../login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                    <a href="../login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                 </div>
             </div>
 
@@ -482,7 +483,7 @@
 
     <script src="/src/Users/js/product.js"></script>
     <script src="/src/Users/js/scripts.js" defer></script>
-
+    <script src ="/src/Users/js/login-signup.js"></script>
 </body>
 
 </html>
