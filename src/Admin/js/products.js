@@ -25,7 +25,6 @@ addDetailBtns.forEach(btn => {
     });
 });
 
-
 // Close modal
 closeModalBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -58,25 +57,30 @@ document.getElementById("update_detail").addEventListener("click", () => {
     const modal = document.getElementById("detail_modal");
     modal.style.display = "none";
 });
+// ----------------------------------------------------------------------------------------------------------
 
 // Thêm sản phẩm 
-const addProductBtns =document.getElementById("add_product");
-const modal1 = document.getElementById('addProductModal');
-const closeModalBtns1 = document.querySelectorAll(".close_modal, #save_Product");
+const addProductModal1 = document.getElementById("addProductModal");
+const saveProductBtn1 = document.getElementById("save_Product");
+const closeModalBtns1 = document.querySelectorAll(".close_modal");
+const toast = document.getElementById("toast");
 
-// Open modal on button click
-    addProductBtns.addEventListener("click", () => {
-        modal1.style.display = "flex";
-    });
+// Mở modal thêm sản phẩm
+document.getElementById("add_product").addEventListener("click", () => {
+    addProductModal1.style.display = "flex";
+});
 
-    // Close modal
-    closeModalBtns1.addEventListener("click", () => {
-        modal.style.display = "none";
-        deleteModal.style.display = 'none';
+// Đóng modal khi nhấn nút thoát
+closeModalBtns1.forEach(btn => {
+    btn.addEventListener("click", () => {
+        addProductModal1.style.display = "none";
     });
-    
-document.getElementById("save_Product").addEventListener("click", () => {
-    // Get input values
+});
+
+// Xử lý sự kiện khi nhấn "Lưu sản phẩm"
+saveProductBtn1.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành vi gửi form mặc định
+    // Lấy giá trị từ form
     const productCode = document.getElementById("productCode").value;
     const productName = document.getElementById("productName").value;
     const productPrice = document.getElementById("productPrice").value;
@@ -85,14 +89,17 @@ document.getElementById("save_Product").addEventListener("click", () => {
     const productStatus = document.getElementById("productStatus").value;
     const productImage = document.getElementById("productImage").value;
 
-    console.log(productCode,productName,productPrice,productCategory,productStock,productStatus,productImage);
-    // Hide the toast after 3 seconds
+    // Log dữ liệu sản phẩm để kiểm tra
+    console.log({ productCode, productName, productPrice, productCategory, productStock, productStatus, productImage });
+
+    // Hiển thị thông báo thành công
+    toast.classList.add("show");
+
+    // Ẩn thông báo sau 3 giây
     setTimeout(() => {
-        toast.classList.remove("show"); // Remove 'show' class to hide the toast
-    }, 3000); // Toast will disappear after 3 seconds
+        toast.classList.remove("show");
+    }, 3000);
 
-    // Close the modal after updating
-    const modal1 = document.getElementById("addProductModal");
-    modal1.style.display = "none";
+    // Đóng modal sau khi lưu sản phẩm
+    addProductModal1.style.display = "none";
 });
-
