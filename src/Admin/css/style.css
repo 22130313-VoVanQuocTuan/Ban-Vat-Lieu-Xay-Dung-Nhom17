@@ -296,8 +296,8 @@ td {
 
 .details table thead td {
   font-weight: 600px;
-  background-color: var(--gray);
-  color: var(--black1);
+  background: linear-gradient(to right, #4f3131, #15283e);
+  color: var(--white);
   font-weight: bolder;
 }
 
