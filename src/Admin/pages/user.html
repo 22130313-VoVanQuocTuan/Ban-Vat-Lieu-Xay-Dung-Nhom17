@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng điều khiển Quản trị viên </title>
     <!------------------ Kiểu dáng ------------------>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
@@ -69,6 +70,23 @@
                         <span class="title">Danh mục</span>
                     </a>
                 </li>
+                <li>
+                <a href="order.html">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="title">Hóa đơn</span>
+                </a>
+                  </li>
+
+                <li>
+                    <a href="review.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Review</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="#">
@@ -105,56 +123,12 @@
                 </div>
 
                 <div class="user">
-                    <img src="../imgs/customer01.jpg" alt="">
+                    <a href=""> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a> 
                 </div>
             </div>
 
-            <!------------------- Thẻ------------------>
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">1,504</div>
-                        <div class="cardName">Lượt Xem Hàng Ngày</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">80</div>
-                        <div class="cardName">Doanh Số</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">Nhận Xét</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">$7,842</div>
-                        <div class="cardName">Doanh Thu</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
-                    </div>
-                </div>
-            </div>
+    
+            
 
             <!-------------------- Danh Sách Chi Tiết người dùng------------------ -->
             <div class="details-user">
@@ -175,7 +149,7 @@
                         <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
                     </div>
                     <table>
-                        <thead>
+                        <thead >
                             <tr>
                                 <td>id</td>
                                 <td>Tên người dùng</td>

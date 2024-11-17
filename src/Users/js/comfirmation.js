@@ -4,7 +4,7 @@ function placeOrder() {
     var name = document.getElementById('name').value;
     var phone = document.getElementById('phone').value;
     var address = document.getElementById('address').value;
-    var city = document.getElementById('city').value;
+   
     var paymentMethod = document.querySelector('input[name="payment"]:checked'); // Kiểm tra nếu đã chọn phương thức thanh toán
     
     // Ẩn tất cả thông báo lỗi trước khi kiểm tra
@@ -37,11 +37,7 @@ function placeOrder() {
         isValid = false;
     }
 
-    // Kiểm tra trường city
-    if (!city) {
-        showError('city', 'Vui lòng chọn tỉnh thành.');
-        isValid = false;
-    }
+   
 
     // Kiểm tra trường payment method
     if (!paymentMethod) {

@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng điều khiển Quản trị viên </title>
     <!------------------ Kiểu dáng ------------------>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/review.css">
 </head>
 <style>
     .add-category{
@@ -85,7 +87,14 @@
                         <span class="title">Danh mục</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="order.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hóa đơn</span>
+                    </a>
+                </li>
                 <li>
                     <a href="#">
                         <span class="icon">
@@ -105,8 +114,7 @@
                 </li>
             </ul>
         </div>
-
-        <!------------------- Chính ------------------>
+        <!-------------------- Chính --------------------->
         <div class="main">
             <div class="topbar">
                 <div class="toggle">
@@ -120,202 +128,135 @@
                     </label>
                 </div>
 
-                <div class="user">
-                    <img src="../imgs/customer01.jpg" alt="">
+                <div  class="user">
+                    <a href=""> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a> 
+
                 </div>
             </div>
+            
 
-            <!------------------- Thẻ------------------>
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">1,504</div>
-                        <div class="cardName">Lượt Xem Hàng Ngày</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">80</div>
-                        <div class="cardName">Doanh Số</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">Nhận Xét</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">$7,842</div>
-                        <div class="cardName">Doanh Thu</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
-                    </div>
-                </div>
+       <!-- Phần chính -->
+       <div class="review">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Danh sách đánh giá của khách hàng</h2>
+                <a href="#" class="btn">Xem Tất Cả</a>
             </div>
-
-            <!-------------------- Danh Sách Chi Tiết người dùng------------------ -->
-            <div class="details-user">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Danh sách đánh giá cảu khách hàng</h2>
-                        <a href="#" class="btn">Xem Tất Cả</a>
-                    </div>
-                    <div class="add-category">
-                        <p style="font-size: 30px; margin-bottom: 20px;">Thêm danh mục</p>
-                        
-                        <input type="text" style="font-size: 30px; border-radius: 5px;" placeholder="Nhập tên danh mục">  
-                        <button  onclick="updateUserStatus()">Thêm</button>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>id</td>
-                                <td>Tên danh mục</td>
-                                <td>Ngày tạo</td>
-
-                                <td>Hành động</td>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Gạch xây dựng</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Xi măng và vựa</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Cát,Đá và Sỏi</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Thép và sắt</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Gỗ và Vậ liệu gỗ</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Sơn và Phụ gia</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Ngói và tấm lợp</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Ống nước và Phụ kiện</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Thiết bị điện nước</td>
-                                <td>2024/07/19</td>
-
-                                <td>
-                                    <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-                                    </div>
-                                </td>
-
-                            </tr>
-
-
-
-                        </tbody>
-                    </table>
-                </div>
-
-
-            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <td>Mã sản phẩm</td>
+                        <td>Mã khách hàng</td>
+                        <td>Thông tin đánh giá</td>
+                        <td>Ngày đánh giá</td>
+                        <td>Hành động</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP002</td>
+                        <td>KH002</td>
+                        <td>Giao hàng nhanh, chất lượng ổn</td>
+                        <td>2024-11-12</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP002', 'KH002')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SP001</td>
+                        <td>KH001</td>
+                        <td>Rất hài lòng với chất lượng</td>
+                        <td>2024-11-10</td>
+                        <td class="v">
+                            <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                        </td>
+                    </tr>
+                    
+                    <!-- Thêm các dòng dữ liệu khác tại đây -->
+                </tbody>
+            </table>
         </div>
+
+        
     </div>
+
+       
+    </div>
+</div>
+
 
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
     <script src="../js/main.js"></script>

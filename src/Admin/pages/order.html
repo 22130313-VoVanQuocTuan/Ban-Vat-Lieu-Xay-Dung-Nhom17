@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng điều khiển Quản trị viên </title>
+    <!------------------ Kiểu dáng ------------------>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/order.css">
+</head>
+<style>
+    .add-category {
+
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .add-category button {
+        background-color: #2a2185;
+        color: #f1f1f1;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    /* Style cho Modal */
+    .modal {
+        display: none;
+        /* Ẩn mặc định */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .image-product {
+        width: 100px;
+        /* Điều chỉnh kích thước ảnh nếu cần */
+        height: auto;
+    }
+</style>
+
+<body>
+    <!-- ------------------ Điều hướng -------------------->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="../imgs/logo.png" alt="">
+                        </span>
+                        <span class="title">Bán Vật Liệu Xây Dựng </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trang chủ</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Người dùng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="product.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Khuyến Mãi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Danh mục</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hóa đơn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Mật Khẩu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title" onclick="lockout()">Đăng Xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!------------------- Chính ------------------>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ở đây">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <a href="account.html"> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a>
+
+                </div>
+            </div>
+
+            <!-- Phần chính -->
+            <div class="order">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Danh sách hóa đơn</h2>
+                        <a href="#" class="btn">Xem Tất Cả</a>
+                    </div>
+                    <div class="update-order">
+                        <p style="font-size: 30px; margin-bottom: 20px;">Cập nhật trạng thái hóa đơn</p>
+                        <input type="text" placeholder="Nhập ID hóa cần cập nhật"
+                            style="font-size: 25px; padding: 2px; border-radius: 5px;">
+                        <select title="choice" id="statusSelect"
+                            style="font-size: 25px; border-radius: 5px; padding: 2px;">
+                            <option value="active">đang xử lý</option>
+                            <option value="inactive">đã hoàn thành</option>
+                            <option value="pending">đã hủy</option>
+
+                        </select>
+                        <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Mã đơn hàng</td>
+                                <td>Mã khách hàng</td>
+                                <td>Ngày đặt hàng</td>
+                                <td>Tổng tiền</td>
+                                <td>Hình thức thanh toán</td>
+                                <td>Trạng thái</td>
+                                <td>Hành động</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>VNPay</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>VNPay</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>COD</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>'
+                                <td>VNPay</td>'
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>COD</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>VNPay</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>VNPay</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>COD</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>COD</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP001</td>
+                                <td>KH001</td>
+                                <td>2024-01-01</td>
+                                <td>100.000</td>
+                                <td>VNPay</td>
+                                <td>đã thanh toán</td>
+                                <td class="v">
+                                    <button class="delete-btn" onclick="deleteReview('SP001', 'KH001')">Xóa</button>
+                                    <button class="view-detail-btn" onclick="showOrderDetail('SP001')">Chi tiết</button>
+                                </td>
+                            </tr>
+
+                            <!-- Thêm các dòng dữ liệu khác tại đây -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <!-- Modal Chi tiết Hóa đơn -->
+            <div id="orderDetailModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <h2>Chi tiết hóa đơn</h2>
+                    <div id="orderDetailContent">
+                        <!-- Thông tin chi tiết sẽ được hiển thị ở đây -->
+                        <table border="1">
+                            <tr>
+
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Gía</th>
+                                <th>Gía giảm</th>
+                                <th>Tổng giá</th>
+                            </tr>
+
+                            <tr>
+                                <td>Xi măng BC</td>
+                                <td>20</td>
+                                <td>1.000.000 ₫</td>
+                                <td>0 ₫ </td>
+                                <td>1.000.000 ₫</td>
+                            </tr>
+                            <tr>
+                                <td>Gạch BC</td>
+                                <td>100</td>
+                                <td>1.000.000 ₫</td>
+                                <td>0 ₫ </td>
+                                <td>1.000.000 ₫</td>
+                            </tr>
+                        </table>
+                        <p><strong>Mã đơn hàng:</strong> 22</p>
+                        <p><strong>Mã khách hàng:</strong> 12</p>
+                        <p><strong>Ngày đặt hàng:</strong> 2024-12-12</p>
+                        <p><strong>Tổng tiền:</strong>2.000.000 ₫</p>
+                        <p><strong>Trạng thái:</strong> đã thanh toán</span></p>
+                        <p><strong>Địa chỉ:</strong> Bình Thạnh</span></p>
+                        <p><strong>Người nhận hàng:</strong>Tuấn</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script src="../js/order.js"></script>
+    <script src="../js/index.js"></script>
+
+
+</body>
+
+</html>

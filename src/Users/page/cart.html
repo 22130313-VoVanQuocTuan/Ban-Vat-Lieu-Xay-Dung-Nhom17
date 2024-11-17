@@ -137,13 +137,14 @@
         <div class="cart-container">
             <div class="cart-left">
                 <table class="cart-table">
-                    <thead>
+                    <thead style="border-bottom: 2px solid #9e0000;">
                         <tr>
                             <th>Tên sản phẩm</th>
                             <th>Hình ảnh</th>
                             <th>Số lượng</th>
                             <th>Giá</th>
-                            <th>Gía đã giảm</th>
+                            <th>Gía giảm</th>
+                            <th>Tổng giá</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -159,6 +160,7 @@
                                 </div>
                             </td>
                             <td id ="price" class="price-after-discount">200.000 ₫</td> 
+                            <td id="total-price" class="total-after-discount">20.000 ₫</td> 
                             <td id="total-price" class="total-after-discount">180.000 ₫</td> 
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
@@ -174,6 +176,7 @@
                                 </div>
                             </td>
                             <td id ="price" class="price-after-discount">200.000 ₫</td> 
+                            <td id="total-price" class="total-after-discount">20.000 ₫</td> 
                             <td id="total-price" class="total-after-discount">180.000 ₫</td> 
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
@@ -268,7 +271,7 @@
         </div>
         <div id="fb">
             <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
-                    target="_blank" rel="noopener icon"><i class="fa-brands fa-facebook-square" style="color: #0911ff;"></i></a></li>
+                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square icon" style="color: #0911ff;"></i></a></li>
         </div>
         <button id="backToTop" title="Quay về đầu trang">⬆</button>
 
