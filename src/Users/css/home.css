@@ -107,6 +107,8 @@ p {
     justify-content: center;
     margin-left: 70px;
     margin-right: 20px;
+   
+
 }
 
 #section-header2 .search-bar input {
@@ -116,6 +118,7 @@ p {
     height: 25px;
     border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 

@@ -192,7 +192,7 @@ h1{
 .toggle{
     background-color:#3895ff;
     height: 100%;
-    background: linear-gradient(to right, #ff0000,#15283e);
+    background: linear-gradient(to right, #891f1f, #15283e);
     color: #fff;
     position: relative;
     left: -100%;
