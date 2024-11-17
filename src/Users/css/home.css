@@ -662,7 +662,7 @@ p {
 /* Responsive cho list Flash Sale */
 @media screen and (max-width: 768px) {
     #section-content {
-        width: 100%;
+        width: 85%;
         padding: 10px;
         margin: 0 auto;
     }
@@ -1702,6 +1702,28 @@ body.no-scroll {
     cursor: pointer;
     color: #ffffff;
     
+}
+
+ /* responsive cho banner */
+@media screen and (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .banner-title {
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .banner-desc {
+        width: 300px;
+        font-size: 22px;
+    }
+
+    .close-button {
+        font-size: 20px;
+    }
 }
 
 
