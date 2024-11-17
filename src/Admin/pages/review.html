@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="user">
-                    <a href=""> <i class="fa-solid fa-id-badge fa-2xl" style="color: #a61111;"></i></a>
+                    <a href="account.html"> <ion-icon name="person" style="color: #000000; font-size: 50px;"></ion-icon></a>
 
                 </div>
             </div>
@@ -271,15 +271,29 @@
 
 
             </div>
+            <!-- Modal xác nhận xóa -->
+            <div id="deleteModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Xác nhận xóa</h3>
+                    </div>
+                    <p>Bạn chắc chắn muốn xóa đánh giá này?</p>
+                    <div class="modal-actions">
+                        <button id="confirmDelete" class="confirm-delete">OK</button>
+                        <button class="close-modal">Thoát</button>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
     </div>
 
 
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/user.js"></script>
+    <script src="../js/products.js"></script>
 
 </body>
 

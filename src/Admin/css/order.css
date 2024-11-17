@@ -69,7 +69,7 @@
   }
   
   .order .recentOrders table tbody tr:hover {
-    background: linear-gradient(to right, #4f3131, #15283e);
+    background: linear-gradient(to right, #ff3636, #15283e); /* Gradient nền */
     color: var(--white);
   }
   
@@ -85,7 +85,7 @@
     border: none;
     padding: 9px;
     cursor: pointer;
-    background-color: #ff6c6c;
+    background-color: #ffec32;
     border-radius: 5px;
 }
 .statusText{
@@ -97,7 +97,7 @@
     text-align: center;
 }
 .update-order button{
-    background-color: #2a2185;
+    background-color: #202a3b;
     color: #f1f1f1;
     border-radius: 5px;
     font-size: 25px;

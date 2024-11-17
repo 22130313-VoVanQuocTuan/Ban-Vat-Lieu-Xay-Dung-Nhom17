@@ -109,7 +109,6 @@
                 <li>
                     <a href="/src/Users/page/login-signup.html">
                         <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
                         </span>
                         <span class="title" onclick="lockout()">Đăng Xuất</span>
                     </a>
@@ -183,10 +182,10 @@
                                 <input type="number" id="discountCategory" required>
 
                                 <label for="discountStock">Ngày bắt đầu:</label>
-                                <input type="date" id="discountStart" required>
+                                <input title="start" type="date-satrt" id="discountStart" required>
 
                                 <label for="discountStock">Ngày kết thúc:</label>
-                                <input type="date" id="discountExpired" required>
+                                <input title="end" type="date-end" id="discountExpired" required>
 
                                 <label for="discountStock">Số lượng:</label>
                                 <input type="number" id="discountStock" required>
@@ -218,7 +217,7 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="../js/product.js"></script>
     <script src="../js/index.js"></script>
 </body>

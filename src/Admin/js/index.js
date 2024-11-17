@@ -1,14 +1,26 @@
-/*Menu*/
-let toggle = document.querySelector(".toggle");
-let navigation = document.querySelector(".navigation");
-let main = document.querySelector(".main");
+// Lấy tất cả các liên kết trong menu
+let menuItems = document.querySelectorAll('.navigation ul li a');
 
-toggle.onclick = function () {
-  navigation.classList.toggle("active");
-  main.classList.toggle("active");
-};
+// Lặp qua từng item và thêm sự kiện click
+menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Loại bỏ class active khỏi tất cả các mục khác
+        menuItems.forEach(link => link.closest('li').classList.remove('active'));
 
+        // Thêm class active vào mục được nhấn
+        this.closest('li').classList.add('active');
+    });
 
+    // Thêm sự kiện hover vào mỗi mục để thêm class hovered
+    item.addEventListener('mouseover', function() {
+        this.closest('li').classList.add('hovered');
+    });
+
+    // Loại bỏ sự kiện hover khi chuột rời khỏi
+    item.addEventListener('mouseout', function() {
+        this.closest('li').classList.remove('hovered');
+    });
+});
 /*Logout*/
 function lockout(){
     window.location.href = "/src/Users/page/login-signup.html"
