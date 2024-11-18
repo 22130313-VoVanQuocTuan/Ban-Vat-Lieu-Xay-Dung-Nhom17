@@ -27,7 +27,7 @@ body {
 /* -------------------Navigation ------------------- */
 .navigation {
   position: fixed;
-  width: 300px;
+  width: 280px;
   height: 100%;
   background: linear-gradient(to right, #4f3131, #15283e);
   transition: 0.5s;
@@ -36,15 +36,16 @@ body {
 
 .navigation ul li a span img {
   width: 75%;
-  height: auto;
+  height: 85%;
   border-radius: 8px;
+  margin-top: 10px;
   filter: brightness(0.8) contrast(1.2);
   /* Tăng độ sáng và độ tương phản */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .navigation ul li a span.title {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: bold;
 }
 
@@ -68,7 +69,7 @@ body {
 }
 
 .navigation ul li:nth-child(1) {
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   pointer-events: none;
 }
 
@@ -96,7 +97,7 @@ body {
 }
 
 .navigation ul li a .icon ion-icon {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .navigation ul li a .title {
@@ -123,7 +124,7 @@ body {
 .main {
   position: absolute;
   width: calc(100% - 300px);
-  left: 300px;
+  left: 280px;
   min-height: 100vh;
   background: var(--white);
   transition: 0.5s;
@@ -136,7 +137,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  margin-top: 10px;
 }
 
 .toggle {
@@ -146,7 +146,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   cursor: pointer;
 }
 
@@ -163,11 +163,11 @@ body {
 
 .search label input {
   width: 100%;
-  height: 40px;
+  height: 28px;
   border-radius: 40px;
   padding: 5px 20px;
   padding-left: 35px;
-  font-size: 18px;
+  font-size: 13px;
   outline: none;
   border: 1px solid var(--black2);
 }
@@ -197,18 +197,18 @@ body {
   overflow: hidden;
   cursor: pointer;
   margin-right: 50px;
-  margin-top: 0;
+  margin-top: 20px;
 }
 .user a   i{
-  font-size: 45px;
-  margin-top: 23px;
+  font-size: 30px;
+  margin-top: 20px;
 }
 
 /* ------------------ Cards ------------------ */
 .cardBox {
   position: relative;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
@@ -217,8 +217,9 @@ body {
 .cardBox .card {
   position: relative;
   background: var(--white);
-  padding: 30px;
+  padding: 15px;
   border-radius: 20px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -228,18 +229,18 @@ body {
 .cardBox .card .numbers {
   position: relative;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   color: var(--black1);
 }
 
 .cardBox .card .cardName {
   color: var(--black2);
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 5px;
 }
 
 .cardBox .card .iconBx {
-  font-size: 3.5rem;
+  font-size: 1.25rem;
   color: var(--black2);
 }
 
@@ -266,7 +267,7 @@ body {
 .details .recentOrders {
   position: relative;
   display: grid;
-  min-height: 500px;
+  min-height: 400px;
   background: var(--white);
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -282,6 +283,7 @@ body {
 .cardHeader h2 {
   font-weight: 600;
   color: #4f3131;
+  font-size: 14px;
 }
 
 .cardHeader .btn {
@@ -291,19 +293,21 @@ body {
   text-decoration: none;
   color: var(--white);
   border-radius: 6px;
+  font-size: 10px;
 }
 
 .details table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .details table th,
 td {
   border: 1px solid #ccc;
   text-align: center;
-  padding: 15px;
+  padding: 0;
+  font-size: 10px;
 }
 
 .details table thead td {
@@ -340,7 +344,7 @@ td {
   background: #8de02c;
   color: var(--white);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -349,7 +353,7 @@ td {
   background: #e9b10a;
   color: var(--white);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -358,7 +362,7 @@ td {
   background: #f00;
   color: var(--white);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -367,7 +371,7 @@ td {
   background: #1795ce;
   color: var(--white);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -375,7 +379,7 @@ td {
 .recentCustomers {
   position: relative;
   display: grid;
-  min-height: 500px;
+  min-height: 400px;
   padding: 20px;
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -405,13 +409,13 @@ td {
 }
 
 .recentCustomers table tr td {
-  padding: 12px 10px;
+  padding: 14px 10px;
 }
 
 .recentCustomers table tr td h4 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.2rem;
+  line-height: 1.25rem;
 }
 
 .recentCustomers table tr td h4 span {
@@ -447,7 +451,7 @@ td {
   }
 
   .navigation.active {
-    width: 300px;
+    width: 280px;
     left: 0;
   }
 
@@ -457,7 +461,7 @@ td {
   }
 
   .main.active {
-    left: 300px;
+    left: 280px;
   }
 
   .cardBox {

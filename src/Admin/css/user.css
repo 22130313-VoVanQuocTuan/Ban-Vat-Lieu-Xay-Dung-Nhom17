@@ -79,6 +79,7 @@
   
   .details-user .recentOrders table tr td {
     padding: 10px;
+    font-size: 12px;
   }
   
   .details-user .recentOrders table tr td:nth-child(3) {
@@ -104,7 +105,7 @@
     background-color: #202a3b;
     color: #f1f1f1;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 15px;
     padding: 2px;
     cursor: pointer;
 }
