@@ -140,18 +140,17 @@
             <div class="discounts">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Danh sách hóa đơn</h2>
+                        <h2>Danh sách khuyến mãi</h2>
                         <a href="#" class="btn">Xem Tất Cả</a>
                     </div>
                     <div class="update-discount">
-                        <p style="font-size: 30px; margin-bottom: 20px;">Cập nhật trạng thái hóa đơn</p>
+                        <p style="font-size: 20px; margin-bottom: 10px;">Cập nhật trạng thái khuyến mãi</p>
                         <input type="text" placeholder="Nhập ID cần cập nhật"
-                            style="font-size: 25px; padding: 2px; border-radius: 5px;">
+                            style="font-size: 15px; padding: 2px; border-radius: 5px;">
                         <select title="choice" id="statusSelect"
-                            style="font-size: 25px; border-radius: 5px; padding: 2px;">
-                            <option value="active">Đang xử lý</option>
-                            <option value="inactive">Đã hoàn thành</option>
-                            <option value="pending">Đã hủy</option>
+                            style="font-size: 15px; border-radius: 5px; padding: 2px;">
+                            <option value="discount">Còn khuyến mãi</option>
+                            <option value="nodiscount">Hết khuyến mãi</option>
 
                         </select>
                         <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
@@ -169,8 +168,9 @@
                                 <th>Mã sản phẩm</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Giảm giá</th>
-                                <th>Ngày tạo</th>
+                                <th>Ngày bắt đầu</th>
                                 <th>Ngày kết thúc</th>
+                                <th>Trạng thái</th>
                                 <th>Hành động</th>
                             </tr>
                         </thead>
@@ -183,6 +183,7 @@
                                 <td>10%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -194,6 +195,7 @@
                                 <td>5%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -206,6 +208,7 @@
                                 <td>20%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -219,6 +222,7 @@
                                 <td>5%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -230,6 +234,7 @@
                                 <td>10%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -241,6 +246,7 @@
                                 <td>10%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -252,6 +258,7 @@
                                 <td>50%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Còn khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -264,6 +271,7 @@
                                 <td>25%</td>
                                 <td>17/11/2024</td>
                                 <td>20/11/2024</td>
+                                <td>Hết khuyến mãi</td>
                                 <td class="v">
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
@@ -272,8 +280,6 @@
 
                         </tbody>
                     </table>
-                    <!-- Toast notification -->
-                    <div id="toast" class="toast">Cập nhật chi tiết thành công!</div>
                     <!-- mẫu điền thêm sản phẩm  -->
                     <div id="addProductModal" class="modal">
                         <div class="modal-content">
