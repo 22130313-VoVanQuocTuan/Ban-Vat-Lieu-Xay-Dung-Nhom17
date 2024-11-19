@@ -79,7 +79,7 @@
   
   .details-user .recentOrders table tr td {
     padding: 10px;
-    font-size: 12px;
+    font-size: 13px;
   }
   
   .details-user .recentOrders table tr td:nth-child(3) {
@@ -89,6 +89,7 @@
 .v button{
     border: none;
     padding: 9px;
+    font-size: 11px;
     cursor: pointer;
     background-color: #ffec32;
     border-radius: 5px;

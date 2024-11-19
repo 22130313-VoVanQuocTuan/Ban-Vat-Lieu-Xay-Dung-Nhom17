@@ -45,8 +45,7 @@
 
 .products table th,
 td {
-
-
+  font-size: 13px;
   text-align: center;
   padding: 15px;
   border-bottom: 1px solid #2e0505;
@@ -79,7 +78,7 @@ td {
 }
 
 .products .recentOrders table tr td {
-  font-size: 18px;
+  font-size: 13px;
   padding: 10px;
 }
 
@@ -89,24 +88,26 @@ td {
 
 .v button {
   border: none;
-  padding: 9px;
+  padding: 8px;
+  font-size: 11px;
+  margin-bottom: 2px;
   cursor: pointer;
   background-color: #ffec32;
   border-radius: 5px;
 }
 
 .products img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
 }
 
 /*Thêm sản phẩm*/
 .list-products-content-button button {
-  padding: 10px;
-  font-size: 15px;
+  padding: 8px;
+  font-size: 11px;
   float: right;
-  margin-top: 15px;
+  margin-top: 10px;
   border-radius: 5px;
   background-color: #4f3131;
   text-decoration: none;
@@ -146,7 +147,7 @@ td {
 }
 
 .modal-header {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 15px;
   color: #f1f1f1;
@@ -158,14 +159,14 @@ td {
 
 .modal-field label {
   display: block;
-  font-size: 14px;
+  font-size: 10px;
   margin-bottom: 5px;
   color: #f1f1f1;
 }
 
 /* ------------------modal thêm chi tiết sản phẩm ---------------- */
 #detail_modal label {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #f7d774;
 }
@@ -173,8 +174,8 @@ td {
 .modal-field input,
 .modal-field textarea {
   width: 100%;
-  padding: 8px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 12px;
   border: 2px solid #f7d774;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.1);
@@ -186,7 +187,7 @@ td {
 }
 
 .modal-actions {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: right;
 }
 
@@ -197,7 +198,7 @@ td {
   padding: 8px 15px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .modal-actions button:hover {
@@ -211,7 +212,7 @@ td {
   padding: 8px 15px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   margin-right: 10px;
 }
 
@@ -254,11 +255,11 @@ td {
 #addProductForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 #addProductForm label {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: bold;
   color: #f7d774;
 }
@@ -267,15 +268,15 @@ td {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #f7d774;
   border-radius: 8px;
-  padding: 12px;
+  padding: 7px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 10px;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #addProductForm select {
-  padding: 15px;
+  padding: 8px;
   border-radius: 5px;
 }
 
@@ -290,8 +291,8 @@ td {
   background: none;
   color: #f7d774;
   cursor: pointer;
-  font-size: 18px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 10px;
   border-radius: 5px;
 }
 
@@ -300,9 +301,9 @@ td {
   background: #f88e62;
   color: #ffffff;
   border: none;
-  padding: 10px 15px;
+  padding: 7px 12px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
