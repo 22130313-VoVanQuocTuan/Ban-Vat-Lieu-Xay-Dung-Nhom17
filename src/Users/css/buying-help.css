@@ -9,20 +9,21 @@ html{
   
   
   #section-content-1 .guide-container {
-    width: 1410px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 75%;
+    padding-left: 36px;
+    padding-right: 69px;
     padding-bottom: 50px;
     margin: 0 auto;
     gap: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 20px auto;
-    max-width: 80%;
-    font-size: 20px;
-   
+    /* margin: 20px auto; */
+    max-width: 100%;
+    font-size: 15px;
 }
+   
+
 
 .guide-container h2 {
     color: #000000 ;

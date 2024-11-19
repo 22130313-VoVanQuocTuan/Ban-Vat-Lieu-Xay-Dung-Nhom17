@@ -1,4 +1,4 @@
-html {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,7 +16,7 @@ html {
 .infor {
     margin-bottom: 15px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 
@@ -36,8 +36,8 @@ html {
 
 
 .back {
-    height: 40px;
-    width: 335px;
+    height: 30px;
+    width: 290px;
     margin-bottom: 15px;
     border-radius: 5px;
     padding-left: 15px;
@@ -105,7 +105,7 @@ html {
 
 .pay {
     margin: 0 0 15px 0;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -119,12 +119,12 @@ input[type="radio"] {
 }
 
 label {
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(81, 76, 76, 0.91);
     display: flex;
-    align-items: center;
+   align-items: center;
     cursor: pointer;
-    padding: 15px 110px 15px 20px;
+    padding: 9px 25px 9px 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -133,7 +133,7 @@ label {
 
 .box2 {
     float: right;
-    width: 35%;
+    width: 28%;
     background-color: #fafafa;
 
     margin-right: 10%;
@@ -141,12 +141,12 @@ label {
 }
 
 .order {
-    margin: 22px 0 20px 0;
+    margin: 22px 0 26px 0;
     padding-bottom: 20px;
     border-bottom: 2px solid #999999;
-    width: 350px;
+    width: 165px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .three-items {
@@ -240,12 +240,11 @@ label {
 }
 
 .totals {
-    display: flex;
-    border-bottom: 2px dashed #999999;
+      border-bottom: 2px dashed #999999;
 }
 
 .total {
-    margin: 20px 266px 20px 3px;
+    margin: 5px 175px 5px 1px;
 }
 
 .total-cost {
@@ -277,13 +276,14 @@ label {
 .submit-btn {
     padding: 14px 20px 12px 20px;
     border: none;
-    margin: 30px 20px 0 0;
+    margin: 34px 20px 0 0;
     background-color: #204af1;
     border-radius: 10px;
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
     margin-left: -92px;
+    width: 195px;
 }
 
 .submit-btn:hover {
@@ -291,7 +291,8 @@ label {
 }
 
 .p {
-    font-size: 20px;
+    font-size: 15px;
+    width:  100%;
 
 }
 

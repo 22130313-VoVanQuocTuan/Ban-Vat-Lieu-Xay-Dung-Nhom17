@@ -10,12 +10,11 @@ html{
   
   
   #section-content-1 .cart-container {
-    width: 1510px;
-   
+    width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    
   }
   
   .cart-left {
@@ -36,23 +35,25 @@ html{
   
   .cart-table th,
   .cart-table td {
-    padding: 10px;
+
     text-align: center; /* Căn giữa nội dung */
     border-bottom: 1px solid #ddd;
     vertical-align: middle; /* Căn giữa theo chiều dọc */
-    font-size: 20px;
+    font-size: 13px;
     font-weight: 500;
+    
   }
   
   .cart-table th {
     background-color: #f4f4f4;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 5px;
   }
   
   .cart-table img {
-    width: 200px; /* Đặt kích thước nhất quán cho hình ảnh */
-    height: 100px;
+    width: 85px; /* Đặt kích thước nhất quán cho hình ảnh */
+    height: 75px;
     object-fit: contain; /* Đảm bảo ảnh không bị méo */
     border-radius: 10px;
   }
@@ -77,7 +78,7 @@ html{
     background-color: #ff0000;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 2px 5px;
     cursor: pointer;
     border-radius: 4px;
   }
@@ -135,8 +136,8 @@ html{
     background-color: white; /* Màu chủ đạo */
     border: 2px solid #ff0000; /* Viền màu đỏ */
     color: #ff0000;
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 3px 5px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng khi hover và nhấn */
@@ -153,8 +154,8 @@ html{
     
   .cart-right h2 {
     margin-bottom: 20px;
-    width: 400px;
-   
+    width: 295px;
+    margin-top: 0px;
   }
   
   .cart-summary {
@@ -176,9 +177,9 @@ html{
     background-color: #204af1;
     color: white;
     width: 100%;
-    padding: 15px;
+    padding: 6px;
     border: none;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng khi hover và nhấn */
@@ -205,13 +206,13 @@ html{
   
   .voucher label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
+   
+    font-size: 15px;
   }
   
   .voucher input {
     width: calc(100% - 90px);
-    padding: 10px;
+    padding: 5px;
     margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -221,7 +222,7 @@ html{
     background-color: #ff0000;
     border: none;
     color: white;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 15px;

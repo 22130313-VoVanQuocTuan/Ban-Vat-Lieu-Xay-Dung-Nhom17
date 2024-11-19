@@ -137,7 +137,7 @@ button:hover {
    width: 100%;
    height: auto;
    margin-top: 20px;
-   margin-left: 35px;
+  
    background-color: #ffffff;
    margin-bottom: 15px;
 }
@@ -191,17 +191,18 @@ button:hover {
 .conten .right .row, .pagination {
    background-color: #ffffffff;
    display: flex;
+
    flex-wrap: wrap;
-   gap: 42px;
-   padding: 20px;
+   gap: 11px;
+   padding: 0px;
 }
 
 .conten .right .name-cart {
-   width: 200px;
+   width: 165px;
    padding: 3px;
    transition: box-shadow 0.3s ease;
    background-color: #fafafa;
-   border-radius: 15px;
+   border-radius: 10px;
    border: 1px solid;
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -213,11 +214,11 @@ button:hover {
 
 .conten .right .row img {
    width: 100%;
-   max-width: 160px;
+   max-width: 127px;
    border-radius: 20px;
    margin-left: 10px;
    transition: transform 0.3s ease;
-    height: 100px;
+   height: 150px;
    padding: 10px;
 }
 
@@ -234,12 +235,13 @@ button:hover {
    font-weight: 600;
    margin-bottom: 5px;
    margin-left: 10px;
+   font-size: 14px;
 }
 
 /* Buttons */
 .conten .right .name-cart .add-cart {
    border-radius: 5px;
-   padding: 8px 50px;
+   padding: 3px 31px;
    text-decoration: none;
    color: #010000;
    display: inline-block;
