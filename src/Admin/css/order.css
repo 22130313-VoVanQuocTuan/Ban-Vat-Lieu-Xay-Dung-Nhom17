@@ -87,20 +87,21 @@
     cursor: pointer;
     background-color: #ffec32;
     border-radius: 5px;
+    font-size: 11px;
 }
 .statusText{
     padding: 2px;
     border-radius: 5px;
 }
 .update-order{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 .update-order button{
     background-color: #202a3b;
     color: #f1f1f1;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 15px;
     padding: 2px;
     cursor: pointer;
 }

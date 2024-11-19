@@ -49,7 +49,7 @@
         width: 80%;
         max-width: 600px;
         border-radius: 20px;
-        line-height: 50px;
+        line-height: 40px;
     }
 
     .close-btn {
@@ -72,7 +72,7 @@
     }
 
     td {
-        padding: 10px;
+        padding: 5px;
         text-align: center;
     }
 
@@ -81,6 +81,11 @@
         /* Điều chỉnh kích thước ảnh nếu cần */
         height: auto;
     }
+
+    #orderDetailContent strong, p{
+        font-size: 15px;
+    }
+
 </style>
 
 <body>
@@ -194,7 +199,7 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                <div class="search">
+                <div class="search">    
                     <label>
                         <input type="text" placeholder="Tìm kiếm ở đây">
                         <ion-icon name="search-outline"></ion-icon>
@@ -202,7 +207,7 @@
                 </div>
 
                 <div class="user">
-                    <a href="account.html"> <ion-icon name="person" style="color: #000000; font-size: 50px;"></ion-icon></a>
+                    <a href="account.html"> <ion-icon name="person" style="color: #000000; font-size: 25px;"></ion-icon></a>
 
                 </div>
             </div>
@@ -215,14 +220,14 @@
                         <a href="#" class="btn">Xem Tất Cả</a>
                     </div>
                     <div class="update-order">
-                        <p style="font-size: 30px; margin-bottom: 20px;">Cập nhật trạng thái hóa đơn</p>
+                        <p style="font-size: 20px; margin-bottom: 10px;">Cập nhật trạng thái hóa đơn</p>
                         <input type="text" placeholder="Nhập ID hóa cần cập nhật"
-                            style="font-size: 25px; padding: 2px; border-radius: 5px;">
+                            style="font-size: 15px; padding: 2px; border-radius: 5px;">
                         <select title="choice" id="statusSelect"
-                            style="font-size: 25px; border-radius: 5px; padding: 2px;">
-                            <option value="active">đang xử lý</option>
-                            <option value="inactive">đã hoàn thành</option>
-                            <option value="pending">đã hủy</option>
+                            style="font-size: 15px; border-radius: 5px; padding: 2px;">
+                            <option value="active">Đang xử lý</option>
+                            <option value="inactive">Đã hoàn thành</option>
+                            <option value="pending">Đã hủy</option>
 
                         </select>
                         <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
