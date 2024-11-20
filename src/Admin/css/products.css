@@ -480,7 +480,7 @@ td {
   color: #F5F5DC;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #deleteModal .modal-header h3 {
@@ -490,21 +490,23 @@ td {
   text-transform: uppercase;
   color: #FFC857;
   background: none;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 10px;
 }
 
-#deleteModal.modal-content .button-container {
+#deleteModal .modal-content .modal-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  width: 100%;
+  width: 45%;
+  margin-left: 200px;
+  margin-top: 5px;
 }
 
-#deleteModal .modal-content .button-container button:first-child {
+#deleteModal .modal-content .modal-actions button:first-child {
   margin-top: 15px;
   background-color: #f88e62;
   color: #ffffff;
@@ -513,7 +515,7 @@ td {
   cursor: pointer;
 }
 
-#deleteModal .modal-content .button-container button:last-child {
+#deleteModal .modal-content .modal-actions button:last-child {
   margin-top: 15px;
   background-color: #f88e62;
   color: #ffffff;
@@ -522,7 +524,7 @@ td {
   cursor: pointer;
 }
 
-#deleteModal .modal-content .button-container button:hover {
+#deleteModal .modal-content .modal-actions button:hover {
   transform: scale(1.1);
 }
 
