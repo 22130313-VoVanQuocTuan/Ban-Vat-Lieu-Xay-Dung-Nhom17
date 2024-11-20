@@ -173,7 +173,7 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
+                                    <button id="edit_product">Sửa</button>
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
@@ -187,7 +187,7 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
+                                    <button id="edit_product">Sửa</button>
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
@@ -202,8 +202,8 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
-                                    <button>Xóa</button>
+                                    <button id="edit_product">Sửa</button>
+                                    <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -218,8 +218,8 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
-                                    <button>Xóa</button>
+                                    <button id="edit_product">Sửa</button>
+                                    <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -232,8 +232,8 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
-                                    <button>Xóa</button>
+                                    <button id="edit_product">Sửa</button>
+                                    <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -246,8 +246,8 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
-                                    <button>Xóa</button>
+                                    <button id="edit_product">Sửa</button>
+                                    <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -260,7 +260,7 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
+                                    <button id="edit_product">Sửa</button>
                                     <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
@@ -275,8 +275,8 @@
                                 <td>13/11/2024</td>
                                 <td class="v">
                                     <button id="add_detail">Cập nhật chi tiết</button>
-                                    <button>Sửa</button>
-                                    <button>Xóa</button>
+                                    <button id="edit_product">Sửa</button>
+                                    <button id="deleteBtn">Xóa</button>
                                 </td>
                             </tr>
 
@@ -291,22 +291,22 @@
                             <h3>Thêm sản phẩm mới</h3>
                             <form id="addProductForm">
                                 <label for="productCode">Mã sản phẩm:</label>
-                                <input type="text" id="productCode" >
+                                <input type="text" id="productCode">
 
                                 <label for="productName">Tên sản phẩm:</label>
-                                <input type="text" id="productName" >
+                                <input type="text" id="productName">
 
                                 <label for="productPrice">Giá:</label>
-                                <input type="text" id="productPrice" >
+                                <input type="text" id="productPrice">
 
                                 <label for="productCategory">Danh mục:</label>
-                                <input type="text" id="productCategory" >
+                                <input type="text" id="productCategory">
 
                                 <label for="productStock">Tồn kho:</label>
-                                <input type="number" id="productStock" >
+                                <input type="number" id="productStock">
 
                                 <label for="productStatus">Trạng thái:</label>
-                                <select id="productStatus" >
+                                <select id="productStatus">
                                     <option value="active">Còn hàng</option>
                                     <option value="inactive">Hết hàng</option>
                                 </select>
@@ -314,7 +314,7 @@
                                 <label for="productImage">Hình ảnh:</label>
                                 <input type="file" id="productImage">
 
-                                <button id ="save_Product">Lưu sản phẩm</button>
+                                <button id="save_Product">Lưu sản phẩm</button>
                                 <button class="close_modal">Thoát</button>
                             </form>
                         </div>
@@ -322,7 +322,9 @@
                     <!-- Mẫu điền chi tiết sản phẩm  -->
                     <div id="detail_modal" class="modal">
                         <div class="modal-content">
-                            <div class="modal-header">Thêm chi tiết sản phẩm</div>
+                            <div class="modal-header">
+                                <h3>Thêm chi tiết sản phẩm</h3>
+                            </div>
 
                             <div class="modal-field">
                                 <label for="msp">Mã sản phẩm:</label>
@@ -353,9 +355,43 @@
                             </div>
 
                             <div class="modal-actions">
-                                <button class="close-modal">Hủy</button>
                                 <button id="update_detail">Cập nhật chi tiết</button>
+                                <button class="close-modal">Hủy</button>
                             </div>
+                        </div>
+                    </div>
+                    <!-- Modal sửa thông tin sản phẩm -->
+                    <div id="editProductModal" class="modal">
+                        <div class="modal-content">
+                            <h3>Sửa sản phẩm</h3>
+                            <form id="editProductForm">
+                                <label for="productCode">Mã sản phẩm:</label>
+                                <input type="text" id="productCode">
+
+                                <label for="productName">Tên sản phẩm:</label>
+                                <input type="text" id="productName">
+
+                                <label for="productPrice">Giá:</label>
+                                <input type="text" id="productPrice">
+
+                                <label for="productCategory">Danh mục:</label>
+                                <input type="text" id="productCategory">
+
+                                <label for="productStock">Tồn kho:</label>
+                                <input type="number" id="productStock">
+
+                                <label for="productStatus">Trạng thái:</label>
+                                <select id="productStatus">
+                                    <option value="active">Còn hàng</option>
+                                    <option value="inactive">Hết hàng</option>
+                                </select>
+
+                                <label for="productImage">Hình ảnh:</label>
+                                <input type="file" id="productImage">
+
+                                <button id="save_Product2">Lưu thay đổi</button>
+                                <button class="close_modal2">Thoát</button>
+                            </form>
                         </div>
                     </div>
                     <!-- Modal xác nhận xóa -->
@@ -379,6 +415,7 @@
         <script src="../js/order.js"></script>
         <script src="../js/index.js"></script>
         <script src="../js/products.js"></script>
-        <script src ="../js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
 </body>
+
 </html>

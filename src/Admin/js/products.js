@@ -103,3 +103,48 @@ saveProductBtn1.addEventListener("click", (event) => {
     // Đóng modal sau khi lưu sản phẩm
     addProductModal1.style.display = "none";
 });
+// ----------------------------------------------------------------------------------------------------------
+
+//Sửa sản phẩm 
+const editProductModal2 = document.getElementById("editProductModal");
+const saveProductBtn2 = document.getElementById("save_Product2");
+const closeModalBtns2 = document.querySelectorAll(".close_modal2");
+
+// Mở modal thêm sản phẩm
+document.getElementById("edit_product").addEventListener("click", () => {
+    editProductModal2.style.display = "flex";
+});
+
+// Đóng modal khi nhấn nút thoát
+closeModalBtns2.forEach(btn => {
+    btn.addEventListener("click", () => {
+        editProductModal2.style.display = "none";
+    });
+});
+
+// Xử lý sự kiện khi nhấn "Lưu sản phẩm"
+saveProductBtn2.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành vi gửi form mặc định
+    // Lấy giá trị từ form
+    const productCode = document.getElementById("productCode").value;
+    const productName = document.getElementById("productName").value;
+    const productPrice = document.getElementById("productPrice").value;
+    const productCategory = document.getElementById("productCategory").value;
+    const productStock = document.getElementById("productStock").value;
+    const productStatus = document.getElementById("productStatus").value;
+    const productImage = document.getElementById("productImage").value;
+
+    // Log dữ liệu sản phẩm để kiểm tra
+    console.log({ productCode, productName, productPrice, productCategory, productStock, productStatus, productImage });
+
+    // Hiển thị thông báo thành công
+    toast.classList.add("show");
+
+    // Ẩn thông báo sau 3 giây
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+
+    // Đóng modal sau khi lưu sản phẩm
+    editProductModal2.style.display = "none";
+});
