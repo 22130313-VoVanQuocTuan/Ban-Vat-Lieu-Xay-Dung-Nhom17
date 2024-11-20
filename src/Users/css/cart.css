@@ -269,3 +269,17 @@ html{
         transform: rotate(360deg); /* Kết thúc ở góc 360 độ */
     }
 }
+
+@media screen and (max-width: 768px) {
+  #section-content-1 .cart-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #section-content-1 .cart-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
