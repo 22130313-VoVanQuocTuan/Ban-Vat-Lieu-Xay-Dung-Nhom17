@@ -62,7 +62,7 @@ function placeOrder() {
 
         // Hiển thị overlay và khóa cuộn trang
         overlay.style.display = 'block';
-        document.body.classList.add('overlay-active'); // Chặn cuộn trang
+        
 
         // Hiển thị form thanh toán tương ứng
         if (paymentMethodValue === 'cod') {

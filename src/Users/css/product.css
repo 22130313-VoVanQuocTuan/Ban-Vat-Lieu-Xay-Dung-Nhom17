@@ -15,7 +15,7 @@ a {
    margin-left: auto;
    margin-right: auto;
    justify-content: space-between;
-   flex-wrap: wrap;
+   flex-direction: row;
 }
 
 .conten .item {
@@ -189,7 +189,7 @@ button:hover {
 }
 
 .conten .right .row, .pagination {
-   background-color: #ffffffff;
+   background-color: rgba(255, 255, 255, 0);
    display: flex;
 
    flex-wrap: wrap;
@@ -229,6 +229,7 @@ button:hover {
 .conten .right .name-cart h3 {
    color: #110ec6;
    margin: 15px 10px 10px;
+   font-size: 15px;
 }
 
 .conten .right .name-cart p {
@@ -346,7 +347,9 @@ li {
    .danhmuc {
       font-size: 24px;
    }
-  
+   .conten {
+      display: grid;
+   }
 
    .conten .left-sidebar {
       width: 100%;
@@ -359,18 +362,25 @@ li {
    
    .conten .right .row {
       grid-template-columns: repeat(2, 1fr); /* Thay 3 cột thành 2 cột */
-    
+      display: grid;
+    flex-wrap: wrap;
+    gap: 11px;
+    padding: 0px;    
+    width: 53%;  /* Đảm bảo sản phẩm chiếm đầy đủ chiều rộng của ô lưới */
+   margin-left: auto;
+   margin-right: auto;
    }
 
-   .conten .right .name-cart {
-      width: 60%;  /* Đảm bảo sản phẩm chiếm đầy đủ chiều rộng của ô lưới */
-   }
+  
 
 }
 
 @media screen and (max-width: 480px) {
    .conten .left-sidebar {
       width: 100%;
+   }
+   .conten .right {
+      width: 20px;
    }
 
    .conten .right .row {
@@ -385,7 +395,21 @@ li {
       font-size: 18px;
    }
    .filter{
-      height: auto;
-      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .filter p{
+      font-size: 10px;
+      padding: auto;
+   }
+   .dropdown{
+      padding: 0px;
+   }
+   .conten .right .pagination {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: nowrap;
+      width: 300px;
    }
 }

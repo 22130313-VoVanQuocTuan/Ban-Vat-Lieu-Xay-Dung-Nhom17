@@ -5,6 +5,7 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     height: auto;
+    background-color: #ffffff;
 }
 
 /* Định dạng cho container chứa sản phẩm */
@@ -74,19 +75,20 @@
 
 /* Nút "Thêm vào giỏ hàng" */
 .add-to-cart-btn {
-    background-color: #3498db;
+    background-color: #204af1;
     color: white;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: -10px;
 }
 
 /* Hiệu ứng hover cho nút "Thêm vào giỏ hàng" */
 .add-to-cart-btn:hover {
-    background-color: #2980b9;
+    background-color: #24a220;
 }
 
 /* Đánh giá sản phẩm */
@@ -98,14 +100,18 @@
 .comment-form button {
     width: 100px;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: -10px;
     font-size: 15px;
     cursor: pointer;
     margin-bottom: 10px;
+    background-color: #204af1;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
 }
 
 .product-info p {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -120,7 +126,8 @@
 .describe-comment textarea {
     width: 500px;
     height: 200px;
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: -7px;
 }
 
 /* Sản phẩm tương tự */
@@ -141,10 +148,13 @@
     margin-top: 15px;
     padding-top: 10px;
     display: flex;
+
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
     gap: 30px 50px;
     background-color: #f1f1f1;
+    flex-direction: row-reverse;
+    align-content: space-around;
 }
 
 .similar {

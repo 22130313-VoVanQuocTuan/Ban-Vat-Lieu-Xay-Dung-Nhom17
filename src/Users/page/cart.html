@@ -149,7 +149,7 @@
                         </tr>
                     </thead>
                     <tbody id="cart-items-container" class="cart-items-container">
-                        <tr id="cart">
+                        <tr class="cart-item" data-id="1">
                             <td>Gạch-inax</td>
                             <td><img src="../img_product/gachxaydung/gachdinhdac.png" alt="${product.name}"></td>
                             <td>
@@ -159,14 +159,13 @@
                                     <button class="qty-btn plus-btn">+</button>
                                 </div>
                             </td>
-                            <td id ="price" class="price-after-discount">200.000 ₫</td> 
+                            <td id="price" class="price-after-discount">200.000 ₫</td> 
                             <td id="total-price" class="total-after-discount">20.000 ₫</td> 
                             <td id="total-price" class="total-after-discount">180.000 ₫</td> 
-                            <td><button id="delete" class="remove-from-cart-button">Xóa</button>
-                            </td>
+                            <td><button class="remove-from-cart-button">Xóa</button></td>
                         </tr>
-                        <tr id="cart">
-                            <td>Gạch-inax</td>
+                        <tr class="cart-item" data-id="2">
+                            <td>Gạch không nung</td>
                             <td><img src="../img_product/gachxaydung/gachkhongnung.png" alt="${product.name}"></td>
                             <td>
                                 <div class="quantity">
@@ -181,8 +180,8 @@
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
                         </tr>
-                        <tr id="cart">
-                            <td>Gạch-inax</td>
+                        <tr class="cart-item" data-id="3">
+                            <td>Ngói nóc</td>
                             <td><img src="../img_product/ngoi/Ngói cuối nóc.png" alt="${product.name}"></td>
                             <td>
                                 <div class="quantity">
@@ -197,8 +196,8 @@
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
                         </tr>
-                        <tr id="cart">
-                            <td>Gạch-inax</td>
+                        <tr class="cart-item" data-id="3">
+                            <td>Thép BCL</td>
                             <td><img src="../img_product/thepvasat/image2.png" alt="${product.name}"></td>
                             <td>
                                 <div class="quantity">
@@ -213,8 +212,8 @@
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
                         </tr>
-                        <tr id="cart">
-                            <td>Gạch-inax</td>
+                        <tr class="cart-item" data-id="4">
+                            <td>Sơn Dulux</td>
                             <td><img src="../img_product/son/Sơn nước ngoại thất Dulux Weathershield Powerflexx Bề Mặt.png" alt="${product.name}"></td>
                             <td>
                                 <div class="quantity">
@@ -229,8 +228,8 @@
                             <td><button id="delete" class="remove-from-cart-button">Xóa</button>
                             </td>
                         </tr>
-                        <tr id="cart">
-                            <td>Gạch-inax</td>
+                        <tr class="cart-item" data-id="5">
+                            <td>Gạch không nung</td>
                             <td><img src="../img_product/gachxaydung/gachkhongnung.png" alt="${product.name}"></td>
                             <td>
                                 <div class="quantity">
@@ -275,10 +274,11 @@
                 <div class="voucher">
                     <label for="voucher">Phiếu ưu đãi</label>
                     <input type="text" id="voucher" placeholder="Mã ưu đãi" />
-                    <span id="voucher-error" class="error-message" style="color: red; display:none;">Mã ưu đãi không hợp lệ hoặc đã hết hạn.</span>
                     <button id="apply-btn" class="apply-btn">
                         Áp dụng
                     </button>
+                    <span id="voucher-error" class="error-message" style="color: red; display:none;">Mã ưu đãi không hợp lệ hoặc đã hết hạn.</span>
+
                     <div class="help">
                         <p><i style="font-size: 15px;" class="fas fa-question-circle spinning-icon"></i></p>
                         <p>Nhập mã ưu đãi nếu có.</p>
@@ -343,6 +343,7 @@
 
     <script src="../js/login-signup.js"></script>
     <script src="/src/Users/js/scripts.js" defer></script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>

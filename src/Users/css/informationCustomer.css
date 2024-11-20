@@ -21,7 +21,7 @@
 }
 
 .account-info-page h1 {
-    font-size: 1.8em;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #f1f1f1;
     font-weight: bold;
@@ -57,7 +57,7 @@
 
 .recent-orders h2,
 .customer-info h2 {
-    font-size: 1.3em;
+    font-size: 15px;
     margin-bottom: 15px;
     color: #333;
     border: 2px solid #15283e;
@@ -85,6 +85,7 @@ thead th {
     background: linear-gradient(to right, #891f1f, #15283e);
     color: #f1f1f1;
     font-weight: bold;
+    font-size: 15px;
 
 }
 
@@ -103,6 +104,7 @@ th {
 tbody td {
     text-align: center;
     color: #000000;
+    font-size: 15px;
 }
 
 tbody td button {
@@ -181,8 +183,8 @@ tbody td button:hover {
     background: linear-gradient(to bottom, #15283e, #891f1f);
     color: #ffffff;
     padding: 25px;
-    width: 80%; 
-    max-width: 600px;
+    width: 60%; 
+    max-width: 555px;
     margin: 15% auto; 
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -197,7 +199,7 @@ tbody td button:hover {
 .close-btn {
     color: #ffffff;
     float: right;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -209,7 +211,7 @@ tbody td button:hover {
 
 .modal-title {
     text-align: center;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: #f7d774;
     margin-bottom: 20px;
@@ -230,7 +232,7 @@ tbody td button:hover {
     background: #891f1f;
     color: #ffffff;
     padding: 10px;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -255,7 +257,7 @@ tbody td button:hover {
 
 .order-info p {
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 15px;
     color: #ffffff;
 }
 
@@ -266,13 +268,13 @@ tbody td button:hover {
 
 .total-price {
     color: #f88e62;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .badge {
     padding: 5px 10px;
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     display: inline-block;
 }

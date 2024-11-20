@@ -1,69 +1,63 @@
-// Hàm mở modal và điền thông tin tài khoản admin
-function editAdmin(username, email, currentPassword) {
-    // Cập nhật giá trị tên tài khoản và email
-    document.getElementById("edit-username").value = username;
-    document.getElementById("edit-email").value = email;
-    
-    // Đảm bảo mật khẩu cũ không tự động điền vào (để người dùng nhập)
-    document.getElementById("edit-old-pass").value = '';
-    document.getElementById("edit-new-pass").value = ''; // Đảm bảo trường mật khẩu mới trống khi mở modal
+document.addEventListener('DOMContentLoaded', function () {
+    // Lấy tất cả các nút chỉnh sửa và xóa
+    const editButtons = document.querySelectorAll('.edit-btn');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
 
-    // Lưu lại thông tin mật khẩu cũ (sẽ sử dụng khi xác thực) trong thuộc tính data-old-password
-    document.getElementById("edit-modal").setAttribute('data-old-password', currentPassword);
-
-    // Hiển thị modal chỉnh sửa
-    document.getElementById("edit-modal").style.display = "block";
-}
-
-// Hàm đóng modal
-function closeModal() {
-    document.getElementById("edit-modal").style.display = "none";
-}
-
-// Hàm xử lý cập nhật mật khẩu
-document.getElementById("edit-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Ngừng hành động mặc định của form (submit)
-    
-    // Lấy dữ liệu từ form
-    const username = document.getElementById("edit-username").value;
-    const oldPassword = document.getElementById("edit-old-pass").value;
-    const newPassword = document.getElementById("edit-new-pass").value;
-
-    // Lấy mật khẩu cũ lưu trữ trong modal (để xác nhận)
-    const storedOldPassword = document.getElementById("edit-modal").getAttribute('data-old-password');
-    
-    // Kiểm tra xem mật khẩu cũ có khớp không
-    if (oldPassword !== storedOldPassword) {
-        alert("Mật khẩu cũ không chính xác!");
-        return;
+    // Hàm hiển thị modal
+    function showModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
     }
 
-    // Nếu mật khẩu cũ đúng, thông báo cập nhật thành công
-    if (newPassword.trim() === "") {
-        alert("Mật khẩu mới không được để trống!");
-        return;
+    // Hàm đóng modal
+    function closeModal() {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => modal.style.display = 'none');
     }
 
-    // Hiển thị thông báo cập nhật thành công
-    alert("Cập nhật mật khẩu thành công!");
+    // Khi nhấn vào nút chỉnh sửa
+    editButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const row = button.closest('tr');
+            const username = row.children[0].textContent;
+            const email = row.children[1].textContent;
 
-    // Đóng modal
-    closeModal();
-});
+            // Điền thông tin vào modal chỉnh sửa
+            document.getElementById('edit-username').value = username;
+            document.getElementById('edit-email').value = email;
 
-// Hàm xóa tài khoản admin
-function deleteAdmin(username) {
-    // Xác nhận xóa
-    if (confirm("Bạn có chắc chắn muốn xóa tài khoản này?")) {
-        // Tìm dòng chứa tài khoản muốn xóa và xóa nó khỏi bảng
-        const rows = document.querySelectorAll('.admin-list tbody tr');
-        rows.forEach(row => {
-            const cells = row.getElementsByTagName('td');
-            if (cells[0].innerText === username) {
-                row.remove();  // Xóa dòng khỏi bảng
-            }
+            // Lấy giá trị data-id của nút đã nhấn
+            const id = button.getAttribute('data-id');
+            console.log("button thứ :" + id); // In ra ID, ví dụ: "1"
+
+            // Hiển thị modal chỉnh sửa
+            showModal('edit-modal');
         });
-        alert("Tài khoản đã được xóa!");
-    }
-}
+    });
 
+    //  Khi nhấn vào nút xóa
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const row = button.closest('tr');
+            const id = button.getAttribute('data-id');
+            // Hiển thị modal xóa
+            showModal('delete-modal');
+
+            // Xử lý khi nhấn "Xóa" trong modal
+            const confirmDeleteButton = document.querySelector('.confirm-delete');
+            confirmDeleteButton.onclick = function () {
+                // Xóa dòng khỏi bảng
+                row.remove();  // Xóa dòng tương ứng trong bảng
+                closeModal();  // Đóng modal sau khi xóa
+                console.log('Xóa tài khoản với ID:', id);  // Hiển thị ID bị xóa
+            };
+        });
+    });
+
+
+    // Đóng tất cả các modal khi nhấn nút đóng
+    const closeButtons = document.querySelectorAll('.close-modal');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
+});

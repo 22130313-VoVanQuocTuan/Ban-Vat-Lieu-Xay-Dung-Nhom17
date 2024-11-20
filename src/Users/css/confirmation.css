@@ -293,37 +293,46 @@ label {
 .p {
     font-size: 15px;
     width:  100%;
+ 
 
 }
 
+p{
+    
+}
 /* Kiểm tra layout của form */
 #codForm, #vnpayForm {
 
     position: absolute;
-    top: 20%;
-    left: 35%;
+    top:7%;
+    left: 30%;
     display: none;
-    line-height: 30px;
+
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     z-index: 1000;
-    font-size: 20px;
+    font-size: 11px;
+    height: auto;
 
 }
 
 .but {
     display: flex;
 }
+p{
+    font-size: 13px;
+    margin-top: 5px;
+}
 
 /*css cho button trong form*/
 #codForm button, #vnpayForm button {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
 
-    margin: 30px;
-    width: 200px;
+    margin: 50px;
+    width: 137px;
     cursor: pointer;
     background-color: #144bff;
     border: none;

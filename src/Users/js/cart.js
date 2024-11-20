@@ -1,89 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const applyBtn = document.getElementById('apply-btn');
-    const voucherInput = document.getElementById('voucher');
-    const voucherError = document.getElementById('voucher-error');
-    const total = document.getElementById('total');
-   
-    //Tăng giảm số lượng
-    const minusButtons = document.querySelectorAll('.minus-btn');
-    const plusButtons = document.querySelectorAll('.plus-btn');
+document.addEventListener('DOMContentLoaded', function () {
+    const cartItemsContainer = document.querySelector('.cart-items-container');
 
-    const price = document.getElementById('price'); // Lấy giá 1 sản phẩm
-    const totalPriceElement = document.getElementById('total-price'); // Element hiển thị tổng giá
+    if (!cartItemsContainer) {
+        console.error('Không tìm thấy container cho giỏ hàng.');
+        return;
+    }
 
-    //Xóa sản phẩm
-    const deleted = document.getElementById('delete');
-    const tr_cart_item = document.getElementById('cart');
+    // Thao tác với nút cộng/trừ
+    cartItemsContainer.addEventListener('click', function (event) {
+        const target = event.target;
 
-    applyBtn.addEventListener('click', function() {
-        const checkvoucher = voucherInput.value.trim();  // Lấy giá trị mã ưu đãi đã nhập
+        // Xử lý khi nhấn vào nút cộng hoặc trừ
+        if (target.classList.contains('plus-btn') || target.classList.contains('minus-btn')) {
+            const cartItem = target.closest('.cart-item');
+            const qtyInput = cartItem.querySelector('.qty-input');
 
-   
+            if (!qtyInput) {
+                console.error('Không tìm thấy input số lượng.');
+                return;
+            }
 
-        // Kiểm tra mã ưu đãi
-        if (checkvoucher !== "QWERTYUI") {
-            // Nếu mã không hợp lệ, hiển thị thông báo lỗi
-            voucherError.style.display = 'block';
-        } else {
-            // Nếu mã hợp lệ, xử lý cập nhật tổng tiền hoặc logic tiếp theo
-            voucherError.textContent = "Bạn được giảm 10.000 ₫";
-            voucherError.style.display = 'block';
-            voucherError.style.color = 'green'
+            let qty = parseInt(qtyInput.value);
 
-            // Lấy giá trị tổng tiền hiện tại và trừ đi 10.000
-        let currentTotal = parseFloat(total.textContent.replace('₫', '').replace('.', '').trim());
-        let newTotal = currentTotal - 10000; // Trừ đi 10.000 ₫
+            if (target.classList.contains('plus-btn')) {
+                qty++;
+            } else if (target.classList.contains('minus-btn') && qty > 1) {
+                qty--;
+            }
 
-        // Cập nhật lại tổng tiền
-        total.textContent = newTotal.toLocaleString() + '₫'; // Hiển thị lại với định dạng số (có dấu chấm phân cách)
-
-
-            // Thực hiện cập nhật tổng tiền nếu cần
+            qtyInput.value = qty; // Cập nhật lại giá trị số lượng
         }
     });
 
-
-    const pricePerProduct = 200000; // Giá cố định của mỗi sản phẩm 
-    //Tăng giảm số lượng
-    minusButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const input = this.nextElementSibling; // Lấy ô input nằm kế bên nút trừ
-            let currentValue = parseInt(input.value);
-
-            if (currentValue > parseInt(input.min || 1)) {
-                currentValue -= 1; // Giảm số lượng
-                input.value = currentValue; // Cập nhật giá trị ô input
-
-                // Cập nhật giá động
-                const currentPrice = currentValue * pricePerProduct;
-                price.textContent = currentPrice.toLocaleString('vi-VN') + ' ₫';
-               
-                totalPriceElement.textContent = totalPrice.toLocaleString('vi-VN') + ' ₫'; // Hiển thị tổng giá
-            }
-        });
+    // Xóa sản phẩm
+    cartItemsContainer.addEventListener('click', function (event) {
+        if (event.target.classList.contains('remove-from-cart-button')) {
+            const cartItem = event.target.closest('.cart-item');
+            cartItem.remove();
+        }
     });
 
-    plusButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const input = this.previousElementSibling; // Lấy ô input nằm trước nút cộng
-            let currentValue = parseInt(input.value);
+    // Áp dụng mã giảm giá
+    const applyBtn = document.getElementById('apply-btn');
+    const voucherInput = document.getElementById('voucher');
+    const voucherError = document.getElementById('voucher-error');
+    const totalElement = document.getElementById('total');
 
-            currentValue += 1; // Tăng số lượng
-            input.value = currentValue; // Cập nhật giá trị ô input
+    applyBtn.addEventListener('click', function () {
+        const voucherCode = voucherInput.value.trim();
+        const validVoucher = "QWERTYUI";
+        const discountAmount = 10000; // Giảm 10.000 ₫
 
-           // Cập nhật giá động
-           const currentPrice = currentValue * pricePerProduct;
-           price.textContent = currentPrice.toLocaleString('vi-VN') + ' ₫';
+        if (voucherCode === validVoucher) {
+            voucherError.textContent = "Bạn được giảm 10.000 ₫";
+            voucherError.style.color = 'green';
+            voucherError.style.display = 'block';
 
-           // Tính toán tổng giá
-           totalPriceElement.textContent = currentPrice.toLocaleString('vi-VN') + ' ₫'; // Hiển thị tổng giá
-        });
+            let total = parseFloat(totalElement.textContent.replace('₫', '').replace(/\./g, ''));
+            total -= discountAmount;
+            totalElement.textContent = total.toLocaleString('vi-VN') + ' ₫';
+        } else {
+            voucherError.textContent = "Mã giảm giá không hợp lệ!";
+            voucherError.style.color = 'red';
+            voucherError.style.display = 'block';
+        }
     });
-
-    //Xóa sản phẩm 
-    deleted.addEventListener('click', function(){
-        tr_cart_item.style.display = "none";
-    
-    })
-    });
-
+});
