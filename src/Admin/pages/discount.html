@@ -110,6 +110,7 @@
                 <li>
                     <a href="/src/Users/page/login-signup.html">
                         <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
                         </span>
                         <span class="title" onclick="lockout()">Đăng Xuất</span>
                     </a>
@@ -156,7 +157,7 @@
                         <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
                     </div>
                     <div class="list-discounts-content-button">
-                        <a href="#" class="add-discount-btn" onclick="openAddProductModal()">Thêm sản phẩm</a>
+                        <button id="add_DiscountNews">Thêm khuyến mãi</button>
                     </div>
 
 
@@ -185,7 +186,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -197,7 +199,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
 
@@ -210,7 +213,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -224,7 +228,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -236,7 +241,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -248,7 +254,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -260,7 +267,8 @@
                                 <td>20/11/2024</td>
                                 <td>Còn khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
 
@@ -273,7 +281,8 @@
                                 <td>20/11/2024</td>
                                 <td>Hết khuyến mãi</td>
                                 <td class="v">
-                                    <button id="deleteBtn">Xóa</button>
+                                    <button class="deleteBtn">Xóa</button>
+                                    <button>Sửa</button>
                                 </td>
                             </tr>
 
@@ -281,44 +290,55 @@
                         </tbody>
                     </table>
                     <!-- mẫu điền thêm sản phẩm  -->
-                    <div id="addProductModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close-btn" onclick="closeAddProductModal()">&times;</span>
-                            <h3>Thêm sản phẩm mới</h3>
-                            <form id="addProductForm">
-                                <label for="productCode">Mã sản phẩm:</label>
-                                <input type="text" id="productCode" required>
+                    <div id="addDiscountNew" class="model">
+                        <div class="model-content">
+                            <h3>Thêm sản phẩm khuyến mãi mới</h3>
+                            <form id="addDiscountForm">
+                                <label for="discountCode">Mã sản phẩm:</label>
+                                <input type="text" id="disocuntCode">
 
-                                <label for="productName">Tên sản phẩm:</label>
-                                <input type="text" id="productName" required>
+                                <label for="discountName">Tên sản phẩm:</label>
+                                <input type="text" id="discountName">
 
-                                <label for="productPrice">Giảm giá:</label>
-                                <input type="text" id="productPrice" required>
+                                <label for="discountPrice">Giảm giá:</label>
+                                <input type="text" id="discountPrice">
 
-                                <label for="productCategory">Danh mục:</label>
-                                <input type="text" id="productCategory" required>
+                                <label for="discountCategory">Danh mục:</label>
+                                <input type="text" id="discountCategory">
 
-                                <label for="discountStock">Ngày bắt đầu:</label>
-                                <input title="start" type="date-satrt" id="discountStart" required>
+                                <label for="discountStart">Ngày bắt đầu:</label>
+                                <input title="start" type="date" id="discountStart">
 
-                                <label for="discountStock">Ngày kết thúc:</label>
-                                <input title="end" type="date-end" id="discountExpired" required>
+                                <label for="discountEnd">Ngày kết thúc:</label>
+                                <input title="end" type="date" id="discountExpired">
 
-                                <label for="productStatus">Trạng thái:</label>
-                                <select id="productStatus" required>
-                                    <option value="active">Còn hàng</option>
-                                    <option value="inactive">Hết hàng</option>
+                                <label for="discountStatus">Trạng thái:</label>
+                                <select id="discountStatus" required>
+                                    <option value="active">Còn khuyến mãi</option>
+                                    <option value="inactive">Hết khuyến mãi</option>
                                 </select>
 
-                                <label for="productImage">Hình ảnh:</label>
-                                <input type="file" id="productImage">
+                                <label for="discountImage">Hình ảnh:</label>
+                                <input type="file" id="discountImage">
 
-                                <button type="button" onclick="addProduct()">Lưu sản phẩm</button>
-                                <button type="button" class="exit-btn" onclick="closeAddProductModal()">Thoát</button>
+                                <button id="save_Discount">Lưu sản phẩm</button>
+                                <button id="closeModel" class="close-model">Thoát</button>
                             </form>
                         </div>
                     </div>
-
+                    <!-- Modal xác nhận xóa -->
+                    <div id="displayModel" class="model">
+                        <div class="model-content">
+                            <div class="model-header">
+                                <h3>Xác nhận xóa</h3>
+                            </div>
+                            <p>Bạn chắc chắn muốn xóa sản phẩm này?</p>
+                            <div class="model-actions">
+                                <button id="confirmDelete" class="confirm-delete">OK</button>
+                                <button id="closeModel" class="close-model">Thoát</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -326,10 +346,7 @@
 
 
         <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-        <script src="../js/order.js"></script>
-        <script src="../js/index.js"></script>
-        <script src="../js/products.js"></script>
-
+        <script src="../js/discounts.js"></script>
 
 </body>
 
