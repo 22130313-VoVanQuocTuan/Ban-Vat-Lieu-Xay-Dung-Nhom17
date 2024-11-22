@@ -426,7 +426,7 @@ td {
 }
 
 .recentCustomers table tr:hover {
-  background: linear-gradient(to right, #ff3636, #15283e);
+  background: linear-gradient(to right, #4f3131, #15283e);
   color: var(--white);
 }
 

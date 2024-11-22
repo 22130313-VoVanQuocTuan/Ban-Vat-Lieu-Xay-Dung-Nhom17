@@ -145,6 +145,10 @@ td {
   text-align: left;
   color: #f1f1f1;
 }
+.modal-content:hover {
+  transform: scale(1.02);
+}
+
 
 .modal-header {
   font-size: 14px;
