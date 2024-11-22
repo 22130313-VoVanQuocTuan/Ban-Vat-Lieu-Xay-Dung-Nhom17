@@ -1,126 +1,41 @@
-// ------------slider product 1--------------
-const rightbtn1 = document.querySelector('.nut_phai-1');
-const leftbtn1 = document.querySelector('.nut_trai-1');
-const productCounttwo1 = document.querySelectorAll('.slider-product-one-content-items');
-let index1 = 0;
-
-console.log(rightbtn1);
-console.log(leftbtn1);
-
-rightbtn1.addEventListener("click", function () {
-    index1 = index1 + 1;
-    if (index1 > productCounttwo1.length - 1) {
-        index1 = 0; // Quay lại đầu
+function initializeSlider(containerClass, nextBtnClass, prevBtnClass, itemsClass) {
+    const rightBtn = document.querySelector(nextBtnClass);
+    const leftBtn = document.querySelector(prevBtnClass);
+    const items = document.querySelectorAll(itemsClass);
+    const container = document.querySelector(containerClass);
+    let index = 0;
+  
+    rightBtn.addEventListener("click", function () {
+      index = index + 1;
+      if (index > items.length - 1) {
+        index = 0; // Quay lại đầu
+      }
+      updateSlider();
+    });
+  
+    leftBtn.addEventListener("click", function () {
+      index = index - 1;
+      if (index < 0) {
+        index = items.length - 1; // Quay lại cuối
+      }
+      updateSlider();
+    });
+  
+    function updateSlider() {
+      const offset = -index * 100; // Tính toán offset
+      container.style.transform = `translateX(${offset}%)`;
+      console.log(`Current Index in ${containerClass}:`, index); // Kiểm tra giá trị index
     }
-    updateSlider1();
-});
-
-leftbtn1.addEventListener("click", function () {
-    index1 = index1 - 1;
-    if (index1 < 0) {
-        index1 = productCounttwo1.length - 1; // Quay lại cuối
-    }
-    updateSlider1();
-});
-
-    function updateSlider1() {
-    const offset = -index1 * 100; // Tính toán offset dựa trên index
-    document.querySelector(".slider-product-one-content-items-content").style.transform = `translateX(${offset}%)`;
-    console.log("Current Index:", index1); // Kiểm tra giá trị index
-}
-
-// ------------slider product 2--------------
-const rightbtn2 = document.querySelector('.nut_phai-2');
-const leftbtn2 = document.querySelector('.nut_trai-2');
-const productCounttwo2 = document.querySelectorAll('.slider-product-two-content-items');
-let index2 = 0;
-
-console.log(rightbtn2);
-console.log(leftbtn2);
-
-rightbtn2.addEventListener("click", function () {
-index2 = index2 + 1;
-if (index2 > productCounttwo2.length - 1) {
-    index2 = 0; // Quay lại đầu
-}
-updateSlider2();
-});
-
-leftbtn2.addEventListener("click", function () {
-index2 = index2 - 1;
-if (index2 < 0) {
-    index2 = productCounttwo2.length - 1; // Quay lại cuối
-}
-updateSlider2();
-});
-
-function updateSlider2() {
-const offset = -index2 * 100; // Tính toán offset dựa trên index
-document.querySelector(".slider-product-two-content-items-content").style.transform = `translateX(${offset}%)`;
-console.log("Current Index:", index2); // Kiểm tra giá trị index
-}
-
-// ------------slider product 3--------------
-const rightbtn3 = document.querySelector('.nut_phai-3');
-const leftbtn3 = document.querySelector('.nut_trai-3');
-const productCounttwo3 = document.querySelectorAll('.slider-product-three-content-items');
-let index3 = 0;
-
-console.log(rightbtn3);
-console.log(leftbtn3);
-
-rightbtn3.addEventListener("click", function () {
-index3 = index3 + 1;
-if (index3 > productCounttwo3.length - 1) {
-    index3 = 0; // Quay lại đầu
-}
-updateSlider3();
-});
-
-leftbtn3.addEventListener("click", function () {
-index3 = index3 - 1;
-if (index3 < 0) {
-    index3 = productCounttwo3.length - 1; // Quay lại cuối
-}
-updateSlider3();
-});
-
-function updateSlider3() {
-const offset = -index3 * 100; // Tính toán offset dựa trên index
-document.querySelector(".slider-product-three-content-items-content").style.transform = `translateX(${offset}%)`;
-console.log("Current Index:", index3); // Kiểm tra giá trị index
-}
-
-// ------------slider product 4--------------
-const rightbtn4 = document.querySelector('.nut_phai-4');
-const leftbtn4 = document.querySelector('.nut_trai-4');
-const productCounttwo4 = document.querySelectorAll('.slider-product-four-content-items');
-let index4 = 0;
-
-console.log(rightbtn4);
-console.log(leftbtn4);
-
-rightbtn4.addEventListener("click", function () {
-index4 = index4 + 1;
-if (index4 > productCounttwo4.length - 1) {
-    index4 = 0; // Quay lại đầu
-}
-updateSlider4();
-});
-
-leftbtn4.addEventListener("click", function () {
-index4 = index4 - 1;
-if (index4 < 0) {
-    index4 = productCounttwo4.length - 1; // Quay lại cuối
-}
-updateSlider4();
-});
-
-function updateSlider4() {
-const offset = -index4 * 100; // Tính toán offset dựa trên index
-document.querySelector(".slider-product-four-content-items-content").style.transform = `translateX(${offset}%)`;
-console.log("Current Index:", index4); // Kiểm tra giá trị index
-}
-
-
-
+  }
+  
+  // Khởi tạo các slider
+  initializeSlider(".slider-product-one-content-items-content", ".nut_phai-1", ".nut_trai-1", ".slider-product-one-content-items");
+  initializeSlider(".slider-product-two-content-items-content", ".nut_phai-2", ".nut_trai-2", ".slider-product-two-content-items");
+  initializeSlider(".slider-product-three-content-items-content", ".nut_phai-3", ".nut_trai-3", ".slider-product-three-content-items");
+  initializeSlider(".slider-product-four-content-items-content", ".nut_phai-4", ".nut_trai-4", ".slider-product-four-content-items");
+  initializeSlider(".slider-product-five-content-items-content", ".nut_phai-5", ".nut_trai-5", ".slider-product-five-content-items");
+  initializeSlider(".slider-product-six-content-items-content", ".nut_phai-6", ".nut_trai-6", ".slider-product-six-content-items");
+  initializeSlider(".slider-product-seven-content-items-content", ".nut_phai-7", ".nut_trai-7", ".slider-product-seven-content-items");
+  initializeSlider(".slider-product-eight-content-items-content", ".nut_phai-8", ".nut_trai-8", ".slider-product-eight-content-items");
+  initializeSlider(".slider-product-nine-content-items-content", ".nut_phai-9", ".nut_trai-9", ".slider-product-nine-content-items");
+  
