@@ -14,7 +14,7 @@
     width: 100%;
 
     padding: 35px;
-    background: linear-gradient(to right, #891f1f, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
@@ -63,7 +63,7 @@
     border: 2px solid #15283e;
     border-radius: 10px;
     padding: 10px;
-    background: linear-gradient(to right, #891f1f, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: #f1f1f1;
     font-weight: bold;
 }
@@ -82,7 +82,7 @@ td {
 }
 
 thead th {
-    background: linear-gradient(to right, #891f1f, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: #f1f1f1;
     font-weight: bold;
     font-size: 15px;
@@ -115,7 +115,7 @@ tbody td button {
 }
 
 tbody td button:hover {
-    background: linear-gradient(to right, #891f1f, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: #f1f1f1;
     font-weight: bold;
 }
@@ -141,7 +141,7 @@ tbody td button:hover {
 }
 
 .customer-info button:hover {
-    background: linear-gradient(to right, #891f1f, #15283e);
+    background: linear-gradient(to right, #4f3131, #15283e);
     color: #ffffff;
 }
 
@@ -180,7 +180,7 @@ tbody td button:hover {
 }
 
 .modal-content {
-    background: linear-gradient(to bottom, #15283e, #891f1f);
+    background:linear-gradient(to right, #4f3131, #15283e);
     color: #ffffff;
     padding: 25px;
     width: 60%; 
