@@ -123,8 +123,8 @@ td {
   background:linear-gradient(to right, #4f3131, #15283e);
   color: #ffffff;
   padding: 25px;
-  width: 60%;
-  max-width: 555px;
+  width: 100%;
+  max-width: 450px;
   margin: 15% auto;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);

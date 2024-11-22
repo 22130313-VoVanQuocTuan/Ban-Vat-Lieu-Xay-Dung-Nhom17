@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/promotional.css">
 
 </head>
 
@@ -134,14 +135,10 @@
                 </div>
 
                 <div class="user">
-                    <a href="account.html"> <ion-icon name="person"
-                        style="color: #000000; font-size: 25px;"></ion-icon></a>
+                    <a href="passwordManagement.html"> <ion-icon name="person"
+                            style="color: #000000; font-size: 25px;"></ion-icon></a>
                 </div>
             </div>
-
-
-
-
             <!-------------------- Danh Sách Chi Tiết người dùng------------------ -->
             <div class="details-user">
                 <div class="recentOrders">
@@ -185,8 +182,7 @@
                                 <td>user</td>
                                 <td>
                                     <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-
+                                        <button class="delete-btn" data-id="1">Xóa</button>
                                     </div>
                                 </td>
 
@@ -200,8 +196,7 @@
                                 <td>user</td>
                                 <td>
                                     <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-
+                                        <button class="delete-btn" data-id="1">Xóa</button>
                                     </div>
                                 </td>
 
@@ -216,8 +211,7 @@
                                 <td>user</td>
                                 <td>
                                     <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-
+                                        <button class="delete-btn" data-id="1">Xóa</button>
                                     </div>
                                 </td>
 
@@ -231,8 +225,7 @@
                                 <td>user</td>
                                 <td>
                                     <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-
+                                        <button class="delete-btn" data-id="1">Xóa</button>
                                     </div>
                                 </td>
 
@@ -247,27 +240,31 @@
                                 <td>user</td>
                                 <td>
                                     <div class="v">
-                                        <button onclick="deleteUser()">Xóa</button>
-
+                                        <button class="delete-btn" data-id="1">Xóa</button>
                                     </div>
                                 </td>
-
                             </tr>
-
-
-
                         </tbody>
                     </table>
                 </div>
-
-
+                <!-- Modal Xóa tài khoản -->
+                <div id="delete-modal" class="modal">
+                    <div class="modal-content">
+                        <h3>Xác nhận xóa</h3>
+                        <label>Bạn có chắc chắn muốn xóa tài khoản này?</label>
+                        <div class="button-container">
+                            <button class="confirm-delete">Xóa</button>
+                            <button class="close-modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/user.js"></script>
+    <script src="../js/promotional.js"></script>
 
 </body>
 

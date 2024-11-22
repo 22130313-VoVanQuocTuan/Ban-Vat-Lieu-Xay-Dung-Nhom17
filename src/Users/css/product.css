@@ -252,7 +252,8 @@ button:hover {
 }
 
 .conten .right .name-cart .add-cart {
-   background-color: #ff3434;
+   background-color: #ff0000;
+   color: #ffffff;
 }
 
 .conten .right .name-cart .add-cart:hover {
@@ -323,7 +324,7 @@ li {
 }
 
 .discount-label {
-   font-size: 18px;
+   font-size: 15px;
    font-weight: bold;
    color: #ff6f00;
    margin-bottom: 5px;
