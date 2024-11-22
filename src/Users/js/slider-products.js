@@ -91,5 +91,36 @@ document.querySelector(".slider-product-three-content-items-content").style.tran
 console.log("Current Index:", index3); // Kiểm tra giá trị index
 }
 
+// ------------slider product 4--------------
+const rightbtn4 = document.querySelector('.nut_phai-4');
+const leftbtn4 = document.querySelector('.nut_trai-4');
+const productCounttwo4 = document.querySelectorAll('.slider-product-four-content-items');
+let index4 = 0;
+
+console.log(rightbtn4);
+console.log(leftbtn4);
+
+rightbtn4.addEventListener("click", function () {
+index4 = index4 + 1;
+if (index4 > productCounttwo4.length - 1) {
+    index4 = 0; // Quay lại đầu
+}
+updateSlider4();
+});
+
+leftbtn4.addEventListener("click", function () {
+index4 = index4 - 1;
+if (index4 < 0) {
+    index4 = productCounttwo4.length - 1; // Quay lại cuối
+}
+updateSlider4();
+});
+
+function updateSlider4() {
+const offset = -index4 * 100; // Tính toán offset dựa trên index
+document.querySelector(".slider-product-four-content-items-content").style.transform = `translateX(${offset}%)`;
+console.log("Current Index:", index4); // Kiểm tra giá trị index
+}
+
 
 
