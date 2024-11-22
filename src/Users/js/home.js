@@ -3,6 +3,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById('animatedText');
     const textContent = textElement.textContent;
+
+
     let index = 0;
   
     function animateText() {
@@ -64,7 +66,11 @@ addToCartButtons.forEach(function(button) {
     });
 });
 
+
+
 });
+
+
 
 
 
