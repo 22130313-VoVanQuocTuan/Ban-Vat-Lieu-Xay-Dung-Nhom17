@@ -240,11 +240,11 @@ label {
 }
 
 .totals {
-      border-bottom: 2px dashed #999999;
+      border-bottom: 1px dashed #999999;
 }
 
 .total {
-    margin: 5px 175px 5px 1px;
+    margin: 12px 175px 5px 1px;
 }
 
 .total-cost {
@@ -265,7 +265,6 @@ label {
     font-size: 16px;
 }
 
-
 .error-message {
     color: #ff0000;
     margin: 10px;
@@ -274,10 +273,10 @@ label {
 
 
 .submit-btn {
-    padding: 14px 20px 12px 20px;
+    padding: 12px 20px 12px 20px;
     border: none;
     margin: 34px 20px 0 0;
-    background-color: #204af1;
+    background-color: #1c293d;
     border-radius: 10px;
     color: white;
     cursor: pointer;
@@ -297,9 +296,7 @@ label {
 
 }
 
-p{
-    
-}
+
 /* Kiểm tra layout của form */
 #codForm, #vnpayForm {
 
@@ -334,7 +331,7 @@ p{
     margin: 50px;
     width: 137px;
     cursor: pointer;
-    background-color: #144bff;
+    background-color: #1c293d;
     border: none;
     color: #ffffff;
 }
@@ -352,7 +349,7 @@ p{
 }
 
 #codForm button:hover, #vnpayForm button:hover {
-    background-color: #ff4141;
+    background-color: #007bff;
 }
 
 /* Lớp CSS để khóa cuộn trang khi overlay hiển thị */
@@ -389,4 +386,8 @@ body.overlay-active {
 
 .overlay.show {
     display: block;
+}
+.hrep :hover {
+    color: #2546ea;
+    
 }

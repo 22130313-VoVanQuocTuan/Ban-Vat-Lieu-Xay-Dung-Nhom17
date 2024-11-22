@@ -275,6 +275,10 @@ html{
     display: flex;
     flex-direction: column;
   }
+  .continue-btn {
+    margin-left: auto;
+    margin-right: auto;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -282,4 +286,8 @@ html{
     display: flex;
     flex-direction: column;
   }
+  .continue-btn {
+    margin-left: auto;
+    margin-right: auto;
+}
 }
