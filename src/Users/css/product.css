@@ -137,7 +137,6 @@ button:hover {
    width: 100%;
    height: auto;
    margin-top: 20px;
-  
    background-color: #ffffff;
    margin-bottom: 15px;
 }
@@ -146,7 +145,6 @@ button:hover {
    padding: 10px;
    cursor: pointer;
    font-size: 15px;
-   margin-left: 35px;
    background-color: #e8e5e5;
    border-radius: 5px;
 }
