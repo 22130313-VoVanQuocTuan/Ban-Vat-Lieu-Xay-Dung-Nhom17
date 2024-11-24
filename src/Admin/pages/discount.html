@@ -15,6 +15,7 @@
 <style>
 
 </style>
+
 <body>
     <!-- ------------------ Điều hướng -------------------->
     <div class="container">
@@ -135,7 +136,7 @@
 
                 <div class="user">
                     <a href="passwordManagement.html"> <ion-icon name="person"
-                        style="color: #000000; font-size: 25px;"></ion-icon></a>
+                            style="color: #000000; font-size: 25px;"></ion-icon></a>
                 </div>
             </div>
 
@@ -150,13 +151,14 @@
                         <p style="font-size: 20px; margin-bottom: 10px;">Cập nhật trạng thái khuyến mãi</p>
                         <input type="text" placeholder="Nhập ID cần cập nhật"
                             style="font-size: 15px; padding: 2px; border-radius: 5px;">
-                        <input type="text" placeholder="nhập giá trị giảm giá" style="padding: 3px; border-radius: 5px;"></input>
-                            
-                        
+                        <input type="text" placeholder="nhập giá trị giảm giá"
+                            style="padding: 3px; border-radius: 5px;"></input>
+
+
                         <button onclick="updateUserStatus()">Cập nhật giá</button>
                     </div>
                     <div class="list-discounts-content-button">
-                        <button id="add_DiscountNews">Thêm khuyến mãi</button>
+                        <button class="addProduct-btn" data-id="1">Thêm khuyến mãi</button>
                     </div>
 
 
@@ -185,8 +187,8 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                    
+                                    <button class="delete-btn" data-id="1">Xóa</button>
+
                                 </td>
                             </tr>
                             <tr>
@@ -198,8 +200,8 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                    
+                                    <button class="delete-btn" data-id="1">Xóa</button>
+
                                 </td>
                             </tr>
 
@@ -212,8 +214,8 @@
                                 <td>20/11/2024</td>
                                 <td>Không hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                   
+                                    <button class="delete-btn" data-id="1">Xóa</button>
+
                                 </td>
                             </tr>
                             <tr>
@@ -227,8 +229,8 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                    
+                                    <button class="delete-btn" data-id="1">Xóa</button>
+
                                 </td>
                             </tr>
                             <tr>
@@ -240,8 +242,7 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                   
+                                    <button class="delete-btn" data-id="1">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -253,8 +254,7 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                    
+                                    <button class="delete-btn" data-id="1">Xóa</button>
                                 </td>
                             </tr>
                             <tr>
@@ -266,8 +266,7 @@
                                 <td>20/11/2024</td>
                                 <td>Hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                   
+                                    <button class="delete-btn" data-id="1">Xóa</button>
                                 </td>
                             </tr>
 
@@ -280,49 +279,46 @@
                                 <td>20/11/2024</td>
                                 <td>Không hoạt động</td>
                                 <td class="v">
-                                    <button class="deleteBtn">Xóa</button>
-                                    
+                                    <button class="delete-btn" data-id="1">Xóa</button>
+
                                 </td>
                             </tr>
 
 
                         </tbody>
                     </table>
+
                     <!-- mẫu điền thêm sản phẩm  -->
-                    <div id="addDiscountNew" class="model">
-                        <div class="model-content">
+                    <div id="addDiscountNew" class="modal">
+                        <div class="modal-content">
                             <h3>Thêm sản phẩm khuyến mãi mới</h3>
                             <form id="addDiscountForm">
                                 <label for="discountCode">Mã sản phẩm:</label>
-                                <input title="ib" type="text" id="disocuntCode">
+                                <input title="ib" type="text" id="discountCode" name ="discountCode">
 
                                 <label for="discountPrice">Giảm giá:</label>
-                                <input type="text" id="discountPrice">
+                                <input type="text" id="discountPrice" name="discountPrice">
 
-                             
+
                                 <label for="discountStart">Ngày bắt đầu:</label>
                                 <input title="start" type="date" id="discountStart">
 
                                 <label for="discountEnd">Ngày kết thúc:</label>
                                 <input title="end" type="date" id="discountExpired">
 
-                            
-                        
-                                <button id="save_Discount">Lưu sản phẩm</button>
-                                <button id="closeModel" class="close-model">Thoát</button>
+                                <button type="submit">Lưu sản phẩm</button>
+                                <button id="closeModal" class="close-modal">Thoát</button>
                             </form>
                         </div>
                     </div>
-                    <!-- Modal xác nhận xóa -->
-                    <div id="displayModel" class="model">
-                        <div class="model-content">
-                            <div class="model-header">
-                                <h3>Xác nhận xóa</h3>
-                            </div>
-                            <p>Bạn chắc chắn muốn xóa sản phẩm này?</p>
-                            <div class="model-actions">
-                                <button id="confirmDelete" class="confirm-delete">OK</button>
-                                <button id="closeModel" class="close-model">Thoát</button>
+                    <!-- Modal Xóa tài khoản -->
+                    <div id="delete-modal" class="modal">
+                        <div class="modal-content">
+                            <h3>Xác nhận xóa</h3>
+                            <label>Bạn có chắc chắn muốn xóa tài khoản này?</label>
+                            <div class="button-container">
+                                <button class="confirm-delete">Xóa</button>
+                                <button class="close-modal">Hủy</button>
                             </div>
                         </div>
                     </div>
