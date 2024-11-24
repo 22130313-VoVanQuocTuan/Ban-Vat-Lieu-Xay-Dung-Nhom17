@@ -40,3 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', closeModal);
     });
 });
+
+//Thêm sản phẩm
+const addPromotions = document.getElementById('add_Promotions');
+const addPro = document.getElementById('addPromotionModal')
+
+addPromotions.addEventListener('click', () => {
+    addPro.style.display = 'flex';
+});
