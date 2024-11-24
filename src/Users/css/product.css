@@ -139,6 +139,7 @@ button:hover {
    margin-top: 20px;
    background-color: #ffffff;
    margin-bottom: 15px;
+   gap: 42px;
 }
 
 .sort {
@@ -147,6 +148,7 @@ button:hover {
    font-size: 15px;
    background-color: #e8e5e5;
    border-radius: 5px;
+   height: 15px;
 }
 
 .sort-price {
