@@ -1,6 +1,6 @@
 #section-content-1 {
     padding: 20px;
-    background-color: #f8f9fa; 
+    background-color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -180,7 +180,7 @@
     gap: 25px;
     justify-content: center; /* Sản phẩm căn giữa */
     padding: 20px;
-    background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Nền chuyển màu nhẹ */
+    background-color: #ffffff;
     border-radius: 15px;
 }
 
