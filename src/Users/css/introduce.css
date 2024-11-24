@@ -16,7 +16,7 @@ body, html {
 /* Container Style */
 .terms-container {
     max-width: 1100px;
-    width: 100%;
+    width: 77%;
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -36,12 +36,13 @@ body, html {
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.4;
+    font-size: 22px;
     letter-spacing: 1px;
 }
 
 /* Section Title */
 .terms-container h2 {
-    font-size: 28px;
+    font-size: 20px;
     color: #090a0a;
     margin-top: 30px;
     margin-bottom: 25px;
@@ -52,7 +53,7 @@ body, html {
 
 /* Sub-section Title */
 .terms-container h3 {
-    font-size: 22px;
+    font-size: 15px;
     color: #34495e;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -61,7 +62,7 @@ body, html {
 
 /* Paragraphs */
 .terms-container p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.8;  
     margin-bottom: 25px; 
     color: #555;
@@ -77,7 +78,7 @@ body, html {
 
 /* Các mục trong danh sách */
 .terms-container ul li {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5; 
     color: #555;
     position: relative;
