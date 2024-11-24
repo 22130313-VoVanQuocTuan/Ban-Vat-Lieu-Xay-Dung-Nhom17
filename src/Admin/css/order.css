@@ -114,7 +114,6 @@ td {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -125,11 +124,12 @@ td {
   padding: 25px;
   width: 100%;
   max-width: 450px;
-  margin: 15% auto;
+  margin: 9% auto;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
+  margin-left: 40%;
 }
 
 .modal-content:hover {

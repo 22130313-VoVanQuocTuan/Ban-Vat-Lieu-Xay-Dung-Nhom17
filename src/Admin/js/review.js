@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Lấy tất cả các nút thêm sp khuyển mãi và xóa
-    const addProduct = document.querySelectorAll('.addProduct-btn');
+    // Lấy tất cả các nút xóa
     const deleteButtons = document.querySelectorAll('.delete-btn');
 
     // Hàm hiển thị modal
@@ -14,27 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const modals = document.querySelectorAll('.modal');
         modals.forEach(modal => modal.style.display = 'none');
     }
-
-    // Khi nhấn vào nút chỉnh sửa
-    addProduct.forEach(button => {
-        button.addEventListener('click', function () {
-            const discountCode = document.getElementById('discountCode').value = '';
-            const discountPrice = document.getElementById('discountPrice').value = '';
-
-
-            // Điền thông tin vào modal chỉnh sửa
-            document.getElementById('discountCode').value = discountCode;
-            document.getElementById('discountPrice').value = discountPrice;
-
-            // Lấy giá trị data-id của nút đã nhấn
-            const id = button.getAttribute('data-id');
-            console.log("button thứ :" + id); // In ra ID, ví dụ: "1"
-
-            // Hiển thị modal chỉnh sửa
-            showModal('addDiscountNew');
-
-        });
-    });
 
     //  Khi nhấn vào nút xóa
     deleteButtons.forEach(button => {
