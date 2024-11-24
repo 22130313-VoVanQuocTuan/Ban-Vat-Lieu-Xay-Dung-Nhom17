@@ -12,7 +12,9 @@
 
 </head>
 
+<style>
 
+</style>
 <body>
     <!-- ------------------ Điều hướng -------------------->
     <div class="container">
@@ -148,13 +150,10 @@
                         <p style="font-size: 20px; margin-bottom: 10px;">Cập nhật trạng thái khuyến mãi</p>
                         <input type="text" placeholder="Nhập ID cần cập nhật"
                             style="font-size: 15px; padding: 2px; border-radius: 5px;">
-                        <select title="choice" id="statusSelect"
-                            style="font-size: 15px; border-radius: 5px; padding: 2px;">
-                            <option value="discount">Hoạt động</option>
-                            <option value="nodiscount">Không hoạt động</option>
-
-                        </select>
-                        <button onclick="updateUserStatus()">Cập nhật trạng thái</button>
+                        <input type="text" placeholder="nhập giá trị giảm giá" style="padding: 3px; border-radius: 5px;"></input>
+                            
+                        
+                        <button onclick="updateUserStatus()">Cập nhật giá</button>
                     </div>
                     <div class="list-discounts-content-button">
                         <button id="add_DiscountNews">Thêm khuyến mãi</button>
@@ -187,7 +186,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -200,7 +199,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                    
                                 </td>
                             </tr>
 
@@ -214,7 +213,7 @@
                                 <td>Không hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                   
                                 </td>
                             </tr>
                             <tr>
@@ -229,7 +228,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -242,7 +241,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                   
                                 </td>
                             </tr>
                             <tr>
@@ -255,7 +254,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -268,7 +267,7 @@
                                 <td>Hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                   
                                 </td>
                             </tr>
 
@@ -282,7 +281,7 @@
                                 <td>Không hoạt động</td>
                                 <td class="v">
                                     <button class="deleteBtn">Xóa</button>
-                                    <button>Sửa</button>
+                                    
                                 </td>
                             </tr>
 
@@ -297,30 +296,18 @@
                                 <label for="discountCode">Mã sản phẩm:</label>
                                 <input title="ib" type="text" id="disocuntCode">
 
-                                <label for="discountName">Tên sản phẩm:</label>
-                                <input type="text" id="discountName">
-
                                 <label for="discountPrice">Giảm giá:</label>
                                 <input type="text" id="discountPrice">
 
-                                <label for="discountCategory">Danh mục:</label>
-                                <input type="text" id="discountCategory">
-
+                             
                                 <label for="discountStart">Ngày bắt đầu:</label>
                                 <input title="start" type="date" id="discountStart">
 
                                 <label for="discountEnd">Ngày kết thúc:</label>
                                 <input title="end" type="date" id="discountExpired">
 
-                                <label for="discountStatus">Trạng thái:</label>
-                                <select id="discountStatus" required>
-                                    <option value="active">Hoạt động</option>
-                                    <option value="inactive">Không hoạt động</option>
-                                </select>
-
-                                <label for="discountImage">Hình ảnh:</label>
-                                <input type="file" id="discountImage">
-
+                            
+                        
                                 <button id="save_Discount">Lưu sản phẩm</button>
                                 <button id="closeModel" class="close-model">Thoát</button>
                             </form>
@@ -345,7 +332,8 @@
         </div>
 
 
-        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
         <script src="../js/discounts.js"></script>
 
 </body>
