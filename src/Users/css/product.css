@@ -229,7 +229,11 @@ button:hover {
 .conten .right .name-cart h3 {
    color: #110ec6;
    margin: 15px 10px 10px;
+   overflow: hidden;
    font-size: 15px;
+   text-overflow: ellipsis;
+   display: block;
+   white-space: nowrap;
 }
 
 .conten .right .name-cart p {
