@@ -3,7 +3,7 @@
     background-color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 20px auto;
 }
 
@@ -16,7 +16,7 @@
 .product-image {
     flex: 1;
     min-width: 300px;
-    text-align: center;
+
 }
 
 .product-image img {
@@ -47,8 +47,8 @@
 }
 
 .review button {
-    margin-top: 10px;
-    padding: 10px 20px;
+    
+    padding: 5px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -69,14 +69,14 @@
 
 .product-title {
     font-size: 24px;
-    color: #333;
+    color: #000000;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
 .product-description {
     font-size: 16px;
-    color: #555;
+    color: #000000;
     line-height: 1.5;
     margin-bottom: 15px;
 }
@@ -84,7 +84,7 @@
 .product-info p {
     margin: 10px 0;
     font-size: 16px;
-    color: #444;
+    color: #000000;
 }
 
 .product-info .product-price {
@@ -100,7 +100,7 @@
 .product-options label {
     margin-right: 10px;
     font-size: 16px;
-    color: #444;
+    color: #000000;
 }
 
 .product-options input {
@@ -133,7 +133,7 @@
 .contact {
     margin-top: 15px;
     font-size: 16px;
-    color: #333;
+    color: #000000;
 }
 
 .contact strong {
@@ -167,7 +167,7 @@
 
 .similar-pro h3 {
     font-size: 26px;
-    color: #333;
+    color: #000000;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase; /* Chữ in hoa */
@@ -203,7 +203,7 @@
 .similar h3 {
     font-size: 18px;
     margin-top: 15px;
-    color: #444;
+    color: #000000;
     font-weight: 600;
     transition: color 0.3s ease;
 }

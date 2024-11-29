@@ -86,6 +86,7 @@ document.addEventListener('click', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const addCart = document.querySelectorAll('.add-cart');
+    
     console.log(addCart); // Kiểm tra xem có chọn đúng các phần tử không
     addCart.forEach(function(a) {
        

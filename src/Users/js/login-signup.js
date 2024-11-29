@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }else{
                 password_errorlog.textContent = 'Tài khoản hoặc mật khẩu không đúng';
                 password_errorlog.style.display = 'block';
-            isValid = false;
+                isValid = false;
             }
         }
         }
