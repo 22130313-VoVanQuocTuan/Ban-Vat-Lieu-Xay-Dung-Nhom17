@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!doctype html>
 <html lang="en">
@@ -22,14 +23,16 @@
                     </p>
                 </div>
                 <div class="top-right">
-                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span
-                            id="username"></span>!</span>
+                       <span id="user-greeting" style="display: none; color: #ffffff;">
+                           Xin chào,  <span
+                               id="username">${sessionScope.username != null ? sessionScope.username : ''}</span>!</span>
+
                     <a href="src/Users/page/informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
                         <i class="fas fa-user-circle"></i> Tài khoản
                     </a>
                     <a href="src/Users/page/login-signup.jsp" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng
                             Nhập</span></a>
-                    <a href="/src/Users/page/login-signup.jsp" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
+                    <a href="src/Users/page/login-signup.jsp" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
                 </div>
             </div>
 
@@ -2296,7 +2299,7 @@
     <script src="src/Users/js/slider_Image-home.js"></script>
     <script src="src/Users/js/slider-products.js"></script>
     <script src="src/Users/js/home.js"></script>
-    <script src="src/Users/js/login-signup.js"></script>
+    <script  type="text/javascript" src="src/Users/js/login-signup.js"></script>
     <script src="src/Users/js/scripts.js"></script>
     <script>
         // Mở banner tự động khi trang tải xong

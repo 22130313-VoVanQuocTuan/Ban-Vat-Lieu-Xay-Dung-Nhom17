@@ -2,7 +2,8 @@ package hcmuaf.nlu.edu.vn.user.service;
 
 import hcmuaf.nlu.edu.vn.user.dao.Users.UsersDao;
 import hcmuaf.nlu.edu.vn.user.model.Users;
-import org.springframework.security.crypto.bcrypt.BCrypt;
+
+
 
 import javax.mail.*;
 import javax.mail.internet.AddressException;
@@ -28,14 +29,12 @@ public class UserService {
 
             }
 
-            // Mã hóa mật khẩu trước khi lưu
-            String encryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
             // Thêm người dùng vào cơ sở dữ liệu
             Users newUser = new Users();
             newUser.setEmail(email);
             newUser.setUsername(username);
-            newUser.setPassword(encryptedPassword);  // Mã hóa mật khẩu
+            newUser.setPassword(password);  // Mã hóa mật khẩu
             newUser.setIsEmailVerified(0);  // Mặc định chưa xác minh email
             if (!usersDao.addUser(newUser)) {
                 return false;
@@ -148,6 +147,20 @@ public class UserService {
             return true;
         }
         return false;
+    }
+
+
+    //Đăng nhập
+    public boolean login(String username, String password) throws SQLException {
+        if(usersDao.checkLogin(username, password)) {
+            return true;
+        }
+        return false;
+    }
+
+    //Lấy user
+    public Users getUser(String username) throws SQLException {
+        return usersDao.getUser(username);
     }
 
 }

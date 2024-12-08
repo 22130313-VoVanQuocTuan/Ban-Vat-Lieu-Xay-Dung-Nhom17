@@ -62,14 +62,8 @@
             </p>
         </div>
         <div class="top-right">
-            <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span
-                    id="username"></span>!</span>
-            <a href="informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
-                <i class="fas fa-user-circle"></i> Tài khoản
-            </a>
-            <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-            <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
-        </div>
+           <a href="login-signup.jsp" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+            </div>
     </div>
 </div>
 <div class="fixed">
@@ -149,7 +143,7 @@
                 <li class="propClone"><a href="product.html"><i class="fa-brands fa-product-hunt"></i>
                     &nbsp;&nbsp;SẢN PHẨM</a>
                 </li>
-                <li class="propClone"><a href="login-signup.html"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp; GIỎ
+                <li class="propClone"><a href="login-signup.jsp"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp; GIỎ
                     HÀNG</a>
                 </li>
                 <li class="propClone">
@@ -209,17 +203,22 @@
         </div>
 
         <div class="form-container sign-in none">
-            <form id="login-form">
+            <form id="login-form" action="/tqh/login" method="post">
                 <h1>Đăng nhập</h1>
                 <div class="social-icons">
                     <a href="#" class="icon-logo"><i class="fa-brands fa-google-plus-g g"></i></a>
                     <a href="#" class="icon-logo"><i class="fa-brands fa-facebook-f f"></i></a>
                 </div>
                 <span>Hoặc sử dụng tài khoản đã đăng kí</span>
-                <input type="text" id="login-username" placeholder="UserName">
+                <input type="text" name="username" id="login-username" placeholder="UserName">
                 <span id="username-errorlog" class="error-message"></span> <!-- Thông báo lỗi tên đăng nhập -->
-                <input type="password" id="login-password" placeholder="Password">
+                <input type="password" name="password" id="login-password" placeholder="Password">
                 <span id="password-errorlog" class="error-message"></span> <!-- Thông báo lỗi mật khẩu -->
+                <div id="error-login" style="color: red;">
+                    <c:if test="${not empty error}">
+                        ${error}
+                    </c:if>
+                </div>
                 <a class="blue" href="reset-password.html">Quên mật khẩu?</a>
                 <button type="submit" id="login-button">Đăng nhập</button>
             </form>

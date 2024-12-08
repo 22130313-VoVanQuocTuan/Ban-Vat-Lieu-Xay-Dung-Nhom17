@@ -7,6 +7,7 @@ import hcmuaf.nlu.edu.vn.user.dao.DBConnect;
 import hcmuaf.nlu.edu.vn.user.model.Users;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,6 +41,7 @@ public class UsersDao {
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setString(1, user.getEmail());
             stmt.setString(2, user.getUsername());
+
             stmt.setString(3, BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
             return stmt.executeUpdate() > 0;
         }
@@ -122,18 +124,44 @@ public class UsersDao {
     }
     // Xử lý đăng nhập
     public boolean checkLogin(String username, String password) throws SQLException {
-        String sql = "SELECT * FROM users WHERE username=? AND password=?";
+        String sql = "SELECT password FROM users WHERE username=?";
+
         try (PreparedStatement ptm = dbConnect.preparedStatement(sql)) {
             ptm.setString(1, username);
-            ptm.setString(2, password);
 
             try (ResultSet rs = ptm.executeQuery()) {
                 if (rs.next()) {
-                    return true;
+                    String hashedPassword = rs.getString("password");
+
+                    // So sánh mật khẩu nhập vào với mật khẩu đã mã hóa
+                    if (BCrypt.checkpw(password, hashedPassword)) {
+                        return true; // Đăng nhập thành công
+                    }
                 }
             }
         }
-        return false;
+        return false; // Tên đăng nhập hoặc mật khẩu không đúng
+    }
+
+
+    public Users getUser(String username){
+        String sql = "SELECT * FROM users WHERE username = ?";
+        try(PreparedStatement ptm = dbConnect.preparedStatement(sql)){
+            ptm.setString(1, username);
+            ResultSet rs = ptm.executeQuery();
+            Users user = new Users();
+            if(rs.next()){
+                user.setId(rs.getInt("id"));
+                user.setEmail(rs.getString("email"));
+                user.setUsername(rs.getString("username"));
+                user.setRole(rs.getString("role"));
+                user.setIsEmailVerified(rs.getInt("isEmailVerified"));
+               return user;
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 

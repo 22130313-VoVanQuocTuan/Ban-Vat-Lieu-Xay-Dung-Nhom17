@@ -63,63 +63,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let isValid = true;
             // Kiểm tra tên đăng nhập
-             if (username === '') {
+            if (username === '') {
                 username_errorlog.textContent = 'Tên đăng nhập không được để trống';
                 username_errorlog.style.display = 'block';
-            isValid = false;
-             } else {
+                isValid = false;
+            } else {
                 username_errorlog.style.display = 'none';
-             }
-              // Kiểm tra mật khẩu
-              if (password === '') {
+            }
+             // Kiểm tra mật khẩu
+            if (password === '') {
                 password_errorlog.textContent = 'Mật khẩu không được để trống';
                 password_errorlog.style.display = 'block';
-            isValid = false;
-             } else {
+                isValid = false;
+            } else {
                 password_errorlog.style.display = 'none';
             }
-
+            const errorMessageElement = document.getElementById('error-login');
             // Nếu hợp lệ, xử lý đăng nhập
             if (isValid) {
-            if (username === "Admin" && password === "Admin") {
-                window.location.href = '../../admin/pages/index.html'; // Chuyển đến trang admin
-            } else {
-                if(username === "tuanquanhuy" && password === "bvlxd"){
-                localStorage.setItem('username', username); // Lưu tên đăng nhập vào localStorage
-                window.location.href = '../../../home.jsp'; // Chuyển đến trang người dùng
-            }else{
-                password_errorlog.textContent = 'Tài khoản hoặc mật khẩu không đúng';
-                password_errorlog.style.display = 'block';
-                isValid = false;
-            }
-        }
+                errorMessageElement.innerText = "";
+                const form = document.getElementById("login-form");
+                form.submit(); // Gửi form nếu hợp lệ
+
         }
     });
     }
 
     // Hiển thị thông tin người dùng nếu đã đăng nhập
-    const username = localStorage.getItem('username');
+    const username = usernameDisplay.textContent.trim();
+    // Kiểm tra xem username có tồn tại không
     if (username) {
-        userGreeting.style.display = 'inline';
-        usernameDisplay.textContent = username;
-        loginLink.style.display = 'none';
-        logoutLink.style.display = 'inline';
-        signupLink.style.display = 'inline';
-        if (cartItemCount) cartItemCount.style.display = 'inline';
+        // Hiển thị thông báo "Xin chào, username!"
+         userGreeting.style.display = "inline";
+        // Hiển thị các liên kết Logout và Account
+       logoutLink.style.display = "inline";
+       signupLink.style.display = "inline";
+       loginLink.style.display = "none";
     } else {
-        userGreeting.style.display = 'none';
-        logoutLink.style.display = 'none';
-        if (cartItemCount) cartItemCount.style.display = 'none';
+        // Nếu không có username, ẩn các liên kết Logout và Account
+        document.getElementById("user-greeting").style.display = "none";
+        document.getElementById("logout-link").style.display = "none";
+        document.getElementById("signup-link").style.display = "none";
+        document.getElementById("login-link").style.display = "inline";
     }
 
-    // Xử lý đăng xuất
-    if (logoutLink) {
-        logoutLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            localStorage.removeItem('username');
-            window.location.href = "../page/login-signup.jsp";
-        });
-    }
+    // // Xử lý đăng xuất
+    // if (logoutLink) {
+    //     logoutLink.addEventListener('click', function (event) {
+    //         event.preventDefault();
+    //         localStorage.removeItem('username');
+    //         window.location.href = "../page/login-signup.jsp";
+    //     });
+    // }
 
     // Xử lý đăng ký
     if (registerForm) {
