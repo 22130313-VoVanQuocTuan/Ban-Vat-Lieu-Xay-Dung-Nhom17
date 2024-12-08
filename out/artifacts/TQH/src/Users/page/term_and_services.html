@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vật Liệu Xây Dựng TQH </title>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
-<link rel="stylesheet" href="/src/Users/css/home.css">
-<link rel="stylesheet" href="/src/Users/css/login-signup.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
+<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="../css/terms_and_services.css">
 
 <body>
-    <div id="section-header1">
-        <div class="container">
-            <div class="top-left">
-                <p class="animated-text">
-                    <marquee>Chào mừng bạn đến với website của chúng tôi !</marquee>
-                </p>
-            </div>
-            <div class="top-right">
-                <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
-                <a href="informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
-                    <i class="fas fa-user-circle"  ></i> Tài khoản
-                </a>
-                <a href="login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
-                <a href="login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
+        <div id="section-header1">
+            <div class="container">
+                <div class="banner">
+                    <div class="top-left">
+                        <p class="animated-text">
+                            <marquee>Chào mừng bạn đến với website của chúng tôi !</marquee>
+                        </p>
+                    </div>
+                    <div class="top-right">
+                        <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span id="username"></span>!</span>
+                        <a href="informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
+                            <i class="fas fa-user-circle"  ></i> Tài khoản
+                        </a>
+                        <a href="login-signup.jsp" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng Nhập</span></a>
+                        <a href="login-signup.jsp" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-    <div class="fixed">
+        <div class="fixed">
         <div id="section-header2">
             <div class="container">
                 <div class="menu">
@@ -55,8 +57,8 @@
                     </div>
                     <div class="cart">
                         <div class="cart-wrapper">
-                            <a id="carts" href="#">
-                                <i class="fas fa-shopping-cart" style="color: #15283e;"></i>
+                            <a href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
                             </a>
                             <span class="cart-count" id="cart-count">0</span>
                         </div>
@@ -107,7 +109,7 @@
                     <li class="propClone"><a href="product.html"><i class="fa-brands fa-product-hunt"></i>
                             &nbsp;&nbsp;SẢN PHẨM</a>
                     </li>
-                    <li class="propClone"> <a href="login-signup.html"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp; GIỎ
+                    <li class="propClone"> <a href="cart.html"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp; GIỎ
                             HÀNG</a>
                     </li>
                     <li class="propClone">
@@ -132,89 +134,52 @@
         </div>
     </div>
 
+    <div id="section-content-1">
+        <div class="terms-container">
+            <h2>Điều Khoản và Dịch Vụ</h2>
+            <p>Chào mừng bạn đến với cửa hàng trực tuyến của chúng tôi! Dưới đây là các điều khoản và điều kiện áp dụng
+                cho việc sử dụng dịch vụ của chúng tôi.</p>
 
-    <!-- Content-->
-    <div class="content">
-        <div class="container" id="container">
-            <div class="form-container sign-up  none">
-                <form id="register-form">
-                    <h1>Tạo tài khoản</h1>
-                    <div class="social-icons">
-                        <a href="" class="icon-logo google"><i class="fa-brands fa-google-plus-g g"></i></a>
-                        <a href="#" class="icon-logo facebook"><i class="fa-brands fa-facebook-f f"></i></a>
-                    </div>
-                    <span>Hoặc sử dụng email để đăng kí tài khoản</span>
-                    <input type="text" id="register-email" placeholder="Email">
-                    <div id="email-error" style="color: red;"></div>
-                    <input type="username" id="register-username" placeholder="UserName">
-                    <div id="username-error" style="color: red;"></div>
-                    <input type="password" id="register-password" placeholder="Password">
-                    <div id="password-error" style="color: red;"></div>
-                    <button type="submit" id="submit-register">Đăng kí</button>
-                </form>
-            </div>
-            <div class="form-container sign-in none">
-                <form id="login-form">
-                    <h1>Đăng nhập</h1>
-                    <div class="social-icons">
-                        <a href="#" class="icon-logo"><i class="fa-brands fa-google-plus-g g"></i></a>
-                        <a href="#" class="icon-logo"><i class="fa-brands fa-facebook-f f"></i></a>
-                    </div>
-                    <span>Hoặc sử dụng tài khoản đã đăng kí</span>
-                    <input type="text" id="login-username" placeholder="UserName" >
-                    <span id="username-errorlog" class="error-message"></span> <!-- Thông báo lỗi tên đăng nhập -->
-                    <input type="password" id="login-password" placeholder="Password" >
-                    <span id="password-errorlog" class="error-message"></span> <!-- Thông báo lỗi mật khẩu -->
-                    <a class="blue" href="reset-password.html">Quên mật khẩu?</a>
-                    <button type="submit" id="login-button">Đăng nhập</button>
-                </form>
-            </div>
-            <div class="toggle-container none">
-                <div class="toggle">
-                    <div class="toggle-panel toggle-left">
-                        <h1>Chào mừng, trở lại!</h1>
-                        <p>Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                        <button class="hidden" id="login">Đăng nhập</button>
-                        <button class="hidden" id="home">Trang chủ</button>
-                    </div>
-                    <div class="toggle-panel toggle-right">
-                        <h1>Chào, bạn!</h1>
-                        <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                        <button class="hidden" id="register">Đăng kí</button>
-                        <button class="hidden" id="HOME">Trang chủ</button>
-                    </div>
-                </div>
-            </div>
+            <h3>1. Giới Thiệu</h3>
+            <p>Các điều khoản này điều chỉnh việc sử dụng trang web của chúng tôi và các dịch vụ mà chúng tôi cung cấp.
+                Bằng cách sử dụng trang web này, bạn đồng ý tuân thủ các điều khoản và điều kiện này.</p>
 
-            <!-- Form xác thực email -->
-            <div class="overlay" id="overlay"></div>
-            <div class="verify-code-container" id="verify-code-container">
-                <h1>Xác thực email</h1>
-                <!-- Icon dấu X để đóng form -->
-                <button title="bt" type="button" class="close-button" id="close-button" style="position: absolute; top: -20px;left: 77%;">
-                    <i class="fas fa-times"></i> <!-- Font Awesome icon for "X" -->
-                </button>
-                <div class="verification-code-inputs">
-                    <input title="code" type="text" id="verification-code-1" maxlength="1" class="verification-code"
-                        required>
-                    <input title="code" type="text" id="verification-code-2" maxlength="1" class="verification-code"
-                        required>
-                    <input title="code" type="text" id="verification-code-3" maxlength="1" class="verification-code"
-                        required>
-                    <input title="code" type="text" id="verification-code-4" maxlength="1" class="verification-code"
-                        required>
-                          <!-- Thông báo lỗi -->
-                       <div id="error-message" class="error-message"></div>
-                </div>
-                <button type="button" class="btn-verify" id="verify-button">Xác thực</button>
-                <button type="button" class="reset" id="reset">Gửi lại</button>
+            <h3>2. Đối Tượng Sử Dụng</h3>
+            <p>Trang web của chúng tôi chỉ dành cho những người từ 18 tuổi trở lên. Nếu bạn chưa đủ tuổi, vui lòng không
+                sử dụng dịch vụ này.</p>
 
+            <h3>3. Đặt Hàng</h3>
+            <p>Khi bạn đặt hàng, bạn đồng ý cung cấp thông tin chính xác và đầy đủ. Chúng tôi có quyền từ chối hoặc hủy
+                bỏ đơn hàng nếu thông tin không chính xác.</p>
 
-            </div>
+            <h3>4. Phương Thức Thanh Toán</h3>
+            <p>Chúng tôi chấp nhận nhiều phương thức thanh toán, chuyển khoản ngân hàng và thanh toán khi nhận hàng. Bạn
+                phải chịu trách nhiệm về việc đảm bảo rằng thông tin thanh toán của bạn là chính xác.</p>
+
+            <h3>5. Chính Sách Giao Hàng</h3>
+            <p>Chúng tôi sẽ cố gắng giao hàng trong thời gian đã thông báo, nhưng không đảm bảo thời gian giao hàng cụ
+                thể. Bạn có thể theo dõi đơn hàng của mình qua trang web của chúng tôi.</p>
+
+            <h3>6. Chính Sách Hoàn Trả</h3>
+            <p>Nếu bạn không hài lòng với sản phẩm đã nhận, vui lòng liên hệ với chúng tôi trong vòng 7 ngày kể từ ngày
+                nhận hàng để yêu cầu hoàn trả hoặc đổi sản phẩm.</p>
+
+            <h3>7. Quyền Sở Hữu Trí Tuệ</h3>
+            <p>Tất cả nội dung trên trang web này, bao gồm văn bản, hình ảnh và logo, đều thuộc quyền sở hữu trí tuệ của
+                chúng tôi. Bạn không được sao chép hoặc sử dụng mà không có sự cho phép của chúng tôi.</p>
+
+            <h3>8. Thay Đổi Điều Khoản</h3>
+            <p>Chúng tôi có quyền thay đổi các điều khoản này bất kỳ lúc nào. Bạn nên thường xuyên kiểm tra trang này để
+                cập nhật những thay đổi. Việc tiếp tục sử dụng dịch vụ sau khi có thay đổi có nghĩa là bạn đồng ý với
+                các điều khoản mới.</p>
+
+            <h3>9. Liên Hệ</h3>
+            <p>Nếu bạn có bất kỳ câu hỏi nào về các điều khoản và dịch vụ này, xin vui lòng liên hệ với chúng tôi qua
+                thông tin liên hệ trên trang web.</p>
+
+            <p>Cảm ơn bạn đã lựa chọn cửa hàng của chúng tôi!</p>
         </div>
-
     </div>
-
 
 
     <div id="section-footer">
@@ -253,20 +218,19 @@
                         class="fa-solid fa-phone call" style="color: #02bc15d1;"></i></a></li>
         </div>
         <div>
-            <li style="list-style-type: none;"><a href="https://www.instagram.com/paq.2012/" target="_blank"
-                    rel="noopener"><i class="fab fa-instagram icon" style="color: #f12020;"></i></a></li>
+            <li style="list-style-type: none;"><a href="https://www.instagram.com/paq.2012/" target="_blank" rel="noopener"><i
+                        class="fab fa-instagram icon " style="color: #f12020;"></i></a></li>
         </div>
         <div id="fb">
             <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
-                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square icon"
-                        style="color: #0911ff;"></i></a></li>
+                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square icon" style="color: #0911ff;"></i></a></li>
         </div>
         <button id="backToTop" title="Quay về đầu trang">⬆</button>
-    </div>
-    <a href="/src/admin/pages/index.html"></a>
-    <script src="/src/Users/js/login-signup.js"></script>
-    <script src="/src/Users/js/scripts.js" defer></script>
 
+    </div>
+   
+    <script src="../js/login-signup.js"></script>
+    <script src="/src/Users/js/scripts.js" defer></script>
 </body>
 
 </html>

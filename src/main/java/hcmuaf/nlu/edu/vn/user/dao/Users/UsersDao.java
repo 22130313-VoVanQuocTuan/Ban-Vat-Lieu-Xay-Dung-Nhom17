@@ -1,20 +1,22 @@
-package hcmuaf.nlu.edu.vn.user.dao;
+package hcmuaf.nlu.edu.vn.user.dao.Users;
 
 
 
 
+import hcmuaf.nlu.edu.vn.user.dao.DBConnect;
 import hcmuaf.nlu.edu.vn.user.model.Users;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 public class UsersDao {
     private DBConnect dbConnect;
-    public UsersDao() {}
-    public UsersDao(DBConnect dbConnect) {
-        this.dbConnect = dbConnect;
+
+    public UsersDao() {
+        this.dbConnect = new DBConnect();
     }
 
     //xử lý đăng kí
@@ -28,11 +30,13 @@ public class UsersDao {
             try (ResultSet rs = stmt.executeQuery()) {
                 return rs.next();
             }
+
         }
+
     }
     // Thêm người dùng vào bảng users khi chưa xác thực email
     public boolean addUser(Users user) throws SQLException {
-        String sql = "INSERT INTO users (email, username, password, is_email_verified, create_date, update_date) VALUES (?, ?, ?, 0, NOW(), NOW())";
+        String sql = "INSERT INTO users (email, username, password, isEmailVerified, createDate, updateDate) VALUES (?, ?, ?, 0, NOW(), NOW())";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setString(1, user.getEmail());
             stmt.setString(2, user.getUsername());
@@ -42,7 +46,7 @@ public class UsersDao {
     }
     // Thêm thông tin vào bảng xác thực email
     public boolean addEmailVerification(String email, String code, int userId) throws SQLException {
-        String sql = "INSERT INTO verify_emails (email, code, email_expiry, userId) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 3 MINUTE), ?)";
+        String sql = "INSERT INTO verifyemail (email, code, codeExpiry, userId) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 3 MINUTE), ?)";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setString(1, email);  // Thêm email vào câu lệnh
             stmt.setString(2, code);   // Thêm mã xác thực vào câu lệnh
@@ -56,6 +60,7 @@ public class UsersDao {
             return false; // Trả về false nếu có lỗi
         }
     }
+    //Lấy userId
     public int getUserIdByEmail(String email) throws SQLException {
         String sql = "SELECT id FROM users WHERE email = ?";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
@@ -68,10 +73,30 @@ public class UsersDao {
             }
         }
     }
+    //Xác thực email
+    public boolean isCode(String email, String code) throws SQLException {
+        String sql = "SELECT code, codeExpiry  FROM verifyemail  WHERE email = ?";
+        try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                String storedCode = rs.getString("code");
+                Timestamp codeExpiry = rs.getTimestamp("codeExpiry");
+
+                // Kiểm tra mã xác thực có trùng và chưa hết hạn
+                if (storedCode.equals(code) && codeExpiry != null && codeExpiry.after(new Timestamp(System.currentTimeMillis()))) {
+                    return true; // Mã hợp lệ và chưa hết hạn
+                } else {
+                    return false; // Mã hết hạn hoặc không khớp
+                }
+            }
+            return false; // Mã không tồn tại trong hệ thống
+        }
+    }
 
     // Cập nhật trạng thái xác thực email
     public boolean verifyEmail(String email) throws SQLException {
-        String sql = "UPDATE users SET is_email_verified = 1 WHERE email = ?";
+        String sql = "UPDATE users SET isEmailVerified = 1 WHERE email = ?";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setString(1, email);
             return stmt.executeUpdate() > 0;
@@ -79,7 +104,7 @@ public class UsersDao {
     }
     // Cập nhật lại mã code xác thực
     public boolean updateVerificationCode(String email, String code) throws SQLException {
-        String sql = "UPDATE verify_emails SET code = ?, code_expiry = DATE_ADD(NOW(), INTERVAL 3 MINUTE) WHERE email = ?";
+        String sql = "UPDATE verifyemail SET code = ?, codeExpiry = DATE_ADD(NOW(), INTERVAL 3 MINUTE) WHERE email = ?";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setString(1, code);
             stmt.setString(2, email);
@@ -89,7 +114,7 @@ public class UsersDao {
 
     // Xóa thông tin xác thực
     public boolean deleteVerificationRecord(int id) throws SQLException {
-        String sql = "DELETE FROM verify_emails WHERE id = ?";
+        String sql = "DELETE FROM verifyEmails WHERE id = ?";
         try (PreparedStatement stmt = dbConnect.preparedStatement(sql)) {
             stmt.setInt(1, id);
             return stmt.executeUpdate() > 0;
