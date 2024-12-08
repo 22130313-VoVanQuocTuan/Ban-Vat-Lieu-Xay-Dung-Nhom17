@@ -1,0 +1,2323 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vật Liệu Xây Dựng TQH </title>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4-beta3/css/all.min.css" />
+<link rel="stylesheet" href="src/Users/css/home.css">
+
+<body>
+    <div id="section-header1">
+        <div class="container">
+            <div class="banner">
+                <div class="top-left">
+                    <p class="animated-text">
+                        <marquee>Chào mừng bạn đến với website của chúng tôi !</marquee>
+                    </p>
+                </div>
+                <div class="top-right">
+                    <span id="user-greeting" style="display: none; color: #ffffff;">Xin chào, <span
+                            id="username"></span>!</span>
+                    <a href="src/Users/page/informationCustomer.html" class="account-link" id="signup-link" style="display: none;">
+                        <i class="fas fa-user-circle"></i> Tài khoản
+                    </a>
+                    <a href="src/Users/page/login-signup.html" id="login-link"><span><i class="fa fa-fw fa-user"></i> Đăng
+                            Nhập</span></a>
+                    <a href="src/Users/page/login-signup.html" id="logout-link" style="display: none;"><span>Đăng Xuất</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="fixed">
+        <div id="section-header2">
+            <div class="container">
+                <div class="menu">
+                    <!-- Logo bên trái -->
+                    <div class="logo">
+                        <a href="home.html"><img src="src/Users/img/logo.png" alt="Logo"></a>
+                    </div>
+
+                    <!-- Thanh tìm kiếm ở giữa -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button title="icon"><i class="fa fa-fw fa-search"></i></button>
+                    </div>
+
+                    <!-- Thông tin bên phải -->
+                    <div class="info">
+                        <div class="hotline">
+                            <span class="hotline-text">HOTLINE LIÊN HỆ </span>
+                            <a href=""> 0905.090.252</a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="cart-wrapper">
+                            <a id="carts" href="#">
+                                <i class="fas fa-shopping-cart" style="color: #15283e;"></i>
+                            </a>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-nav">
+            <div class="container">
+                <button class="menu-toggle"><i class="fa-solid fa-bars"></i> Menu</button>
+                <ul class="nav navbar-nav navbar-center">
+                    <li class="propClone">
+                        <span class="none-a"><i class="fa-solid fa-list" style="color: #d0cdcd;"></i> &nbsp;&nbsp; DANH
+                            MỤC SẢN
+                            PHẨM</span>
+                        <ul class="items">
+                            <li> <a href="src/Users/page/product/gach-xay-dung.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GẠCH XÂY
+                                    DỰNG</a></li>
+                            <li><a href="src/Users/page/product/xi-mang-va-vua.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;XI MĂNG VÀ
+                                    VỮA</a></li>
+                            <li><a href="src/Users/page/product/cat-da-va-soi.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;CÁT, ĐÁ VÀ
+                                    SỎI</a></li>
+                            <li><a href="src/Users/page/product/thep-va-sat.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THÉP VÀ
+                                    SẮT</a></li>
+                            <li><a href="src/Users/page/product/go-va-vat-lieu-go.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;GỖ VÀ VẬT
+                                    LIỆU GỖ</a></li>
+                            <li><a href="src/Users/page/product/son-va-phu-gia.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;SƠN VÀ PHỤ
+                                    GIA</a></li>
+                            <li><a href="src/Users/page/product/ngoi-va-tam-lop.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;NGÓI VÀ TẤM
+                                    LỢP</a></li>
+                            <li><a href="src/Users/page/product/ong-nuoc-va-phu-kien.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ỐNG NƯỚC VÀ
+                                    PHỤ KIỆN</a></li>
+                            <li><a href="src/Users/page/product/thiet-bi-dien-nuoc.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;THIẾT BỊ
+                                    ĐIỆN NƯỚC</a></li>
+                        </ul>
+                    </li>
+                    <li class="propClone"><a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; TRANG CHỦ </a></li>
+                    <li class="propClone"><a href="src/Users/page/product.html"><i class="fa-brands fa-product-hunt"></i>
+                            &nbsp;&nbsp;SẢN PHẨM</a>
+                    </li>
+                    <li class="propClone"> <a id="cartss" href="src/Users/page/cart.html"><i
+                                class="fas fa-shopping-cart"></i>&nbsp;&nbsp; GIỎ
+                            HÀNG</a>
+                    </li>
+                    <li class="propClone">
+                        <span class="none-a"> <i class="fa-solid fa-book"></i> &nbsp;&nbsp; HƯỚNG DẪN </span>
+                        <ul class="items">
+                            <li><a href="src/Users/page/buying-help.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp; HƯỚNG DẪN
+                                    MUA HÀNG</a>
+                            </li>
+                            <li><a href="src/Users/page/product_unit.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;BẢNG ĐƠN VỊ SẢN PHẨM</a>
+                            </li>
+                            <li><a href="src/Users/page/term_and_services.html">&nbsp;&nbsp;<i
+                                        class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;ĐIỀU KHOẢN
+                                    VÀ DỊCH VỤ</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="section-slider">
+        <div class="slide-show-content-container">
+            <p class="title-w" id="animatedText">Xây dựng nền móng vững chắc - Khởi tạo những công trình bền vững cùng
+                bạn!</p>
+            <div class="slide-show-content-image">
+
+                <img src="src/Users/img/slider1.png" alt="baner">
+                <img src="src/Users/img/slider2.png" alt="baner">
+                <img src="src/Users/img/slider3.png" alt="baner">
+                <img src="src/Users/img/slider4.png" alt="baner">
+                <img src="src/Users/img/slider5.png" alt="baner">
+                <img src="src/Users/img/slider6.png" alt="baner">
+            </div>
+            .<div class="slide-show-content-btn">
+                <div class="nut_trai">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="nut_phai">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-content">
+        <!-- List Product flash sales -->
+        <div class="product-one-content">
+            <div class="product-one-content-title">
+                <div class="title">
+                    <h3>Flash Sale !!</h3>
+                    <span><a class="highlight-text" href="src/Users/page/product.html">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="product-one-content-items">
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/gachxaydung/gachtuynelsangtrongnghia.png"
+                                                                          alt=""></a>
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="src/Users/page/product-detail.html">Gạch Tuynel 200x100 </a></div>
+                        <div class="product-price">
+                            <li>144.000₫</li>
+                            <li>180.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <a href="src/Users/page/product-detail.html"><img
+                                src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20TEGOLA%20CAO%20CẤP%20NHẬP%20KHẨU%20Ý%20–%20DẠNG%20VẢY%20CÁ.png"
+                                alt=""></a>
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="src/Users/page/product-detail.html">Ngói BITUM PHỦ ĐÁ TEGOLA cao cấp nhập
+                                khẩu Ý</a></div>
+                        <div class="product-price">
+                            <li>120.000₫</li>
+                            <li>150.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gothong.png" alt=""></a>
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ Thông Xẻ</a></div>
+                        <div class="product-price">
+                            <li>640.000₫</li>
+                            <li>800.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/son/Sơn%20Lót%20Ngoại%20Thất%20Siêu%20Cao%20Cấp%20Dulux%20Weathershield%20Chống%20Kiềm.png"
+                            alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Sơn Lót Ngoại Thất Siêu Cao Cấp Dulux Weathershield Chống
+                                Kiềm</a></div>
+                        <div class="product-price">
+                            <li>720.000₫</li>
+                            <li>900.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/son/Sơn%20nước%20nội%20thất%20cao%20cấp%20TOA%20Nanoclean.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Sơn nước nội thất cao cấp TOA Nanoclean</a></div>
+                        <div class="product-price">
+                            <li>640.000₫</li>
+                            <li>800.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-one-content-items">
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/gachxaydung/gachmen.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Gạch Men 60x60 cm</a></div>
+                        <div class="product-price">
+                            <li>240.000₫</li>
+                            <li>300.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/Da_cat_soi/catvang.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Cát Xây Dựng</a></div>
+                        <div class="product-price">
+                            <li>120.000₫</li>
+                            <li>150.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/xingmang/ximamgholikem.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Xi Măng Holcim 50kg</a></div>
+                        <div class="product-price">
+                            <li>120.000₫</li>
+                            <li>150.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/thepvasat/image5.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Sắt Thép Cuộn 10mm</a></div>
+                        <div class="product-price">
+                            <li>400.000₫</li>
+                            <li>500.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-one-content-item">
+                    <div class="img-product">
+                        <img src="src/Users/img_product/ong-nuoc-phu-kien/Ống%20nhựa%20Bình%20Minh%20PVC-U.png" alt="">
+                        <span class="sale-box">- 20% </span>
+                    </div>
+                    <div class="product-title">
+                        <div class="name-product"><a href="#">Ống nhựa Bình Minh PVC-U</a></div>
+                        <div class="product-price">
+                            <li>80.000₫</li>
+                            <li>100.000₫</li>
+                            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SẢN PHẨM BÁN CHẠY -->
+        <div class="selling-products-container">
+            <div class="imgSale">
+                <img src="src/Users/img_product/inax-khuyen-mai-mua-dong.png" alt="">
+            </div>
+            <div class="selling-products-content">
+                <h4><i class="fa-regular fa-gem" style="color: #f8f9fc;"></i>TOP SẢN PHẨM BÁN CHẠY</h4>
+                <div class="content-products">
+                    <div class="content-product">
+                        <div class="img-product"> <img src="src/Users/img_product/gachxaydung/gachmen.png" alt="Sản phẩm 1">
+                        </div>
+                        <div class="nameProduct-price">
+                            <li> <a href="">Gạch Men 60x60 cm</a></li>
+                            <li>Giá: 340.000đ</li>
+                        </div>
+                    </div>
+                    <div class="content-product">
+                        <img src="src/Users/img_product/xingmang/ximamgholikem.png" alt="Sản phẩm 2">
+                        <div class="nameProduct-price">
+                            <li><a href=""> Xi Măng Holcim 50kg</a></li>
+                            <li>Giá: 120.000đ</li>
+                        </div>
+                    </div>
+                    <div class="content-product">
+                        <img src="src/Users/img_product/gachxaydung/gachtuynelsangtrongnghia.png" alt="Sản phẩm 3">
+                        <div class="nameProduct-price">
+                            <li> <a href="">Gạch Tuynel 200x100</a></li>
+                            <li>Giá: 144.000đ</li>
+                        </div>
+                    </div>
+                    <div class="content-product">
+                        <img src="src/Users/img_product/vat_lieu_go/gothong.png" alt="Sản phẩm 4">
+                        <div class="nameProduct-price">
+                            <li><a href="">Gỗ Thông Xẻ</a></li>
+                            <li>Giá: 640.000đ</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- List Slider Products 1 -->
+        <div class="slider-product-one-content">
+            <div class="slider-product-one-content-title">
+                <div class="title">
+                    <h3>Gạch Xây Dựng</h3>
+                    <span><a class="highlight-text" href="src/Users/page/product/gach-xay-dung.html">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-one-content-container">
+                <div class="slider-product-one-content-items-content">
+                    <div class="slider-product-one-content-items">
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gach-xay-tuong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch xây tường</a></div>
+                                <div class="product-price">
+                                    <li>150.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachbong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch bông GR01 </a></div>
+                                <div class="product-price">
+                                    <li>100.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachdaden.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch đá đen</a></div>
+                                <div class="product-price">
+                                    <li>150.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachdanaBU03.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch Dana BU03</a></div>
+                                <div class="product-price">
+                                    <li>180.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachdinhdac.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch đinh đặc</a></div>
+                                <div class="product-price">
+                                    <li>100.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-items">
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="src/Users/img_product/gachxaydung/gachhiephung717.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch xây dựng</a></div>
+                                <div class="product-price">
+                                    <li>144.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="src/Users/img_product/gachxaydung/gachkhongnung.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch không nung</a></div>
+                                <div class="product-price">
+                                    <li>120.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachkinh.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch kính</a></div>
+                                <div class="product-price">
+                                    <li>195.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="src/Users/img_product/gachxaydung/gachmen.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch men</a></div>
+                                <div class="product-price">
+                                    <li>340.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachnhua.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch nhựa</a></div>
+                                <div class="product-price">
+                                    <li>98.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-items">
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="src/Users/img_product/gachxaydung/gachtau.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch tàu</a></div>
+                                <div class="product-price">
+                                    <li>598.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachcaosu.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch cao su</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachtuynel.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch Tuynel 200x100</a></div>
+                                <div class="product-price">
+                                    <li>135.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachtuynelngocchung.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch Tuynel Ngọc Chung</a></div>
+                                <div class="product-price">
+                                    <li>135.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-one-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/gachxaydung/gachtuynelsangtrongnghia.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Gạch Tuynel Sang Trọng Nghĩa</a></div>
+                                <div class="product-price">
+                                    <li>180.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-one-content-btn">
+                    <div class="nut_trai-1">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-1">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- List Slider Products 2 -->
+        <div class="slider-product-two-content">
+            <div class="slider-product-two-content-title">
+                <div class="title">
+                    <h3>Xi Măng Và Vữa</h3>
+                    <span><a class="highlight-text" href="src/Users/page/product/xi-mang-va-vua.html">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-two-content-container">
+                <div class="slider-product-two-content-items-content">
+                    <div class="slider-product-two-content-items">
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/image1.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng SCG-PC40-ELE</a></div>
+                                <div class="product-price">
+                                    <li>290.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/xingmang/image2.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Victem Hà Tiến</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/image3.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng đa dụng ECO</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximagfico.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng FICO CEMENT</a></div>
+                                <div class="product-price">
+                                    <li>195.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximamg%20allybuild.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Allyuild</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-two-content-items">
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/xingmang/ximamgholikem.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Holcim</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/xingmang/ximanginseeeco.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Inceeco</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangpc40.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng PCP 40-MS</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangtaydo.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Tây Đô</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangvicemhalong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Viccem Hạ Long</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-two-content-items">
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangvicemhatien.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng Viccem Hà tiên</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangcampha.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng CẨM PHẢ-NB</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangchongtham.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng chống thấm SOTIN</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/xingmang/ximanginsee.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng đa dụng INSEE </a></div>
+                                <div class="product-price">
+                                    <li>290.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-two-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/xingmang/ximangshahcement.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Xi măng SHAH CEMENT</a></div>
+                                <div class="product-price">
+                                    <li>198.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-two-content-btn">
+                    <div class="nut_trai-2">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-2">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- List Slider Products 3 -->
+        <div class="slider-product-three-content">
+            <div class="slider-product-three-content-title">
+                <div class="title">
+                    <h3>Cát,Đá Và Sỏi</h3>
+                    <span><a class="highlight-text" href="src/Users/page/product/cat-da-va-soi.html">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-three-content-container">
+                <div class="slider-product-three-content-items-content">
+                    <div class="slider-product-three-content-items">
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/catbetong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Cát bê tông</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/Da_cat_soi/catden.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Cát đen</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="/src/Users/img_product/Da_cat_soi/dache.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá chẻ</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/Da_cat_soi/catsong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Cát sông</a></div>
+                                <div class="product-price">
+                                    <li>310.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/Da_cat_soi/catvang.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Cát vàng</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-three-content-items">
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/catxayto.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Cát xây tô</a></div>
+                                <div class="product-price">
+                                    <li>250.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/da12.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá bi</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/da24.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá bi lớn</a></div>
+                                <div class="product-price">
+                                    <li>250.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="/src/Users/img_product/Da_cat_soi/da46.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá 4/6</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/da57.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá 5/7</a></div>
+                                <div class="product-price">
+                                    <li>98.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-product-three-content-items">
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/dahoc.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá hóc</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/dacmthach.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá thạch</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/dahoacuong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá hoa cương</a></div>
+                                <div class="product-price">
+                                    <li>190.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/daphien.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá phiến</a></div>
+                                <div class="product-price">
+                                    <li>150.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-three-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="/src/Users/img_product/Da_cat_soi/datrang.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="">Đá trắng</a></div>
+                                <div class="product-price">
+                                    <li>200.000₫</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-three-content-btn">
+                    <div class="nut_trai-3">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-3">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--List Slider product 4-->
+        <div class="slider-product-four-content">
+            <div class="slider-product-four-content-title">
+                <div class="title">
+                    <h3>Thép và Sắt</h3>
+                    <span><a href="src/Users/page/product/thep-va-sat.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-four-content-container">
+                <div class="slider-product-four-content-items-content">
+                    <div class="slider-product-four-content-items">
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thepvasat/image1.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép cốt bê tông</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thepvasat/image3.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép thanh vằn</a></div>
+                                <div class="product-price">
+                                    <li>700.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html">  <img src="src/Users/img_product/thepvasat/image5.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ống thép mạ kẽm</a></div>
+                                <div class="product-price">
+                                    <li>480.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thepvasat/image10.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Hàng rào sắt</a></div>
+                                <div class="product-price">
+                                    <li>499.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-four-content-items">
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thepvasat/image14.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép hộp vuông mạ kẽm
+                                        Sendo</a></div>
+                                <div class="product-price">
+                                    <li>999.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thepvasat/image8.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thanh thép chữ A</a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image15.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép hình chữ V Miền Na</a>
+                                </div>
+                                <div class="product-price">
+                                    <li>1.500.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image4.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html"></a>Thanh thép hình I</div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-four-content-items">
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image2.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép cuộn SS400</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image12.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Cuộn thép gai</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image11.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Lưới sắt</a></div>
+                                <div class="product-price">
+                                    <li>480.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-four-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thepvasat/image13.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Thép cuộn Pomina</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-four-content-btn">
+                    <div class="nut_trai-4">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-4">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--List Slider product 5-->
+        <div class="slider-product-five-content">
+            <div class="slider-product-five-content-title">
+                <div class="title">
+                    <h3>Gỗ và Vật liệu gỗ</h3>
+                    <span><a href="src/Users/page/product/go-va-vat-lieu-go.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-five-content-container">
+                <div class="slider-product-five-content-items-content">
+                    <div class="slider-product-five-content-items">
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gobachduong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ bạch dương</a></div>
+                                <div class="product-price">
+                                    <li>1.000.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gocamlai.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ cẩm lài</a></div>
+                                <div class="product-price">
+                                    <li>765.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gothong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ thông</a></div>
+                                <div class="product-price">
+                                    <li>400.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gohuong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ hương</a></div>
+                                <div class="product-price">
+                                    <li>499.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-five-content-items">
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/image11.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ thanh mượt</a></div>
+                                <div class="product-price">
+                                    <li>999.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/image10.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ trắng đặc</a></div>
+                                <div class="product-price">
+                                    <li>1.350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/image1.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ cao cấp</a>
+                                </div>
+                                <div class="product-price">
+                                    <li>2.000.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/image12.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ đa năng</a></div>
+                                <div class="product-price">
+                                    <li>300.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-five-content-items">
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/image3.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ lõi đen</a></div>
+                                <div class="product-price">
+                                    <li>905.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gotro.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ trơ</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gooccho.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ óc chó/a></div>
+                                <div class="product-price">
+                                    <li>765.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-five-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/vat_lieu_go/gohong.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Gỗ hồng</a></div>
+                                <div class="product-price">
+                                    <li>950.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-product-five-content-btn">
+                    <div class="nut_trai-5">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-5">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--List Slider product 6-->
+        <div class="slider-product-six-content">
+            <div class="slider-product-six-content-title">
+                <div class="title">
+                    <h3>Sơn và Phụ gia</h3>
+                    <span><a href="src/Users/page/product/son-va-phu-gia.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-six-content-container">
+                <div class="slider-product-six-content-items-content">
+                    <div class="slider-product-six-content-items">
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Phụ%20gia%20chống%20thấm%20BS-8430%20Latex.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Phụ gia chống thấm BS-8430
+                                        Latex</a></div>
+                                <div class="product-price">
+                                    <li>890.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/SƠN%20LÓT%20LẤP%20TIM%20LÀM%20MỊN%20GỖ%20LOTUS%20SANDING%20SEALER.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">SƠN LÓT LẤP TIM LÀM MỊN GỖ
+                                        LOTUS
+                                        SANDING SEALER</a></div>
+                                <div class="product-price">
+                                    <li>100.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20Lót%20Ngoại%20Thất%20Siêu%20Cao%20Cấp%20Dulux%20Weathershield%20Chống%20Kiềm.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn Lót Ngoại Thất Siêu Cao
+                                        Cấp
+                                        Dulux Weathershield Chống Kiềm</a></div>
+                                <div class="product-price">
+                                    <li>280.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20Lót%20Ngoại%20Thất%20Siêu%20Cao%20Cấp%20Dulux%20Weathershield%20Powersealer.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn Lót Ngoại Thất Siêu Cao
+                                        Cấp
+                                        Dulux Weathershield Powersealer</a></div>
+                                <div class="product-price">
+                                    <li>299.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-six-content-items">
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20Ngoại%20Thất%20Dulux%20Inspire%20Sắc%20Màu%20Bền%20Đẹp%20Bề%20Mặt.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn Ngoại Thất Dulux Inspire
+                                        Sắc
+                                        Màu Bền Đẹp Bề Mặt</a></div>
+                                <div class="product-price">
+                                    <li>199.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20nước%20ngoại%20thất%20Dulux%20Weathershield%20Bề%20Mặt%20.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn nước ngoại thất Dulux
+                                        Weathershield Bề Mặt</a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <img src="src/Users/img_product/son/Sơn%20nước%20ngoại%20thất%20Dulux%20Weathershield%20Colour%20Protect%20Bề%20Mặt.png" alt="">
+                            </div>
+                            <div class=" product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn nước ngoại thất Dulux
+                                        Weathershield Colour Protect Bề Mặt</a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20nước%20ngoại%20thất%20Dulux%20Weathershield%20Powerflexx%20Bề%20Mặt.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn nước ngoại thất Dulux Weathershield Powerflexx Bề Mặt</a></div>
+                                <div class="product-price">
+                                    <li>200.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-six-content-items">
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/SƠN%20NƯỚC%20NGOẠI%20THẤT%20SUPERTECH%20PRO%20EXTERIOR.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">SƠN NƯỚC NGOẠI THẤT SUPERTECH
+                                        PRO
+                                        EXTERIOR</a></div>
+                                <div class="product-price">
+                                    <li>100.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20nước%20nội%20thất%20cao%20cấp%20TOA%20Nanoclean.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn nước nội thất cao cấp TOA
+                                        Nanoclean</a></div>
+                                <div class="product-price">
+                                    <li>400.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20Sắt%20Giả%20Gỗ%20Lotus%20Meta%20Coat%20Primer%20–%201%20Sơn%20Lót%20+%201%20Sơn%20Phủ.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn Sắt Giả Gỗ Lotus Meta Coat
+                                        Primer – 1 Sơn Lót + 1 Sơn Phủ</a></div>
+                                <div class="product-price">
+                                    <li>444.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-six-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/son/Sơn%20nước%20nội%20thất%20sinh%20học%20DULUX%20BETTER%20LIVING%20AIR%20CLEAN.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Sơn nước nội thất sinh học
+                                        DULUX
+                                        BETTER LIVING AIR CLEAN</a></div>
+                                <div class="product-price">
+                                    <li>222.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-product-six-content-btn">
+                    <div class="nut_trai-6">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-6">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--List Slider product 7-->
+        <div class="slider-product-seven-content">
+            <div class="slider-product-seven-content-title">
+                <div class="title">
+                    <h3>Ngói và Tấm lợp</h3>
+                    <span><a href="src/Users/page/product/ngoi-va-tam-lop.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-seven-content-container">
+                <div class="slider-product-seven-content-items-content">
+                    <div class="slider-product-seven-content-items">
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NgoiThaiSCGDangPhang.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NgoiThaiSCGDangPhang</a></div>
+                                <div class="product-price">
+                                    <li>300.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20CANA%20ĐỒNG%20PHẲNG.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM CANA ĐỒNG PHẲNG</a>
+                                </div>
+                                <div class="product-price">
+                                    <li>555.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20DẠNG%20TỔ%20ONG%20–%20MÀU%20XANH%20RÊU.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM PHỦ ĐÁ DẠNG TỔ ONG
+                                        –
+                                        MÀU XANH RÊU</a></div>
+                                <div class="product-price">
+                                    <li>480.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20DẠNG%20VẢY%20RỒNG%20–%20MÀU%20XANH%20DƯƠNG.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM PHỦ ĐÁ DẠNG VẢY
+                                        RỒNG –
+                                        MÀU XANH DƯƠNG</a></div>
+                                <div class="product-price">
+                                    <li>499.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-seven-content-items">
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20DẠNG%20ĐỒNG%20PHẲNG%20–%20MÀU%20XÁM.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM PHỦ ĐÁ DẠNG ĐỒNG
+                                        PHẲNG
+                                        – MÀU XÁM</a></div>
+                                <div class="product-price">
+                                    <li>999.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/Ngói%20chạc%20ba%20chữ%20Y.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ngói chạc ba chữ Y</a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20TEGOLA%20CAO%20CẤP%20NHẬP%20KHẨU%20Ý%20–%20DẠNG%20VẢY%20CÁ.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM PHỦ ĐÁ TEGOLA CAO
+                                        CẤP
+                                        NHẬP KHẨU Ý – DẠNG VẢY CÁ</a></div>
+                                <div class="product-price">
+                                    <li>777.777đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/Ngói%20cuối%20nóc.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html"></a>Ngói cuối nóc</div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-seven-content-items">
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/NGÓI%20BITUM%20PHỦ%20ĐÁ%20TEGOLA%20CAO%20CẤP%20NHẬP%20KHẨU%20Ý.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">NGÓI BITUM PHỦ ĐÁ TEGOLA CAO
+                                        CẤP
+                                        NHẬP KHẨU Ý</a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/Ngói%20Thái%20SCG%20Elite%20Series%20Dạng%20Sóng%20Classic-Nâu%20Socola.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ngói Thái SCG Elite Series
+                                        Dạng
+                                        Sóng Classic-Nâu Socola</a></div>
+                                <div class="product-price">
+                                    <li>780.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/Tôn%20Sáng%20Sóng%20Vuông%20Polycacbonate%20Tấm.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Tôn Sáng Sóng Vuông
+                                        Polycacbonate
+                                        Tấm</a></div>
+                                <div class="product-price">
+                                    <li>560.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-seven-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ngoi/Tấm%20Cemboard%20Ốp%20Trần%20Vân%20Gỗ%20Smartboard%20Có%20Rãnh.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Tấm Cemboard Ốp Trần Vân Gỗ
+                                        Smartboard Có Rãnh</a></div>
+                                <div class="product-price">
+                                    <li>910.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slider-product-seven-content-btn">
+                    <div class="nut_trai-7">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-7">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--List Slider product 8-->
+        <div class="slider-product-eight-content">
+            <div class="slider-product-eight-content-title">
+                <div class="title">
+                    <h3>Ống nước và Phụ kiện</h3>
+                    <span><a href="src/Users/page/product/ong-nuoc-va-phu-kien.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-eight-content-container">
+                <div class="slider-product-eight-content-items-content">
+                    <div class="slider-product-eight-content-items">
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                               <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Ống%20nhựa%20mềm%20lõi%20thép%20Ø50mm,%20cuộn%2050m.png"
+                                                                                 alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ống nhựa mềm lõi thép Ø50mm,
+                                        cuộn
+                                        50m</a></div>
+                                <div class="product-price">
+                                    <li>300.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Co%2090%20độ%20trơn%20phi%2021%20Nhựa%20Bình%20Minh.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Co 90 độ trơn phi 21 Nhựa Bình
+                                        Minh</a></div>
+                                <div class="product-price">
+                                    <li>700.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Co%2090⁰%20Ø6mm%20dùng%20cho%20máy%20lọc%20nước%20RO.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Co 90⁰ Ø6mm dùng cho máy lọc
+                                        nước
+                                        RO</a></div>
+                                <div class="product-price">
+                                    <li>480.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Co%20giảm%20PVC%20phi%2060-42.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Co giảm PVC phi 60-42</a>
+                                </div>
+                                <div class="product-price">
+                                    <li>49.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-eight-content-items">
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Nắp%20khóa,%20bịt%20đầu%20ống%20loại%20ren%20ngoài%20Ø21%20nhựa%20PVC%20BÌNH%20MINH,%20giá%20tính%20theo%20cái.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Nắp khóa, bịt đầu ống loại ren
+                                        ngoài Ø21 nhựa PVC BÌNH MINH, giá tính theo cái</a></div>
+                                <div class="product-price">
+                                    <li>99.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Nối%20ống%20chữ%20T%20nhựa%20PVC%20Bình%20Minh%20một%20đầu%20ren%20trong%20phi%2021.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Nối ống chữ T nhựa PVC Bình
+                                        Minh
+                                        một đầu ren trong phi 21</a></div>
+                                <div class="product-price">
+                                    <li>50.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Nối%20rút%20trơn%2090%20x%2042%20M%20,%20nhựa%20PVC-U%20Bình%20Minh.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Nối rút trơn 90 x 42 M , nhựa
+                                        PVC-U Bình Minh</a></div>
+                                <div class="product-price">
+                                    <li>100.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Van%20nhựa%20Ø34%20Bình%20Minh.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html"></a>Van nhựa Ø34 Bình Minh
+                                </div>
+                                <div class="product-price">
+                                    <li>60.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-eight-content-items">
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Nắp%20khóa,%20bịt%20đầu%20ống%20Ø90%20(loại%20đầu%20bằng,%20không%20ren)%20nhựa%20PVC-U%20Tiền%20Phong.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Nắp khóa, bịt đầu ống Ø90
+                                        (loại
+                                        đầu bằng, không ren) nhựa PVC-U Tiền Phong</a></div>
+                                <div class="product-price">
+                                    <li>80.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Đồng%20hồ%20nước%20Trung%20Đức%20phi%2049%20DN40.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Đồng hồ nước Trung Đức phi 49
+                                        DN40</a></div>
+                                <div class="product-price">
+                                    <li>69.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Ống%20nhựa%20mềm%20lõi%20thép%20Ø50mm,%20cuộn%2050m.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ống nhựa mềm lõi thép Ø50mm,
+                                        cuộn
+                                        50m</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-eight-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/ong-nuoc-phu-kien/Ống%20nhựa%20PVC%20lưới%20mềm%20ø25mm%20Luco,%20cuộn%2050m%20màu%20xanh%20dương.png"
+                                                                                  alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Ống nhựa PVC lưới mềm ø25mm
+                                        Luco,
+                                        cuộn 50m màu xanh dương</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slider-product-eight-content-btn">
+                    <div class="nut_trai-8">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-8">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--List Slider product 9-->
+        <div class="slider-product-nine-content">
+            <div class="slider-product-nine-content-title">
+                <div class="title">
+                    <h3>Thiết bị điện nước</h3>
+                    <span><a href="src/Users/page/product/thiet-bi-dien-nuoc.html" class="highlight-text">Xem thêm</a></span>
+                </div>
+            </div>
+            <div class="slider-product-nine-content-container">
+                <div class="slider-product-nine-content-items-content">
+                    <div class="slider-product-nine-content-items">
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thietbi-diennuoc/image1.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy bơm tăng áp A-130 JAK –
+                                        Panasonic</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image2.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy bơm tăng áp Panasonic
+                                        JAK-100%
+                                        lõi đồng</a></div>
+                                <div class="product-price">
+                                    <li>700.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image3.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy bơm tăng áp Panasonic JAK-
+                                        có
+                                        nắp che mưa</a></div>
+                                <div class="product-price">
+                                    <li>480.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image4.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy Bơm Đẩy Cao Panasonic
+                                        GP-350JA-SV5 350W </a></div>
+                                <div class="product-price">
+                                    <li>499.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-nine-content-items">
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image5.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy bơm nước đẩy cao Panasonic
+                                        GP-129JXK-SV5 125W</a></div>
+                                <div class="product-price">
+                                    <li>599.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image6.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Bồn nước inox 1000L Đứng Tân Á
+                                        Đại
+                                        Thành </a></div>
+                                <div class="product-price">
+                                    <li>350.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image7.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Bình nóng lạnh năng lượng mặt
+                                        trời</a></div>
+                                <div class="product-price">
+                                    <li>500.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image8.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Đồng hồ điện điện tử LSE LS142 có 1 pha 2 dây</a></div>
+                                <div class="product-price">
+                                    <li>600.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-product-nine-content-items">
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image9.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Đồng Hồ Điện Một Pha EMIC 10(40A)
+                                        – Có Giấy Kiểm Định</a></div>
+                                <div class="product-price">
+                                    <li>222.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"> <img src="src/Users/img_product/thietbi-diennuoc/image10.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máy nước nóng Beko BWI35S1N-213</a></div>
+                                <div class="product-price">
+                                    <li>1.567.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image11.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Máng đèn Anfaco T8 0.6m -
+                                        14W</a>
+                                </div>
+                                <div class="product-price">
+                                    <li>123.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-product-nine-content-item">
+                            <div class="img-product">
+                                <a href="src/Users/page/product-detail.html"><img src="src/Users/img_product/thietbi-diennuoc/image12.png" alt=""></a>
+                            </div>
+                            <div class="product-title">
+                                <div class="name-product"><a href="src/Users/page/product-detail.html">Đèn LED Duhal âm trần cao cấp
+                                        KBNL830 30W</a></div>
+                                <div class="product-price">
+                                    <li>345.000đ</li>
+                                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slider-product-nine-content-btn">
+                    <div class="nut_trai-9">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="nut_phai-9">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Banner -->
+    <div class="popup-banner" id="popupBanner" style="display: none;">
+        <div class="popup-content">
+            <!-- Ảnh banner -->
+            <img src="src/Users/img/baner.png" alt="Sự kiện ưu đãi" class="banner-image">
+
+            <!-- Nội dung banner -->
+            <div class="banner-details">
+                <h2 class="banner-title">Sự Kiện Giảm Giá Đặc Biệt Mừng Giáng Sinh</h2>
+                <p class="banner-desc">Giảm giá lên đến 50% cho các sản phẩm</p>
+                <a href="src/Users/page/product.html" class="banner-btn">Mua Ngay</a>
+            </div>
+
+            <!-- Nút đóng banner -->
+            <div class="closee-button" onclick="closePopup()">
+                <i class="fa-solid fa-x"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-footer">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Vật Liệu Xây Dựng TQH </h3>
+                <p>Địa chỉ: Trường ĐH Nông Lâm TP. HCM</p>
+                <p>Điện thoại: 0314 597 812</p>
+                <p>Hotline: 0905 090 252</p>
+                <p>Email: 22130098@st.hcmuaf.edu.vn</p>
+            </div>
+            <div class="links">
+                <h3>Liên kết</h3>
+                <ul>
+                    <li><a href="src/Users/page/introduce.html">Giới thiệu</a></li>
+                    <li><a href="src/Users/page/term_and_services.html">Điều khoản và dịch vụ</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Mạng xã hội</h3>
+                <ul>
+                    <li> <a href="https://www.facebook.com/profile.php?id=100044411504061"><i
+                                class="fa-brands fa-facebook" style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://www.instagram.com/paq.2012/"><i class="fa-brands fa-instagram-square"
+                                style="color: #d1d1d1;"></i></a></li>
+                    <li> <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter"
+                                style="color: #d1d1d1;"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2024: Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+       
+        <div>
+            <li style="list-style-type: none;"><a href="https://zaloweb.me/" target="_blank" rel="noopener"><i
+                        class="fa-solid fa-phone call" style="color: #02bc15d1;"></i></a></li>
+        </div>
+        <div>
+            <li style="list-style-type: none;"><a href="https://www.instagram.com/paq.2012/" target="_blank"
+                    rel="noopener"><i class="fab fa-instagram icon" style="color: #f12020;"></i></a></li>
+        </div>
+        <div id="fb">
+            <li style="list-style-type: none;"><a href="https://www.facebook.com/profile.php?id=100044411504061"
+                    target="_blank" rel="noopener"><i class="fa-brands fa-facebook-square icon"
+                        style="color: #0911ff;"></i></a></li>
+        
+        
+    </div>
+
+        <button id="backToTop" title="Quay về đầu trang">⬆</button>
+    </div>
+    <script src="src/Users/js/slider_Image-home.js"></script>
+    <script src="src/Users/js/slider-products.js"></script>
+    <script src="src/Users/js/home.js"></script>
+    <script src="src/Users/js/login-signup.js"></script>
+    <script src="src/Users/js/scripts.js"></script>
+    <script>
+        // Mở banner tự động khi trang tải xong
+        window.onload = function () {
+            openPopup(); // Gọi hàm mở popup
+        };
+
+        function openPopup() {
+            // Hiển thị banner và ngừng cuộn trang
+            document.getElementById("popupBanner").style.display = "flex";
+            document.body.classList.add("no-scroll");
+        }
+
+        function closePopup() {
+            // Ẩn banner và khôi phục cuộn trang
+            document.getElementById("popupBanner").style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    </script>
+
+
+</body>
+
+</html>

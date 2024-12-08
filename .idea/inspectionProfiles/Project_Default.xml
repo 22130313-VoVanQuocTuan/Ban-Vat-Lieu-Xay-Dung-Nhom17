@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+          <option value="Web_Ban_Vat_Lieu_Xay_Dung_17" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="com.google.protobuf:protobuf-java:3.25.1" />
+          <option value="org.springframework.security:spring-security-core:5.8.0" />
+          <option value="org.springframework:spring-beans:5.3.24" />
+          <option value="org.springframework:spring-core:6.1.12" />
+          <option value="org.springframework:spring-expression:6.1.12" />
+          <option value="org.springframework:spring-beans:6.1.12" />
+          <option value="org.springframework:spring-context:6.1.12" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
